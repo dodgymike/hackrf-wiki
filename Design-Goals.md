@@ -1,6 +1,7 @@
 Eventually, the HackRF project may result in multiple hardware designs, but the initial goal is to build a single wideband transceiver peripheral that can be attached to a general purpose computer for software radio functions.
 
 Primary goals:
+
 * half-duplex transceiver
 * operating freq: 100 MHz to 6 GHz
 * maximum sample rate: 20 Msps
