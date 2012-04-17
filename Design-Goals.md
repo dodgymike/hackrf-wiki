@@ -11,6 +11,7 @@ Primary goals:
 * portable
 
 Wish list:
+
 * full-duplex (at reduced max sample rate)
 * external clock reference
 * dithering
