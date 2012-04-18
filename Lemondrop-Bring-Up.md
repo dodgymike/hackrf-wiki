@@ -15,12 +15,17 @@ When I put my finger on the MAX2837, current consumption goes up. This suggests 
 
 ### Bus Pirate
 
-> m (set mode)
-> 4 (I2C mode)
-> 3 (~100kHz speed)
-> W (power supplies ON)
-> (1) (macro 1: 7-bit address search)
-
-Devices found at 0xC0(0x60 W) 0xC1(0x60 R) 
+    # set mode
+    m
+    # I2C mode
+    4
+    # ~100kHz speed
+    3
+    # power supplies ON
+    W
+    # macro 1: 7-bit address search
+    (1)
+    Searching I2C address space. Found devices at:
+    0xC0(0x60 W) 0xC1(0x60 R) 
 
 I2C A0 address configuration pin (not available on QFN20 package) is apparently forced to "0".
