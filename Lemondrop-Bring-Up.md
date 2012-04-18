@@ -6,6 +6,8 @@ When I put my finger on the MAX2837, current consumption goes up. This suggests 
 
 # Si5351 I2C
 
+Attached crystal is 25MHz.
+
 ### Connections
 
 * Bus Pirate GND to P7 pin 1
@@ -29,3 +31,24 @@ When I put my finger on the MAX2837, current consumption goes up. This suggests 
     0xC0(0x60 W) 0xC1(0x60 R) 
 
 I2C A0 address configuration pin (not available on QFN20 package) is apparently forced to "0".
+
+Reading a register:
+
+    # Read register 0
+    I2C>[0xc0 0[0xc1 r]]
+    ...
+    # Register 0: SYS_INIT=0, LOL_B=0, LOL_A=0, LOS=1, REVID=0
+    READ: 0x10
+    ...
+    # Read 16 registers, starting with register 0
+    I2C>[0xc0 0[0xc1 r:16]]
+    ...
+    READ: 0x10  ACK 0xF8  ACK 0x03  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x8F  ACK 0x01  ACK
+          0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x90  ACK 0x00
+    ...
+    # Read 16 registers, starting with register 16
+    I2C>[0xc0 16[0xc1 r:16]]
+    ...
+    READ: 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK
+          0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00  ACK 0x00 
+    ...
