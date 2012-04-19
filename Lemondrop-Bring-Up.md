@@ -6,7 +6,7 @@ When I put my finger on the MAX2837, current consumption goes up. This suggests 
 
 # Si5351 I2C
 
-Attached crystal is 25MHz.
+Attached crystal is 25MHz. For now, I'm assuming 10pF "internal load capacitance" is good enough to get the crystal oscillating. The crystal datasheet should be reviewed and measurements made...
 
 Be sure to reference Silicon Labs application note 619 (AN619). The datasheet is a terrible mess (typos and lack of some details). AN619 appears to be less of a mess, on the whole. And as a bonus, AN619 has PDF bookmarks for each register...
 
@@ -93,6 +93,6 @@ I2C A0 address configuration pin (not available on QFN20 package) is apparently 
     #   CLK0_IDRV=3 (8mA)
     [0xC0 16 0x43 0x80 0x80 0x80 0x80 0x80 0x80 0x80]
 
-    # Enable all outputs
-    [0xC0 3 0x00]
+    # Enable CLK0 output only.
+    [0xC0 3 0xFE]
 
