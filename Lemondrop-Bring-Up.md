@@ -185,7 +185,7 @@ Initialization:
     # CLK1:
     #   CLK1_PDN=0 (powered up)
     #   MS1_INT=1 (integer mode)
-    #   MS1_SRC=0 (PLLA as source for MultiSynth 0)
+    #   MS1_SRC=0 (PLLA as source for MultiSynth 1)
     #   CLK1_INV=0 (not inverted)
     #   CLK1_SRC=3 (MS1 as input source)
     #   CLK1_IDRV=3 (8mA)
