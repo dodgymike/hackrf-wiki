@@ -119,9 +119,9 @@ MultiSynth0 should output 40MHz (800MHz VCO divided by 20):
     a = 20, b = 0, c = X
     MS0_P1[17: 0] = 128 * a + floor(128 * b / c) - 512
                   = 2048 = 0x800
-    MS0_P1[17:16] = 0x00
-    MS0_P1[15: 8] = 0x08
-    MS0_P1[ 7: 0] = 0x00
+    MS0_P1[17:16] (register 44) = 0x00
+    MS0_P1[15: 8] (register 45) = 0x08
+    MS0_P1[ 7: 0] (register 46) = 0x00
     MS0_P2[19:0]  = 0
     MS0_P3[19:0]  = 0
 
