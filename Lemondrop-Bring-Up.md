@@ -96,3 +96,79 @@ I2C A0 address configuration pin (not available on QFN20 package) is apparently 
     # Enable CLK0 output only.
     [0xC0 3 0xFE]
 
+### Clocking Scheme (Work In Progress)
+
+From AN619:
+If Fxtal=25MHz, Fvco = Fxtal * (a + (b / c)).
+If we want Fvco = 800MHz, a = 32, b = 0, c = don't care.
+
+    MSNA_P1[17:0] = 128 * a + floor(128 * b / c) - 512
+                  = 128 * a + floor(0) - 512
+                  = 128 * 32 + 0 - 512
+                  = 3584 = 0xE00
+    MSNA_P1[17:16] (register 28) = 0x00
+    MSNA_P1[15: 8] (register 29) = 0x0E
+    MSNA_P1[ 7: 0] (register 30) = 0x00
+    MSNA_P2[19:0] = 128 * b - c * floor(128 * b / c)
+                  = 128 * 0 - 0 * floor(128 * 0 / X)
+                  = 0
+    MSNA_P3[19:0] = 0
+
+MultiSynth0 should output 40MHz (800MHz VCO divided by 20):
+
+    a = 20, b = 0, c = X
+    MS0_P1[17: 0] = 128 * a + floor(128 * b / c) - 512
+                  = 2048 = 0x800
+    MS0_P1[17:16] = 0x00
+    MS0_P1[15: 8] = 0x08
+    MS0_P1[ 7: 0] = 0x00
+    MS0_P2[19:0]  = 0
+    MS0_P3[19:0]  = 0
+
+Initialization:
+
+    # Disable all CLKx outputs.
+    [0xC0 3 0xFF]
+
+    # Turn off OEB pin control for all CLKx
+    [0xC0 9 0xFF]
+
+    # Power down all CLKx
+    [0xC0 16 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80]
+
+    # Register 183: Crystal Internal Load Capacitance
+    # Reads as 0xE4 on power-up
+    # Set to 10pF (until I find out what loading the crystal/PCB likes best)
+    [0xC0 183 0xE4]
+
+    # Register 187: Fanout Enable
+    # Turn on XO and MultiSynth fanout only.
+    [0xC0 187 0x50]
+
+    # Register 15: PLL Input Source
+    # CLKIN_DIV=0 (Divide by 1)
+    # PLLB_SRC=0 (XTAL input)
+    # PLLA_SRC=0 (XTAL input)
+    [0xC0 15 0x00]
+
+    # MultiSynth NA (PLL1)
+    [0xC0 26 0x00 0x00 0x00 0x0E 0x00 0x00 0x00 0x00]
+
+    # MultiSynth NB (PLL2)
+    ...
+
+    # MultiSynth 0
+    [0xC0 42 0x00 0x00 0x00 0x08 0x00 0x00 0x00 0x00]
+
+    # Registers 16 through 23: CLKx Control
+    # CLK0:
+    #   CLK0_PDN=0 (powered up)
+    #   MS0_INT=1 (integer mode)
+    #   MS0_SRC=0 (PLLA as source for MultiSynth 0)
+    #   CLK0_INV=0 (not inverted)
+    #   CLK0_SRC=3 (MS0 as input source)
+    #   CLK0_IDRV=3 (8mA)
+    [0xC0 16 0x4F 0x80 0x80 0x80 0x80 0x80 0x80 0x80]
+
+    # Enable CLK0 output only.
+    [0xC0 3 0xFE]
