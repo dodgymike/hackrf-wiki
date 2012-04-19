@@ -125,6 +125,17 @@ MultiSynth0 should output 40MHz (800MHz VCO divided by 20):
     MS0_P2[19:0]  = 0
     MS0_P3[19:0]  = 0
 
+MultiSynth1 should output 20MHz (800MHz VCO divided by 40) or some smaller integer fraction of the VCO:
+
+    a = 40, b = 0, c = X
+    MS1_P1[17: 0] = 128 * a + floor(128 * b / c) - 512
+                  = 4608 = 0x1200
+    MS1_P1[17:16] (register 52) = 0x00
+    MS1_P1[15: 8] (register 53) = 0x12
+    MS1_P1[ 7: 0] (register 54) = 0x00
+    MS1_P2[19:0]  = 0
+    MS1_P3[19:0]  = 0
+
 Initialization:
 
     # Disable all CLKx outputs.
@@ -160,6 +171,9 @@ Initialization:
     # MultiSynth 0
     [0xC0 42 0x00 0x00 0x00 0x08 0x00 0x00 0x00 0x00]
 
+    # MultiSynth 1
+    [0xC0 50 0x00 0x00 0x00 0x12 0x00 0x00 0x00 0x00]
+
     # Registers 16 through 23: CLKx Control
     # CLK0:
     #   CLK0_PDN=0 (powered up)
@@ -168,7 +182,14 @@ Initialization:
     #   CLK0_INV=0 (not inverted)
     #   CLK0_SRC=3 (MS0 as input source)
     #   CLK0_IDRV=3 (8mA)
-    [0xC0 16 0x4F 0x80 0x80 0x80 0x80 0x80 0x80 0x80]
+    # CLK1:
+    #   CLK1_PDN=0 (powered up)
+    #   MS1_INT=1 (integer mode)
+    #   MS1_SRC=0 (PLLA as source for MultiSynth 0)
+    #   CLK1_INV=0 (not inverted)
+    #   CLK1_SRC=3 (MS1 as input source)
+    #   CLK1_IDRV=3 (8mA)
+    [0xC0 16 0x4F 0x4F 0x80 0x80 0x80 0x80 0x80 0x80]
 
     # Enable CLK0 output only.
-    [0xC0 3 0xFE]
+    [0xC0 3 0xFC]
