@@ -1,4 +1,4 @@
-# Lemodrop Bring-Up
+# Lemondrop Bring-Up
 
 Board draws approximately 24mA from +3V3 when power is applied. This seems a bit high, but may be expected if not all parts are capable of low-power mode, or aren't configured for low power at power-on. I need to review the schematic and datasheets and see what can be done.
 
