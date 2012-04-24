@@ -61,6 +61,8 @@ You can also control SGPIO pins, GPIO-style, from within the SGPIO peripheral. T
         for(i=0; i<1000; i++);
     }
 
+### Serializing Data With Slice Clock Source
+
 My first full-on SGPIO experiment involved serializing a data pattern from slice A, using slice D to generate a SGPIO_CLK/2 data rate. I derived the code from examples that configured the SGPIO as I2S interfaces:
 
     // Disable all counters during configuration
