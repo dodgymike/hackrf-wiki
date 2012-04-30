@@ -8,4 +8,10 @@ The April 16, 2012 Jellybean design has a voltage divider for VBUS that is fed t
 
 ## Setup
 
+### Boot Mode Jumpers
+
+Set the boot mode jumpers to USB0: BOOT[0:3] = "1010". Jumper setting takes effect at the next power-on or reset. (I'll probably rig up a reset button to P2 "LPC_JTAG" or P14 "LPC_ISP".)
+
+### USB DFU Utility
 http://dfu-util.gnumonks.org/
+
