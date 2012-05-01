@@ -193,3 +193,11 @@ Initialization:
 
     # Enable CLK0 output only.
     [0xC0 3 0xFC]
+
+## Si5351 output phase relationships
+
+Tested CLK4 and CLK5 (integer division only):
+
+With CLK4 set to MS4 and CLK5 set to MS5, even with both multisynths configured identically, there was no consistent phase between the two.  Once started, the clocks maintained relative phase with each other, but when stopped and restarted the initial phase offset was unpredictable.
+
+With CLK4 and CLK5 both set to MS4, the phase of both outputs was identical when no output (R) divider was selected.  When an output divider was selected on both MS4 and MS5, the relative phase became predictable only within the constraints of the divider (e.g. with R=2 the relative phase was always either 0 or half a cycle, with R=4 the relative phase was always either 0, a quarter, a half, or three quarters of a cycle).  With R=1 on MS4 and R=2 on MS5, the two outputs were consistently in phase with each other.  The output (R) dividers supposedly tied to the multisynths are actually tied to the outputs.
