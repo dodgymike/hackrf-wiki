@@ -14,6 +14,7 @@ Major parts selected so far (subject to change):
   * [User Manual](http://www.nxp.com/documents/user_manual/UM10503.pdf)
   * [Datasheet](http://www.nxp.com/documents/data_sheet/LPC4350_30_20_10.pdf)
   * [Other Documentation (LPC4330FBD144)](http://www.nxp.com/products/microcontrollers/cortex_m4/lpc4300/LPC4330FBD144.html#documentation) - includes errata and application notes.
+  * [ARM-standard JTAG/SWD connector pinout](http://www.keil.com/support/man/docs/ulink2/ulink2_hw_connectors.htm)
 * [RFFC5071 mixer/synthesizer](https://estore.rfmd.com/RFMD_Onlinestore/Products/RFMD+Parts/PID-P_RFFC5071.aspx)
   * [Datasheet](http://www.rfmd.com/CS/Documents/RFFC5071_2DS.pdf)
   * [Other Documentation](https://estore.rfmd.com/RFMD_Onlinestore/Products/RFMD+Parts/PID-P_RFFC5071.aspx) - includes programming guides and application notes.
