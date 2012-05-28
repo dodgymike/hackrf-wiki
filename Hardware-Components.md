@@ -2,7 +2,7 @@ Major parts selected so far (subject to change):
 
 * [MAX2837 2.3 to 2.7 GHz transceiver](http://www.maxim-ic.com/datasheet/index.mvp/id/5452/t/al)
   * [Datasheet](http://datasheets.maxim-ic.com/en/ds/MAX2837.pdf)
-  * There's also a register map document that Mike received directly from Maxim. Not sure what distribution restrictions there are on that document...
+  * There's also a register map document that Mike received directly from Maxim. Send an email to Mike or submit a support request to Maxim if you want a copy.
 * [MAX5864 ADC/DAC](http://www.maxim-ic.com/datasheet/index.mvp/id/3946/t/do)
   * [Datasheet](http://datasheets.maxim-ic.com/en/ds/MAX5864.pdf)
 * [Si5351 clock generator](http://www.silabs.com/products/clocksoscillators/clock-generators-and-buffers/Pages/clock+vcxo.aspx)
