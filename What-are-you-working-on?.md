@@ -17,6 +17,9 @@ The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD
    * Modify startup to copy .text to SRAM.
 * Driver SSP, SPI and USART (libopencm3).
 
+willcode4:
+* MAX2837 driver
+
 Ideas:
 * LPC43xx drivers(libopencm3):
   * SSP, SPI, I2C, USART.
