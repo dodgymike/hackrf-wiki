@@ -1,7 +1,9 @@
 Fill in this page so that people know what you are working on:
 
 mossmann:
-* LPC43xx register definitions in libopencm3
+* LPC43xx register definitions in libopencm3 (mostly done but will add more as needed)
+* trying to get LPC43xx working with blackmagic debugger
+* general LPC43xx development (building some libopencm3 examples)
 * Lollipop hardware design revisions (PCBs to be assembled soon)
 
 bvernoux:
