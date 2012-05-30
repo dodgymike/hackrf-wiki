@@ -15,6 +15,7 @@ The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD
 * Special Linker + Startup to Copy Code from SPIFI to SRAM at Boot and execute code in SRAM
    * Modify Linker Script with section for .text Start section.
    * Modify startup to copy .text to SRAM.
+   * Done see blinky_SPIFI_SRAM: Wait Feedback, maybe add more than 128KB SRAM, but will need some configuration because other segment are not accessible by default.
 * Driver SSP, SPI and USART (libopencm3).
 
 # willcode4:
