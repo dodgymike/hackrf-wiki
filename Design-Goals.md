@@ -9,6 +9,7 @@ Primary goals:
 * interface: High Speed USB
 * power supply: USB bus power
 * portable
+* open source
 
 Wish list:
 
