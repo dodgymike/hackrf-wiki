@@ -10,12 +10,10 @@ Fill in this page so that people know what you are working on:
 The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD/libopencm3.
 * Modify the actual project to use libopencm3 
 * Add SCU PinMux function.
-   * Configure all GPIO with SCU PinMux function in JellyBean Init Code.
-   * To use 
+   * Configure all GPIO with SCU PinMux function in JellyBean Init Code => In progress
 * Special Linker + Startup to Copy Code from SPIFI to SRAM at Boot and execute code in SRAM
-   * Modify Linker Script with section for .text Start section.
-   * Modify startup to copy .text to SRAM.
-   * Done see blinky_SPIFI_SRAM: Wait Feedback, maybe add more than 128KB SRAM, but will need some configuration because other segment are not accessible by default.
+   * Done see blinky_SPIFI_SRAM: Wait Feedback.
+   * To be added in libopencm3.
 * Driver SSP, SPI and USART (libopencm3).
 
 # willcode4:
