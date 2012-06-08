@@ -1,3 +1,5 @@
+Follow these instructions to set up a firmware development environment for HackRF.
+
 # Toolchain
 
 Install the GCC ARM toolchain from [https://code.launchpad.net/gcc-arm-embedded](https://code.launchpad.net/gcc-arm-embedded).  (Other toolchains exist. YMMV).  All you have to do is unpack the archive and add the bin directory to your path.
