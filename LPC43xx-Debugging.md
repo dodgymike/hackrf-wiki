@@ -18,6 +18,41 @@ TitanMKD has had some success.
 
 # ST-LINK/V2
 
-(included with STM32F4DISCOVERY)
+## Hardware Configuration
 
-Jared has had some success.
+Start with an STM32F4-Discovery board. Remove the jumpers from CN3. Connect the target's SWD interface to CN2 "SWD" connector.
+
+## Software Configuration
+
+I'm using libusb-1.0.9.
+
+### Install OpenOCD-0.6.0 dev
+
+    # Cloned at hash a21affa42906f55311ec047782a427fcbcb98994
+    git clone git://openocd.git.sourceforge.net/gitroot/openocd/openocd
+    cd openocd
+    # If necessary, patch for GDB<->OpenOCD "packet reply is too long" errors.
+    # http://stackoverflow.com/questions/7053067/arm-none-eabi-gdb-and-openocd-malformed-response-to-offset-query-qoffsets
+    # http://pastebin.com/rdFF2eZd
+    # This patch might cause other bugs (nonexistent register p19 or similar).
+    ./bootstrap
+    ./configure --enable-stlink --enable-buspirate --enable-jlink --enable-maintainer-mode
+    make
+    sudo make install
+
+### OpenOCD configuration files
+
+To be gist'ed momentarily.
+
+### Run ARM GDB
+
+    arm-none-eabi-gdb -n
+    target extended-remote localhost:3333
+    monitor reset init       # Not sure difference between init and halt...
+    monitor reset halt
+    monitor mww 0x40043100 0x10000000
+    monitor mdw 0x40043100    # Verify 0x0 shadow register is set properly.
+    file lpc4350-test.axf     # This is an ELF file.
+    break main
+    continue
+    continue     # To continue from the breakpoint.
