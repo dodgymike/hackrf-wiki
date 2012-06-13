@@ -60,7 +60,7 @@ lpc4350.cfg
     target create $_CHIPNAME.m4 stm32_stlink -chain-position $_CHIPNAME.m4
     #target create $_CHIPNAME.m0 stm32_stlink -chain-position $_CHIPNAME.m0
 
-target.xml, nabbed from (an OpenOCD mailing list thread)[http://www.mail-archive.com/openocd-development@lists.berlios.de/msg18182.html], to fix a communication problem between GDB and newer OpenOCD builds.
+target.xml, nabbed from [an OpenOCD mailing list thread](http://www.mail-archive.com/openocd-development@lists.berlios.de/msg18182.html), to fix a communication problem between GDB and newer OpenOCD builds.
 
     <?xml version="1.0"?>
     <!DOCTYPE target SYSTEM "gdb-target.dtd">
