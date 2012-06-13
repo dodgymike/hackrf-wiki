@@ -71,8 +71,9 @@ lpc4350.cfg
     monitor reset init       # Not sure difference between init and halt...
     monitor reset halt
     monitor mww 0x40043100 0x10000000
-    monitor mdw 0x40043100    # Verify 0x0 shadow register is set properly.
-    file lpc4350-test.axf     # This is an ELF file.
-    break main
-    continue
-    continue     # To continue from the breakpoint.
+    monitor mdw 0x40043100   # Verify 0x0 shadow register is set properly.
+    file lpc4350-test.axf    # This is an ELF file.
+    load                     # Place image into RAM.
+    break main               # Set a breakpoint.
+    continue                 # Run to breakpoint.
+    continue                 # To continue from the breakpoint.
