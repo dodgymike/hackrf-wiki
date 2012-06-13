@@ -16,6 +16,7 @@ mossman hates it. Anyone have any luck?
 
 TitanMKD has had some success.
 See the tutorial in hackrf/doc/LPCXPresso_Flash_Debug_Tutorial.pdf or .odt (PDF and OpenOffice document)
+Doc Link [https://github.com/mossmann/hackrf/tree/master/doc)
 
 # ST-LINK/V2
 
