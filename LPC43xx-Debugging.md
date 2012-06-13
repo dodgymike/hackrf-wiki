@@ -42,7 +42,27 @@ I'm using libusb-1.0.9.
 
 ### OpenOCD configuration files
 
-To be gist'ed momentarily.
+openocd.cfg
+
+    #debug_level 3
+    source [find interface/stlink-v2.cfg]
+    source ./lpc4350.cfg
+
+lpc4350.cfg
+
+    set _CHIPNAME lpc4350
+    set _M0_CPUTAPID 0x4ba00477
+    set _M4_SWDTAPID 0x2ba01477
+    set _M0_TAPID 0x0BA01477
+    set _TRANSPORT stlink_swd
+
+    transport select $_TRANSPORT
+
+    stlink newtap $_CHIPNAME m4 -expected-id $_M4_SWDTAPID
+    stlink newtap $_CHIPNAME m0 -expected-id $_M0_TAPID
+
+    target create $_CHIPNAME.m4 stm32_stlink -chain-position $_CHIPNAME.m4
+    #target create $_CHIPNAME.m0 stm32_stlink -chain-position $_CHIPNAME.m0
 
 ### Run ARM GDB
 
