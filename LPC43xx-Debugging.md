@@ -31,10 +31,6 @@ I'm using libusb-1.0.9.
     # Cloned at hash a21affa42906f55311ec047782a427fcbcb98994
     git clone git://openocd.git.sourceforge.net/gitroot/openocd/openocd
     cd openocd
-    # If necessary, patch for GDB<->OpenOCD "packet reply is too long" errors.
-    # http://stackoverflow.com/questions/7053067/arm-none-eabi-gdb-and-openocd-malformed-response-to-offset-query-qoffsets
-    # http://pastebin.com/rdFF2eZd
-    # This patch might cause other bugs (nonexistent register p19 or similar).
     ./bootstrap
     ./configure --enable-stlink --enable-buspirate --enable-jlink --enable-maintainer-mode
     make
@@ -64,10 +60,52 @@ lpc4350.cfg
     target create $_CHIPNAME.m4 stm32_stlink -chain-position $_CHIPNAME.m4
     #target create $_CHIPNAME.m0 stm32_stlink -chain-position $_CHIPNAME.m0
 
+target.xml, nabbed from (an OpenOCD mailing list thread)[http://www.mail-archive.com/openocd-development@lists.berlios.de/msg18182.html], to fix a communication problem between GDB and newer OpenOCD builds.
+
+    <?xml version="1.0"?>
+    <!DOCTYPE target SYSTEM "gdb-target.dtd">
+    <target>
+      <feature name="org.gnu.gdb.arm.core">
+        <reg name="r0" bitsize="32" type="uint32"/>
+        <reg name="r1" bitsize="32" type="uint32"/>
+        <reg name="r2" bitsize="32" type="uint32"/>
+        <reg name="r3" bitsize="32" type="uint32"/>
+        <reg name="r4" bitsize="32" type="uint32"/>
+        <reg name="r5" bitsize="32" type="uint32"/>
+        <reg name="r6" bitsize="32" type="uint32"/>
+        <reg name="r7" bitsize="32" type="uint32"/>
+        <reg name="r8" bitsize="32" type="uint32"/>
+        <reg name="r9" bitsize="32" type="uint32"/>
+        <reg name="r10" bitsize="32" type="uint32"/>
+        <reg name="r11" bitsize="32" type="uint32"/>
+        <reg name="r12" bitsize="32" type="uint32"/>
+        <reg name="sp" bitsize="32" type="data_ptr"/>
+        <reg name="lr" bitsize="32"/>
+        <reg name="pc" bitsize="32" type="code_ptr"/>
+        <reg name="cpsr" bitsize="32" regnum="25"/>
+      </feature>
+      <feature name="org.gnu.gdb.arm.fpa">
+        <reg name="f0" bitsize="96" type="arm_fpa_ext" regnum="16"/>
+        <reg name="f1" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="f2" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="f3" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="f4" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="f5" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="f6" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="f7" bitsize="96" type="arm_fpa_ext"/>
+        <reg name="fps" bitsize="32"/>
+      </feature>
+    </target>
+
+
+
 ### Run ARM GDB
+
+Soon, I should dump this stuff into a .gdbinit file...
 
     arm-none-eabi-gdb -n
     target extended-remote localhost:3333
+    set tdesc filename target.xml
     monitor reset init       # Not sure difference between init and halt...
     monitor reset halt
     monitor mww 0x40043100 0x10000000
