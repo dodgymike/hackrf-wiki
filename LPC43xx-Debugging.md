@@ -15,6 +15,7 @@ mossman hates it. Anyone have any luck?
 (included with LPCXpresso boards)
 
 TitanMKD has had some success.
+See the tutorial in hackrf/doc/LPCXPresso_Flash_Debug_Tutorial.pdf or .odt (PDF and OpenOffice document)
 
 # ST-LINK/V2
 
