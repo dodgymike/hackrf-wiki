@@ -108,12 +108,12 @@ Soon, I should dump this stuff into a .gdbinit file...
     arm-none-eabi-gdb -n
     target extended-remote localhost:3333
     set tdesc filename target.xml
-    monitor reset init       # Not sure difference between init and halt...
-    monitor reset halt
+    monitor reset init
     monitor mww 0x40043100 0x10000000
     monitor mdw 0x40043100   # Verify 0x0 shadow register is set properly.
     file lpc4350-test.axf    # This is an ELF file.
     load                     # Place image into RAM.
+    monitor reset init
     break main               # Set a breakpoint.
     continue                 # Run to breakpoint.
     continue                 # To continue from the breakpoint.
