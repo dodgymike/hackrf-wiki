@@ -12,11 +12,11 @@ Based on testing with Jellybean/Lemondrop/Lollipop, here are some notes for futu
 
 It was a bad idea to run the SGPIO clock through the CPLD. In a future board rev, I recommend hooking one of SGPIO[8:11] directly to the same CLK_X2 signal going into the CPLD. In the interim, I modified my Jellybean (16 Apr 2012) to connect CPLD GCLK2 (at the via 1cm from the CPLD) to the LPC4330 P1_12 (at the via 3mm from the LPC4330):
 
-(insert photo here)
+![SGPIO GCLK2 reroute](https://github.com/jboone/hackrf/raw/master/doc/wiki/hardware/modifications/sgpio-gclk2-reroute.jpg)
 
 And on the back side, I cut
 
-(insert photo here)
+![SGPIO P1_12 cut trace](https://github.com/jboone/hackrf/raw/master/doc/wiki/hardware/modifications/sgpio-p1_12-cut-trace.jpg)
 
 I revised the clocking scheme of the Si5351C to:
 
