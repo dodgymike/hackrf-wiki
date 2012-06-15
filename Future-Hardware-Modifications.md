@@ -6,6 +6,12 @@ Based on testing with Jellybean/Lemondrop/Lollipop, here are some notes for futu
 * Si5351C power sequencing: 1V8 must be applied before or at the same time as 3V3. This could be accomplished in various ways. Perhaps a FET controlling 3V3 for that part individually would be best.
 * The various places where we have selectable 1V8/3V3 should all be fixed, probably mostly to 1V8.
 
+# Signal integrity
+
+The 100 Ohm resistors between MAX5864 DA/DD buses and the CPLD are too strong to operate effectively at 10MHz+. They need some tuning (in my estimation, 39 Ohms on Jellybean 6 Apr 2012), or perhaps elimination once the MAX5864 and CPLD live on the same PCB.
+
+100 Ohms is probably too strong for the Si5351C clock signals as well.
+
 # SGPIO issues
 
 ### SGPIO Clock Routing
