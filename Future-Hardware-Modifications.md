@@ -5,3 +5,21 @@ Based on testing with Jellybean/Lemondrop/Lollipop, here are some notes for futu
 * RSSI from MAX2837 should be connected to an ADC on the LPC43xx.
 * Si5351C power sequencing: 1V8 must be applied before or at the same time as 3V3. This could be accomplished in various ways. Perhaps a FET controlling 3V3 for that part individually would be best.
 * The various places where we have selectable 1V8/3V3 should all be fixed, probably mostly to 1V8.
+
+# SGPIO issues
+
+### SGPIO Clock Routing
+
+It was a bad idea to run the SGPIO clock through the CPLD. In a future board rev, I recommend hooking one of SGPIO[8:11] directly to the same CLK_X2 signal going into the CPLD. In the interim, I modified my Jellybean (16 Apr 2012) to connect CPLD GCLK2 (at the via 1cm from the CPLD) to the LPC4330 P1_12 (at the via 3mm from the LPC4330):
+
+(insert photo here)
+
+And on the back side, I cut
+
+(insert photo here)
+
+I revised the clocking scheme of the Si5351C to:
+
+* 10MHz via CLK1 to the MAX5864
+* 10MHz via CLK2 to CPLD GCLK1 (assumed in-phase with CLK1 and the MAX5864)
+* 20MHz via CLK3 to CPLD GCLK2 and LPC4330 P1_12 (SGPIO8) (assumed in-phase with CLK2 edges)
