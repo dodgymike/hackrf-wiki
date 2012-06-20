@@ -14,7 +14,7 @@ The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD
 * Special Linker + Startup to Copy Code from SPIFI to SRAM at Boot and execute code in SRAM
    * Done see blinky_SPIFI_SRAM: Wait Feedback.
    * To be added in libopencm3.
-* Driver SSP, SPI and USART (libopencm3).
+* Driver SysTick+Interrupt (done), SSP (basic driver done), DMA (in progress), SPI(todo low priority) and USART(for debug purpose) (libopencm3).
 
 # willcode4:
 * MAX2837 driver
