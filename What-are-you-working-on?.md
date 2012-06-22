@@ -1,10 +1,10 @@
 Fill in this page so that people know what you are working on:
 
 # mossmann:
-* Putting bvernoux's SSP driver and willcode4's MAX2837 driver together to build some test programs
+* Testing Lollipop
 * trying to get LPC43xx working with blackmagic debugger
-* building Lollipops (PCBs to arrive any day now)
-* LPC43xx register definitions in libopencm3 (mostly done but will add more as needed)
+* building (second rev) Lollipops (PCBs to be ordered shortly)
+* designing Bubblegum (alternative wideband front-end design)
 
 # bvernoux:
 The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD/libopencm3.
