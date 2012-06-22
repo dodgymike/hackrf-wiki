@@ -4,7 +4,7 @@ Various debugger options for the LPC43xx exist.
 
 [http://www.blacksphere.co.nz/main/blackmagic](http://www.blacksphere.co.nz/main/blackmagic)
 
-mossmann is working with the blackmagic developer to try to make it work with the LPC43xx. So far it properly identifies the M4 core via SWD and both the M4 and M0 cores via JTAG but doesn't do anything more.
+mossmann is working with the blackmagic developer to try to make it work with the LPC43xx. So far it properly identifies the M4 core via SWD and both the M4 and M0 cores via JTAG and attach to a process, but it cannot load code into RAM or flash yet.
 
 # openocd
 
