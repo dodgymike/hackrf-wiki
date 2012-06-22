@@ -1,4 +1,4 @@
-Various debugger options for the LPC43xx exist, but none of us has a fully working open source solution yet.
+Various debugger options for the LPC43xx exist.
 
 # blackmagic
 
