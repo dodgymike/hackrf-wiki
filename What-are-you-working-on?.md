@@ -14,7 +14,7 @@ The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD
 * Special Linker + Startup to Copy Code from SPIFI to SRAM at Boot and execute code in SRAM
    * Done see blinky_SPIFI_SRAM: Wait Feedback.
    * To be added in libopencm3.
-* Performance tests (nb MIPS) from SPIFI, and SRAM (to be published).
+* Performance tests (nb MIPS) code executed from SPIFI and SRAM (to be published).
 * Work on non documented features found in LPC43xx ROM (Ini, SPIFI internals, USB drivers work in progress).
 * Dual core M4 & M0 working in parallel (work fine, work in progress to include it in libopencm3).
 * Driver SysTick+Interrupt (done), SSP (basic driver done), UART(in progress), DMA (in progress), SPI(todo low priority) (libopencm3).
