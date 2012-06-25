@@ -8,7 +8,6 @@ Fill in this page so that people know what you are working on:
 
 # bvernoux:
 The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD/libopencm3.
-* Modify the actual project to use libopencm3 
 * Add SCU PinMux function.
    * Configure all GPIO with SCU PinMux function in JellyBean Init Code => In progress
 * Special Linker + Startup to Copy Code from SPIFI to SRAM at Boot and execute code in SRAM
@@ -16,7 +15,7 @@ The draft/proposal will be in github.com/TitanMKD/hackrf and github.com/TitanMKD
    * To be added in libopencm3.
 * Performance tests (nb MIPS) code executed from SPIFI and SRAM (to be published).
 * Work on non documented features found in LPC43xx ROM (Init stuff, SPIFI internals, USB drivers, other stuff hidden, work in progress).
-* Dual core M4 & M0 working in parallel (work fine, work in progress to include it in libopencm3).
+* Dual core M4 & M0 working in parallel (work fine on JellyBean, work in progress to include it in libopencm3).
 * Driver SysTick+Interrupt (done), SSP (basic driver done), UART(in progress), DMA (in progress), SPI(todo low priority) (libopencm3).
 
 # willcode4:
