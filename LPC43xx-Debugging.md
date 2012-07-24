@@ -117,3 +117,12 @@ Soon, I should dump this stuff into a .gdbinit file...
     break main               # Set a breakpoint.
     continue                 # Run to breakpoint.
     continue                 # To continue from the breakpoint.
+
+More GDB tips for the GDB-unfamiliar:
+
+    # Write the variable "buffer" (an array) to file "buffer.u8".
+    dump binary value buffer.u8 buffer
+
+    # Display the first 32 values in buffer whenever you halt
+    # execution.
+    display/32xh buffer
