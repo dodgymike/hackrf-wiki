@@ -117,6 +117,8 @@ Soon, I should dump this stuff into a .gdbinit file...
     break main               # Set a breakpoint.
     continue                 # Run to breakpoint.
     continue                 # To continue from the breakpoint.
+    step                     # Step-execute the next source line.
+    stepi                    # Step-execute the next processor instruction.
 
 More GDB tips for the GDB-unfamiliar:
 
