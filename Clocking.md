@@ -28,4 +28,4 @@ Future Si5351 output mapping:
 * CLK4 -> RFFC5071
 * CLK5 -> MAX2837
 * CLK6 -> none
-* CLK7 -> none
+* CLK7 -> LPC4330 (but LPC4330 will start up on its own crystal)
