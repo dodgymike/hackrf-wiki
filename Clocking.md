@@ -15,17 +15,17 @@ Lemondrop+Jellybean Si5351 output mapping:
 * CLK2 -> CPLD
 * CLK3 -> CPLD
 * CLK4 -> LPC4330
-* CLK5 -> RFFC5071
+* CLK5 -> RFFC5072
 * CLK6 -> extra
 * CLK7 -> extra
 
-Future Si5351 output mapping:
+Jawbreaker output mapping:
 
 * CLK0 -> MAX5864/CPLD
 * CLK1 -> CPLD
 * CLK2 -> SGPIO
 * CLK3 -> external clock output
-* CLK4 -> RFFC5071
+* CLK4 -> RFFC5072
 * CLK5 -> MAX2837
 * CLK6 -> none
 * CLK7 -> LPC4330 (but LPC4330 will start up on its own crystal)
