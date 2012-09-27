@@ -128,3 +128,35 @@ More GDB tips for the GDB-unfamiliar:
     # Display the first 32 values in buffer whenever you halt
     # execution.
     display/32xh buffer
+
+And still more, for debugging ARM Cortex-M4 Hard Faults:
+
+    # Assuming you have a hard-fault handler wired in:
+    display/8xw args
+    
+    # Examine fault-related registers:
+
+    # Configurable Fault Status Register (CFSR) contains:
+    # CFSR[15:8]: BusFault Status Register (BFSR)
+    #   "Shows the status of bus errors resulting from instruction
+    #   prefetches and data accesses."
+    #   BFSR[7]: BFARVALID: BFSR contents valid.
+    #   BFSR[5]: LSPERR: fault during FP lazy state preservation.
+    #   BFSR[4]: STKERR: derived bus fault on exception entry.
+    #   BFSR[3]: UNSTKERR: derived bus fault on exception return.
+    #   BFSR[2]: IMPRECISERR: imprecise data access error.
+    #   BFSR[1]: PRECISERR: precise data access error, faulting
+    #            address in BFAR.
+    #   BFSR[0]: IBUSERR: bus fault on instruction prefetch. Occurs
+    #            only if instruction is issued.
+    display/xw 0xE000ED28
+
+    # BusFault Address Register (BFAR)
+    # "Shows the address associated with a precise data access fault."
+    # "This is the location addressed by an attempted data access that
+    # was faulted. The BFSR shows the reason for the fault and whether
+    # BFAR_ADDRESS is valid..."
+    # "For unaligned access faults, the value returned is the address
+    # requested by the instruction. This might not be the address that
+    # faulted."
+    display/xw 0xE000ED38
