@@ -15,3 +15,26 @@ Set the boot mode jumpers to USB0: BOOT[0:3] = "1010". Jumper setting takes effe
 ### USB DFU Utility
 http://dfu-util.gnumonks.org/
 
+## Usage Notes
+DFU boot downloads to RAM then executes. Need a DFU suffix, but also a header
+
+> cp blinky.bin blinky.dfu
+
+Add DFU suffix and address prefix:
+> /usr/local/bin/dfu-suffix --pid=0x000c --vid=0x1fc9 --did=0x0 -s 0 -a blinky.dfu
+
+Create header:
+> echo "0000000: da ff 02 00 ff ff ff ff" | xxd -g1 -r > header.bin
+
+where the 02 means 2 x 512 + 16 bytes ... this should be automated.
+Assume rounded up.
+
+Add header
+> cat header.bin blinky.dfu > load.dfu
+
+Check for device:
+> /usr/local/bin/dfu-util -l
+
+Download (I used the latest dfu-util from git)
+> /usr/local/bin/dfu-util -d 1fc9:000c -a 0 -D load.dfu
+
