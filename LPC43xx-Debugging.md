@@ -119,6 +119,7 @@ Soon, I should dump this stuff into a .gdbinit file...
     continue                 # To continue from the breakpoint.
     step                     # Step-execute the next source line.
     stepi                    # Step-execute the next processor instruction.
+    info reg                 # Show processor registers.
 
 More GDB tips for the GDB-unfamiliar:
 
