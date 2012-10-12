@@ -23,11 +23,13 @@ DFU boot downloads to RAM then executes. Need a DFU suffix, but also a header
 Add DFU suffix and address prefix:
 > /usr/local/bin/dfu-suffix --pid=0x000c --vid=0x1fc9 --did=0x0 -s 0 -a blinky.dfu
 
-Create header:
-> echo "0000000: da ff 02 00 ff ff ff ff" | xxd -g1 -r > header.bin
+Create header (based on UM10503 section 5.3.3 "Boot image header format"):
+> echo "0000000: da ff {blocksL} {blocksH} {hash0} {hash1} {hash2} {hash3}" | xxd -g1 -r > header.bin
 
-where the 02 means 2 x 512 + 16 bytes ... this should be automated.
+where {blocksL} and {blocksH} are the low and high bytes of the length of the .bin file + 16 bytes, measured in 512-byte frames. "02 00" means 2 x 512 + 16 bytes. (this should be automated.)
 Assume rounded up.
+
+{hash0}..{hash3} = 0xFF. The value is not used, based on the HASH_ACTIVE field in the first two bytes.
 
 Add header
 > cat header.bin blinky.dfu > load.dfu
