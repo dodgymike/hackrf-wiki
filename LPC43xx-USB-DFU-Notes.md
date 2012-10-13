@@ -12,6 +12,13 @@ http://dfu-util.gnumonks.org/
 You need the latest source from git for some reason.
 
 ## Usage Notes
+
+### Makefile
+
+The firmware Makefile contains a "%.dfu" and a "program" target. The program target will make the DFU file and then attempt to load the code to a device that's attached via USB and in DFU mode.
+
+### Manually
+
 DFU boot downloads to RAM then executes. Need a DFU suffix, but also a header
 
 > cp blinky.bin blinky.dfu
