@@ -29,5 +29,4 @@ If you are interested in helping with any of these tasks, coordinate with the pe
 
 ## Documentation
 
-* add some structure to wiki (mossmann)
 * create user documenation (mossmann)
