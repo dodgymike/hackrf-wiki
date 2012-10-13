@@ -29,4 +29,4 @@ If you are interested in helping with any of these tasks, coordinate with the pe
 
 ## Documentation
 
-* create user documenation (mossmann)
+* create user documentation (mossmann)
