@@ -16,4 +16,4 @@ With your PATH set as above, simply do a make and make install.
 
 You should now be able to cd into one of the HackRF firmware directories (try blinky first) and type make.
 
-The resulting .bin file can be programmed directly onto the SPI flash with a GoodFET or Bus Pirate, or you can use a debugger.
+The resulting .bin file can be programmed directly onto the SPI flash with a GoodFET or Bus Pirate, or you can use a debugger to load directly into RAM, or you can use USB DFU boot.
