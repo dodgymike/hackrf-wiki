@@ -10,6 +10,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 * [Firmware Development Setup](https://github.com/mossmann/hackrf/wiki/Firmware-Development-Setup)
 * [LPC4350 SGPIO Experimentation](https://github.com/mossmann/hackrf/wiki/LPC4350-SGPIO-Experimentation)
+* [LPC43xx SGPIO Configuration](https://github.com/mossmann/hackrf/wiki/LPC43xx-SGPIO-Configuration)
 * [LPC43xx Debugging](https://github.com/mossmann/hackrf/wiki/LPC43xx-Debugging)
 * [LPC43xx USB DFU Notes](https://github.com/mossmann/hackrf/wiki/LPC43xx-USB-DFU-Notes)
 * [LPC43xx USB Implementation](https://github.com/mossmann/hackrf/wiki/LPC43xx-USB-Implementation)
