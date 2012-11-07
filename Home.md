@@ -3,8 +3,9 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 ## User Documentation
 
 * [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
+* [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
 
-## Developer notes
+## Developer Notes
 
 ### Firmware
 
