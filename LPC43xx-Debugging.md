@@ -1,14 +1,31 @@
 Various debugger options for the LPC43xx exist.
 
-# blackmagic
+# Black Magic Probe
 
 [http://www.blacksphere.co.nz/main/blackmagic](http://www.blacksphere.co.nz/main/blackmagic)
 
-mossmann is working with the blackmagic developer to try to make it work with the LPC43xx. So far it properly identifies the M4 core via SWD and both the M4 and M0 cores via JTAG and can attach to a process, but it cannot load code into RAM or flash yet.
+Recent Black Magic Probe firmware supports the LPC43xx.
 
-# openocd
+To upgrade the Black Magic Probe firmware, plug in the Black Magic Probe and do:
 
-mossman hates it. Anyone have any luck?
+    git clone git://github.com/gsmcmullin/blackmagic.git
+    cd blackmagic
+    git submodule init && git submodule update
+    make
+    scripts/stm32_mem.py src/blackmagic.bin
+    scripts/stm32_mem.py src/blackmagic.bin
+
+An example of using gdb with the Black Magic Probe:
+
+    arm-none-eabi-gdb -n blinky.elf
+    target extended-remote /dev/ttyACM0
+    monitor swdp_scan
+    attach 1
+    set {int}0x40043100 = 0x10000000
+    load
+    cont
+
+It is possible to attach to the M0 instead of the M4 if you use jtag_scan instead of swdp_scan, but the Black Magic Probe still has some bugs when trying to work with the M0.
 
 # LPC-Link
 
