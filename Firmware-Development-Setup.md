@@ -2,7 +2,7 @@ Follow these instructions to set up a firmware development environment for HackR
 
 # Toolchain
 
-Install the GCC ARM toolchain from [https://launchpad.net/gcc-arm-embedded](https://launchpad.net/gcc-arm-embedded).  (Other toolchains exist. YMMV).  All you have to do is unpack the archive and add the bin directory to your PATH.
+Install the GCC ARM toolchain from [https://launchpad.net/gcc-arm-embedded](https://launchpad.net/gcc-arm-embedded).  (Other toolchains exist. YMMV).  All you have to do is unpack the archive and add the bin directory to your PATH. The pre-compiled GCC ARM toolchain works with Ubuntu versions up to 10.x.
 
 # libopencm3
 
