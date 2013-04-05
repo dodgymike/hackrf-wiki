@@ -4,7 +4,7 @@ These instructions allow you to upgrade the firmware and CPLD bitstream in order
 
 FIXME: hackrf_spiflash -w
 
-FIXME: hackrf_cpldjtagprog
+FIXME: cpldjtagprog
 
 FIXME: DFU to SPIFI
 
