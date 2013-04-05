@@ -13,7 +13,7 @@ When writing a firmware image to SPI flash, be sure to select firmware that is c
 
 After writing the firmware to SPI flash, unplug Jawbreaker and plug it back in to boot the new firmware.
 
-# DFU boot
+# DFU Boot
 
 The LPC4330 microcontroller on Jawbreaker is capable of booting from several different code sources.  By default, Jawbreaker boots from SPI flash memory (SPIFI).  By shorting two pins on one of the "BOOT" headers while power is first supplied, you can force Jawbreaker into DFU (USB) boot mode.  In DFU boot mode, Jawbreaker will enumerate over USB, wait for code to be delivered using the DFU (Device Firmware Update) standard over USB, and then execute that code from RAM.  The SPIFI is normally unused and unaltered in DFU mode.
 
@@ -34,6 +34,8 @@ To update to the latest CPLD image, simply use DFU boot mode to load the cpldjta
 > make program
 
 After a few seconds, three LEDs should start blinking.  This indicates that the CPLD has been programmed successfully.  You may now unplug Jawbreaker and reboot it normally.
+
+If cpldjtagprog fails, LED2 should illuminate (and not blink).  If this happens, unplug Jawbreaker and try again.
 
 # Recovering the SPI Flash Firmware
 
