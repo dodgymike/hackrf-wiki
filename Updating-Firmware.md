@@ -9,9 +9,7 @@ To update the firmware on a working Jawbreaker, use the hackrf_spiflash program
 
 Note that the length (-l option) of the .bin file must be specified.  FIXME: This should be determined automatically in the future.
 
-FIXME: cpldjtagprog
-
-FIXME: DFU to SPIFI
+When writing a firmware image to SPI flash, be sure to select firmware that is compiled with the "rom_to_ram" option.  (Without that option, the microcontroller will try to execute code directly from SPI flash without first copying the code to RAM.  This can cause performance problems and can result in future firmware update failures.)
 
 # DFU boot
 
@@ -23,3 +21,11 @@ The pins that must be shorted are pins 1 and 2 of header P32 on Jawbreaker.  Hea
 DFU mode is very convenient for making rapid changes during firmware development.  If you leave a jumper in place, you can install new firmware by removing power from Jawbreaker, plugging it back in, and typing 'make firmware' in the firmware source directory.
 
 We also use DFU mode to enable programming of the CPLD and to program SPI flash if the currently installed firmware is not working properly.
+
+# Updating the CPLD
+
+
+
+FIXME: cpldjtagprog
+
+FIXME: DFU to SPIFI
