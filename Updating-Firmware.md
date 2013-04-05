@@ -28,6 +28,7 @@ Developers: DFU mode is also very convenient for making rapid changes during fir
 
 To update to the latest CPLD image, simply use DFU boot mode to load the cpldjtagprog firmware.  Follow the DFU instructions above to start Jawbreaker in DFU boot mode and then execute:
 > cd firmware/cpldjtagprog
+
 > make program
 
 After a few seconds, three LEDs should start blinking.  This indicates that the CPLD has been programmed successfully.  You may now unplug Jawbreaker and reboot it normally.
