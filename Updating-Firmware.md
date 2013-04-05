@@ -2,7 +2,12 @@ HackRF Jawbreaker ships with firmware on the SPI flash memory and with a bitstre
 
 These instructions allow you to upgrade the firmware and CPLD bitstream in order to take advantage of new features or bug fixes.
 
-FIXME: hackrf_spiflash -w
+# Updating the SPI Flash Firmware
+
+To update the firmware on a working Jawbreaker, use the hackrf_spiflash program
+> hackrf_spiflash -l 14540 -w usb_performance_rom_to_ram.bin
+
+Note that the length (-l option) of the .bin file must be specified.  FIXME: This should be determined automatically in the future.
 
 FIXME: cpldjtagprog
 
