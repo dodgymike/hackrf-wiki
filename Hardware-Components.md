@@ -5,7 +5,7 @@ Major parts selected so far (subject to change):
   * There's also a register map document that Mike received directly from Maxim. Send an email to Mike or submit a support request to Maxim if you want a copy.
 * [MAX5864 ADC/DAC](http://www.maxim-ic.com/datasheet/index.mvp/id/3946/t/do)
   * [Datasheet](http://datasheets.maxim-ic.com/en/ds/MAX5864.pdf)
-* [Si5351 clock generator](http://www.silabs.com/products/clocksoscillators/clock-generators-and-buffers/Pages/clock+vcxo.aspx)
+* [Si5351 clock generator](http://www.silabs.com/products/clocksoscillators/clock-generator/Pages/lvcmos-clocks-5-outputs.aspx)
   * [AN619: Manually Generating an Si5351 Register Map](http://www.silabs.com/Support%20Documents/TechnicalDocs/AN619.pdf)
   * [Datasheet](http://www.silabs.com/Support%20Documents/TechnicalDocs/Si5351.pdf) - this document is a mess of typos, and best used in conjunction with AN619, which has its own typos. Usually, you can reconcile what's true by comparison and a bit of thought.
   * [Other Documentation](http://www.silabs.com/products/clocksoscillators/clock-generators-and-buffers/Pages/clock+vcxo.aspx) - includes application notes, user guides, and white papers.
