@@ -5,7 +5,7 @@ These instructions allow you to upgrade the firmware and CPLD bitstream in order
 # Updating the SPI Flash Firmware
 
 To update the firmware on a working Jawbreaker, use the hackrf_spiflash program:
-> hackrf_spiflash -w usb_performance_rom_to_ram.bin
+> hackrf_spiflash -w hackrf_usb_rom_to_ram.bin
 
 When writing a firmware image to SPI flash, be sure to select firmware that is compiled with the "rom_to_ram" option.  (Without that option, the microcontroller will try to execute code directly from SPI flash without first copying the code to RAM.  This can cause performance problems and can result in future firmware update failures.)
 
@@ -40,7 +40,5 @@ If cpldjtagprog fails, LED2 should illuminate (and not blink).  If this happens,
 If the firmware installed in SPI flash has been damaged or if you are programming a home-made Jawbreaker for the first time, you will not be able to immediately use the hackrf_spiflash program as listed in the above procedure.  Follow these steps instead:
 
 1. Follow the DFU Boot instructions to start the Jawbreaker in DFU boot mode.
-2. Use 'make program' in the firmware/usb_performance directory to load the firmware into RAM and start it.
+2. Use 'make program' in the firmware/hackrf_usb directory to load the firmware into RAM and start it.
 3. Follow the SPI flash firmware update procedure above to write the "rom_to_ram" firmware image to SPI flash.
-
-FIXME: rename usb_performance
