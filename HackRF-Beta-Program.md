@@ -26,7 +26,8 @@ Software known to support HackRF:
 
 Linux distributions known to include libhackrf:
 
-* none yet, but [Pentoo](http://www.pentoo.ch/) will likely be the first!
+* [Pentoo](http://www.pentoo.ch/)
+* [Gentoo](http://www.gentoo.org/)
 
 ## Testing
 
