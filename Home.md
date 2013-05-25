@@ -2,11 +2,13 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 ## User Documentation
 
-* [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
+* [Jawbreaker](https://github.com/mossmann/hackrf/wiki/Jawbreaker)
 * [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
 * [Updating Firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware)
 
 ## Developer Notes
+
+* [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
 
 ### Firmware
 
