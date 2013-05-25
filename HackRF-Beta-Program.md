@@ -26,6 +26,10 @@ Software known to support HackRF:
 
 Notably absent from the above list is [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), THE open source SDR software framework.  GNU Radio support is provided by gr-osmosdr.  Install GNU Radio and libhackrf, then install gr-osmosdr to get them to work together.
 
+Linux distributions known to include libhackrf:
+
+* none yet, but [Pentoo](http://www.pentoo.ch/) will likely be the first!
+
 ## Testing
 
 The best way to help test HackRF is to try using it for whatever radio application interests you.  If you aren't sure where to start, try getting familiar with [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), especially [GNU Radio Companion](http://gnuradio.org/redmine/projects/gnuradio/wiki/GNURadioCompanion).  Search the web for interesting SDR implementations and see if you can reproduce them with HackRF.
