@@ -20,7 +20,7 @@ The primary software library required to work with Jawbreaker is [libhackrf](htt
 
 Software known to support HackRF:
 
-* [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki): THE open source SDR software framework, with HackRF support provided by [gr-osmosdr](http://cgit.osmocom.org/gr-osmosdr/)
+* [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki): THE open source SDR software framework, with HackRF support provided by [gr-osmosdr](http://sdr.osmocom.org/trac/wiki/GrOsmoSDR)
 * [hackrf-tools](https://github.com/mossmann/hackrf/tree/master/host/hackrf-tools): command-line utilities for HackRF
 * [SDR#](http://www.sdrsharp.com/): A graphical SDR receiver application
 
