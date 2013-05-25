@@ -32,7 +32,7 @@ Linux distributions known to include libhackrf:
 
 ## Testing
 
-The best way to help test HackRF is to try using it for a radio application that interests you.  If you aren't sure where to start, try getting familiar with [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), especially [GNU Radio Companion](http://gnuradio.org/redmine/projects/gnuradio/wiki/GNURadioCompanion).  Search the web for interesting SDR implementations and see if you can reproduce them with HackRF.
+The best way to help test HackRF is to use it for a radio application that interests you.  If you aren't sure where to start, try getting familiar with [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), especially [GNU Radio Companion](http://gnuradio.org/redmine/projects/gnuradio/wiki/GNURadioCompanion).  Search the web for interesting SDR implementations and see if you can reproduce them with HackRF.
 
 ## Communication
 
