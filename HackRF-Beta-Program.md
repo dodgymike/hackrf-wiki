@@ -25,3 +25,11 @@ Software known to support HackRF:
 * [SDR#](http://www.sdrsharp.com/): A graphical SDR receiver application
 
 Notably absent from the above list is [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), THE open source SDR software framework.  GNU Radio support is provided by gr-osmosdr.  Install GNU Radio and libhackrf, then install gr-osmosdr to get them to work together.
+
+## Testing
+
+The best way to help test HackRF is to try using it for whatever radio application interests you.  If you aren't sure where to start, try getting familiar with [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki), especially [GNU Radio Companion](http://gnuradio.org/redmine/projects/gnuradio/wiki/GNURadioCompanion).  Search the web for interesting SDR implementations and see if you can reproduce them with HackRF.
+
+## Communication
+
+Please subscribe to the [HackRF-dev mailing list](http://nine.pairlist.net/mailman/listinfo/hackrf-dev).  This is the preferred way to share test results or ask questions.  Additionally, you may want to join the #hackrf IRC channel on [freenode](http://freenode.net/).  Specific bugs and feature requests may be added to the [Issues List](https://github.com/mossmann/hackrf/issues?direction=desc&sort=updated&state=open) though they should probably be discussed on the mailing list or IRC first.
