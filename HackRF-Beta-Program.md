@@ -14,6 +14,12 @@ The HackRF beta hardware platform is [Jawbreaker](https://github.com/mossmann/ha
 
 Jawbreaker is a development tool.  It has not been tested for compliance with regulations governing transmission and reception of radio signals.  You are responsible for operating Jawbreaker in a manner permitted by the laws of your country.
 
+## Handling your Jawbreaker
+
+Jawbreaker is distributed as a bare circuit board.  It is fragile and may be damaged by electrostatic discharge (ESD) or by contact with conductive objects or surfaces during operation.  Handle your Jawbreaker only by its edges.  Do not operate Jawbreaker on a metal surface.  Store your Jawbreaker in its anti-static bag when not in use.
+
+You may wish to protect your Jawbreaker with an enclosure.  A [design](https://github.com/mossmann/hackrf/tree/master/hardware/jawbreaker/SoBv1_DP17298) for a laser-cut acrylic enclosure is available.
+
 ## Software
 
 The primary software library required to work with Jawbreaker is [libhackrf](https://github.com/mossmann/hackrf/tree/master/host/libhackrf).  To use any software that supports HackRF, you must first install libhackrf.
