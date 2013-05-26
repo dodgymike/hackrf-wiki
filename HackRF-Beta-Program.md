@@ -24,6 +24,8 @@ Software known to support HackRF:
 * [hackrf-tools](https://github.com/mossmann/hackrf/tree/master/host/hackrf-tools): command-line utilities for HackRF
 * [SDR#](http://www.sdrsharp.com/): A graphical SDR receiver application
 
+The latest 3.6 release of GNU Radio is recommended.  [Significant changes](https://lists.gnu.org/archive/html/discuss-gnuradio/2013-05/msg00448.html) are underway in the git repository.
+
 Linux distributions known to include libhackrf:
 
 * [Pentoo](http://www.pentoo.ch/)
