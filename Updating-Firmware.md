@@ -1,17 +1,21 @@
-HackRF Jawbreaker ships with firmware on the SPI flash memory and with a bitstream programmed onto the CPLD.  You should be able to start using it with nothing more than a USB cable and host computer.
+HackRF Jawbreaker ships with firmware on the SPI flash memory and with a bitstream programmed onto the CPLD.  You will need to update the firmware.  You can do this with nothing more than a USB cable and host computer.
 
-These instructions allow you to upgrade the firmware and CPLD bitstream in order to take advantage of new features or bug fixes.
+These instructions allow you to upgrade the firmware and (CPLD bitstream if necessary) in order to take advantage of new features or bug fixes.
 
-# Updating the SPI Flash Firmware
+## Updating the SPI Flash Firmware
 
 To update the firmware on a working Jawbreaker, use the hackrf_spiflash program:
 > hackrf_spiflash -w hackrf_usb_rom_to_ram.bin
+
+You can find the firmware binary (hackrf_usb_rom_to_ram.bin) in the firmware-bin directory of the latest [release package](http://sourceforge.net/projects/hackrf/files/) or you can compile your own from the [source](https://github.com/mossmann/hackrf/tree/master/firmware).
+
+The hackrf_spiflash program is part hackrf-tools.
 
 When writing a firmware image to SPI flash, be sure to select firmware that is compiled with the "rom_to_ram" option.  (Without that option, the microcontroller will try to execute code directly from SPI flash without first copying the code to RAM.  This can cause performance problems and can result in future firmware update failures.)
 
 After writing the firmware to SPI flash, unplug Jawbreaker and plug it back in to boot the new firmware.
 
-# DFU Boot
+## DFU Boot
 
 The LPC4330 microcontroller on Jawbreaker is capable of booting from several different code sources.  By default, Jawbreaker boots from SPI flash memory (SPIFI).  By shorting two pins on one of the "BOOT" headers while power is first supplied, you can force Jawbreaker into DFU (USB) boot mode.  In DFU boot mode, Jawbreaker will enumerate over USB, wait for code to be delivered using the DFU (Device Firmware Update) standard over USB, and then execute that code from RAM.  The SPIFI is normally unused and unaltered in DFU mode.
 
@@ -24,7 +28,9 @@ We use DFU mode to enable programming of the CPLD and to program SPI flash if th
 
 Developers: DFU mode is also very convenient for making rapid changes during firmware development.  If you leave a jumper in place, you can install new firmware by removing power from Jawbreaker, plugging it back in, and typing 'make program' in the firmware source directory.  Note that you should not load firmware compiled with the "rom_to_ram" option over DFU.
 
-# Updating the CPLD
+## Updating the CPLD
+
+Required CPLD updates are rare.  You may never need to do this.
 
 To update to the latest CPLD image, simply use DFU boot mode to load the cpldjtagprog firmware.  Follow the DFU instructions above to start Jawbreaker in DFU boot mode and then execute:
 > cd firmware/cpldjtagprog
@@ -35,7 +41,7 @@ After a few seconds, three LEDs should start blinking.  This indicates that the 
 
 If cpldjtagprog fails, LED2 should illuminate (and not blink).  If this happens, unplug Jawbreaker and try again.
 
-# Recovering the SPI Flash Firmware
+## Recovering the SPI Flash Firmware
 
 If the firmware installed in SPI flash has been damaged or if you are programming a home-made Jawbreaker for the first time, you will not be able to immediately use the hackrf_spiflash program as listed in the above procedure.  Follow these steps instead:
 
