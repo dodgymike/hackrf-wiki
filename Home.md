@@ -6,6 +6,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
 * [HackRF Beta Program](https://github.com/mossmann/hackrf/wiki/HackRF-Beta-Program) (Received a Jawbreaker?  Start here!)
 * [Updating Firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware)
+* [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
 
 ## Developer Notes
 
