@@ -7,6 +7,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [HackRF Beta Program](https://github.com/mossmann/hackrf/wiki/HackRF-Beta-Program) (Received a Jawbreaker?  Start here!)
 * [Updating Firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware)
 * [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
+* [HackRF Hacks](https://github.com/mossmann/hackrf/wiki/HackRF-Hacks)
 
 ## Developer Notes
 
