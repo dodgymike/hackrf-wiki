@@ -4,6 +4,8 @@ Things to consider for post-Jawbreaker hardware designs:
 
 The PCB antenna on Jawbreaker was included to facilitate beta testing. Future designs likely will not include a PCB antenna.
 
+If an antenna is not included, a side-launch SMA antenna connector might be worth considering. It'd be much easier to pack up a connected HackRF if there wasn't a stiff coax cabls sticking out perpendicular to the board.
+
 # CPLD
 
 The CPLD could be removed, but some sort of multiplexer would be needed to meet the MAX5864 i/o requirements.
