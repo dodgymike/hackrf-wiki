@@ -24,3 +24,16 @@ If you want to restore the PCB antenna for some reason, you can install a 10 nF 
 ## SMA, not RP-SMA
 
 Some connectors that appear to be SMA are actually RP-SMA.  If you connect an RP-SMA antenna to Jawbreaker, it will seem to connect snugly but won't function at all because neither the male nor female side has a center pin.  RP-SMA connectors are most common on 2.4 GHz antennas and are popular on Wi-Fi equipment.
+
+## Transmit Power
+
+The maximum TX power varies by operating frequency:
+* 30 MHz to 100 MHz: 5 dBm to 15 dBm, increasing as frequency decreases
+* 100 MHz to 2300 MHz: 0 dBm to 10 dBm, increasing as frequency decreases
+* 2300 MHz to 2700 MHz: 10 dBm to 15 dBm
+* 2700 MHz to 4000 MHz: -5 dBm to 5 dBm, increasing as frequency decreases
+* 4000 MHz to 6000 MHz: -15 dBm to 0 dBm, increasing as frequency decreases
+
+Overall, the output power is enough to perform over-the-air experiments at close range or to drive an external amplifier.  If you connect an external amplifier, you should also use an external bandpass filter for your operating frequency.
+
+Before you transmit, know your laws.  Jawbreaker has not been tested for compliance with regulations governing transmission of radio signals.  You are responsible for using your Jawbreaker legally.
