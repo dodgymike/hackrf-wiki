@@ -21,3 +21,13 @@ ATTR{idVendor}=="1d50", ATTR{idProduct}=="604b", SYMLINK+="hackrf-%k", MODE="666
 The content of the file instructs udev to look out for a device with a Vendor- and Product-ID of 1d50:604b which, in this case, is the unique device identification of the HackRF Jawbreaker board. It then sets the UNIX permissions to `666` and the group to `plugdev` and creates a symlink in `/dev` to the device.
 
 After creating the rules file you can either reboot or run the command `udevadm control --reload-rules` as root to instruct udev to reload all rule files. After replugging your HackRF board, you should be able to access the device with all utilities as a normal user.
+
+## hackrf_set_sample_rate fails
+
+### Q:
+
+I'm trying to run `hackrf_transfer` and hackrf_set_sample_rate fails. The libusb_control_transfer call in hackrf_set_sample_rate_manual is returning with LIBUSB_ERROR_PIPE.
+
+### A:
+
+Follow the instructions to [update your firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
