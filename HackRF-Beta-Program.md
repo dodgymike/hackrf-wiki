@@ -33,8 +33,10 @@ You can download the latest HackRF source code [release package](http://sourcefo
 Software known to support HackRF:
 
 * [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki): THE open source SDR software framework, with HackRF support provided by [gr-osmosdr](http://sdr.osmocom.org/trac/wiki/GrOsmoSDR)
-  * Under Linux the entire installation of hackrf, gr-osmosdr, gnu-radio and all dependencies can be automatically installed using Marcus D. Leech's excellent [build-gnuradio script](http://www.sbrac.org/files/build-gnuradio)
+  * Under Linux the entire installation of hackrf, gr-osmosdr, gnu-radio (3.6) and all dependencies can be automatically installed using Marcus D. Leech's excellent [build-gnuradio script](http://www.sbrac.org/files/build-gnuradio)
 * [hackrf-tools](https://github.com/mossmann/hackrf/tree/master/host/hackrf-tools): command-line utilities for HackRF, included in the HackRF source tree
+  * If you used build-gnuradio, once the script has finished you can simply do:
+`cd hackrf/host/hackrf-tools && mkdir build && cd build && cmake .. && make && sudo make install`
 
 The latest 3.6 release of GNU Radio is recommended.  [Significant changes](https://lists.gnu.org/archive/html/discuss-gnuradio/2013-05/msg00448.html) toward 3.7 are underway in the git repository.  Use gr-osmosdr's gr3.6 branch for compatibility with GNU Radio 3.6.
 
