@@ -22,6 +22,8 @@ You may wish to protect your Jawbreaker with an enclosure.  A [design](https://g
 
 ## Software
 
+*** Read this whole section thoroughly before starting any software installation! Some of the options may include steps that duplicate installation of individual components, so you will end up wasting a lot of time re-installing what you've already got! ***
+
 The primary software library required to work with Jawbreaker is [libhackrf](https://github.com/mossmann/hackrf/tree/master/host/libhackrf).  To use any software that supports HackRF, you must first install libhackrf.
 
 You will need to [update the firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware) on your Jawbreaker to use the latest software.
@@ -31,6 +33,7 @@ You can download the latest HackRF source code [release package](http://sourcefo
 Software known to support HackRF:
 
 * [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki): THE open source SDR software framework, with HackRF support provided by [gr-osmosdr](http://sdr.osmocom.org/trac/wiki/GrOsmoSDR)
+  * Under Linux the entire installation of hackrf, gr-osmosdr, gnu-radio and all dependencies can be automatically installed using Marcus D. Leech's excellent [build-gnuradio script](http://www.sbrac.org/files/build-gnuradio)
 * [hackrf-tools](https://github.com/mossmann/hackrf/tree/master/host/hackrf-tools): command-line utilities for HackRF, included in the HackRF source tree
 
 The latest 3.6 release of GNU Radio is recommended.  [Significant changes](https://lists.gnu.org/archive/html/discuss-gnuradio/2013-05/msg00448.html) toward 3.7 are underway in the git repository.  Use gr-osmosdr's gr3.6 branch for compatibility with GNU Radio 3.6.
