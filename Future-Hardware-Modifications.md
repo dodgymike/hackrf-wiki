@@ -17,3 +17,7 @@ The clock signal from the Si5351C to the LPC43xx's GP_CLKIN pin may need differe
 ## Power Management
 
 The MAX5864 appears to come up in "Tx" or "Rcvr" mode -- I have observed that the part will pass DA bus data to ID/QD without any SPI configuration. If we're worried about USB power and minimizing current consumption, it might be good to have this device on a power regulator with an ENABLE pin, or have a FET power switch.
+
+## Miscellaneous
+
+Any reason P28 (SD) pin 12 isn't grounded or doing something useful? Same goes for P25 (LPC_ISP) pin 3 -- maybe make it VCC, the signaling voltage for the ISP interface? The SPIFI connector could also use a reference voltage (GND?).
