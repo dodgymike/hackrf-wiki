@@ -29,3 +29,5 @@ Any reason P28 (SD) pin 12 isn't grounded or doing something useful? Same goes f
 I'd like to see an I2C bus exposed somewhere, and perhaps an I2S0_RX_SDA signal, so I don't have to steal it from the CPLD interface. The I2S0 will function in "four-wire mode" with only one more pin (RX_SDA), so why not?
 
 Provide a way to inject a supply voltage into the board? Having diodes managing multiple voltage sources would be lossy, so a more expensive solution would be necessary on the Jawbreaker board, adding cost.
+
+If an LPC43xx package with a higher pin-count is used, it would be stellar to expose the LCD interface and quadrature encoder peripheral pins.
