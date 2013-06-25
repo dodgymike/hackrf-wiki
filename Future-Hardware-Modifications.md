@@ -31,3 +31,5 @@ I'd like to see an I2C bus exposed somewhere, and perhaps an I2S0_RX_SDA signal,
 Provide a way to inject a supply voltage into the board? Having diodes managing multiple voltage sources would be lossy, so a more expensive solution would be necessary on the Jawbreaker board, adding cost.
 
 If an LPC43xx package with a higher pin-count is used, it would be stellar to expose the LCD interface and quadrature encoder peripheral pins.
+
+The RTC would be handy for stand-alone use. This would require a crystal (32.768kHz) between RTCX1 and RTCX2, and exposing VBAT to a shield for battery backup (disconnecting it from VCC) or providing a coin cell footprint on the HackRF PCB.
