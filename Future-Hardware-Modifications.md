@@ -37,3 +37,5 @@ Provide a way to inject a supply voltage into the board? Having diodes managing 
 If an LPC43xx package with a higher pin-count is used, it would be stellar to expose the LCD interface and quadrature encoder peripheral pins.
 
 The RTC would be handy for stand-alone use. This would require a crystal (32.768kHz) between RTCX1 and RTCX2, and exposing VBAT to a shield for battery backup (disconnecting it from VCC) or providing a coin cell footprint on the HackRF PCB.
+
+Coalesce separate headers into fewer, larger banks of headers, to reduce the number of unique, small header receptacles required for mating? Reducing the header count will also increase the amount of board space around the perimeter of a shield for components and connectors.
