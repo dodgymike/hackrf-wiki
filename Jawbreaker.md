@@ -15,7 +15,7 @@ HackRF Jawbreaker is the beta test hardware platform for the HackRF project.
 
 Jawbreaker has an SMA antenna connector but also includes a built-in PCB antenna intended for operation near 900 MHz.  It isn't a very good antenna.  Seriously.  A paperclip stuck into the SMA connector would probably be better.  You can free your Jawbreaker to operate with better antennas by cutting the PCB trace to the PCB antenna with a knife.  This enables the SMA connector to be used without interference from the PCB antenna.
 
-The trace to be cut is labeled R44 in the [assembly diagram](https://github.com/mossmann/hackrf/blob/master/doc/hardware/jawbreaker-assembly.pdf?raw=true).  There is an arrow pointing to it printed on the board.
+The trace to be cut is between the two solder pads inside a box labeled R44 in the [assembly diagram](https://github.com/mossmann/hackrf/blob/master/doc/hardware/jawbreaker-assembly.pdf?raw=true).  There is an arrow pointing to it printed on the board. Before this modification, the pads of R44 will appear as a single solder blob. Use a soldering iron and fine solder wick to remove as much solder as you can from the two R44 pads. Then, use a pen knife to gently cut away the area between the two R44 pads. Make multiple, gentle cuts, instead of one or two forceful cuts. As you cut, you'll break through the black solder mask, then the copper trace between the pads, and stop when you reach fiberglass. Remove the copper trace completely, so just the two R44 pads remain. Use a multimeter or continuity tester to verify that the two R44 pads are no longer connected.
 
 The only reason not to do this is if you want to try Jawbreaker but don't have any antenna with an SMA connector (or adapter).
 
