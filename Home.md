@@ -8,6 +8,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [Updating Firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware)
 * [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
 * [HackRF Hacks](https://github.com/mossmann/hackrf/wiki/HackRF-Hacks)
+* [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) (software setup for particular OS or Linux distro)
 
 ## Developer Notes
 
