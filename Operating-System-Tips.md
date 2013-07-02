@@ -32,6 +32,7 @@ mkdir build && cd build
 cmake ../
 make -j4 // example build command to speed up compilation process when 4 cores are available
 sudo make install
+sudo ldconfig
 ```
 4. `gr-osmosdr`
 ```
