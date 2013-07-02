@@ -6,7 +6,7 @@ HackRF Jawbreaker is the beta test hardware platform for the HackRF project.
 * operating freq: 30 MHz to 6 GHz
 * supported sample rates: 8 Msps to 20 Msps (quadrature)
 * resolution: 8 bits
-* interface: High Speed USB
+* interface: High Speed USB (with USB Micro-B connector)
 * power supply: USB bus power
 * portable
 * open source
