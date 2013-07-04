@@ -48,4 +48,20 @@ This periodic signal contains a strong sinusoidal component spanning from -2 to 
 
 Samples produced by HackRF are measurements of radio waveforms, but the measurement method is prone to a DC bias introduced by HackRF.  It's an artifact of the measurement system, not an indication of a received radio signal.  DC offset is not unique to HackRF; it is common to all quadrature sampling systems.
 
-There was a bug in the HackRF firmware (through release 2013.06.1) that made the DC offset worse than it should have been.  In the worst cases, certain Jawbreakers experienced a DC offset that drifted to a great extreme over several seconds of operation.  This bug has been fixed (only in git at the time of writing).  The fix reduces DC offset but does not do away with it entirely.  It is something you have to live with when using any quadrature sampling system like HackRF
+There was a bug in the HackRF firmware (through release 2013.06.1) that made the DC offset worse than it should have been.  In the worst cases, certain Jawbreakers experienced a DC offset that drifted to a great extreme over several seconds of operation.  This bug has been fixed (only in git at the time of writing).  The fix reduces DC offset but does not do away with it entirely.  It is something you have to live with when using any quadrature sampling system like HackRF.
+
+## How do I deal with the DC offset?
+
+### Q:
+
+Okay, now that I understand what that big spike in the middle of my spectrum is, how do I handle it?
+
+### A:
+
+There are a few options:
+
+1. Ignore it.  For many applications it isn't a problem.  You'll learn to ignore it.
+
+2. Avoid it.  The best way to handle DC offset for most applications is to use offset tuning; instead of tuning to your exact frequency of interest, tune to a nearby frequency so that the entire signal you are interested in is shifted away from 0 Hz but still within the received bandwidth.  If your algorithm works best with your signal centered at 0 Hz (many do), you can shift the frequency in the digital domain, moving your signal of interest to 0 Hz and your DC offset away from 0 Hz.  HackRF's high maximum sampling rate can be a big help as it allows you to use offset tuning even for relatively wideband signals.
+
+3. Correct it.  There are various ways of removing the DC offset in software.  However, these techniques may degrade parts of the signal that are close to 0 Hz.  It may look better, but that doesn't necessarily mean that it is better from the standpoint of a demodulator algorithm, for example.  Still, correcting the DC offset is often a good choice.
