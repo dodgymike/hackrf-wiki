@@ -34,6 +34,12 @@ Follow the instructions to [update your firmware](https://github.com/mossmann/ha
 
 ## What is this big spike in the center of my received spectrum?
 
+### Q:
+
+I see a large spike in the center of my FFT display regardless of the frequency my HackRF is tuned to.  Is there something wrong with my HackRF?
+
+### A:
+
 You are seeing a DC offset (or component or bias).  The term "DC" comes from "Direct Current" in electronics.  It is the unchanging aspect of a signal as opposed to the "alternating" part of the signal (AC) that changes over time.  Take, for example, the signal represented by the digital sequence:
 ```
 -2, -1, 1, 6, 8, 9, 8, 6, 1, -1, -2, -1, 1, 6, 8, 9, 8, 6, 1, -1, -2, -1, 1, 6, 8, 9, 8, 6, 1, -1
