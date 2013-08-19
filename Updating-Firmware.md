@@ -15,6 +15,8 @@ When writing a firmware image to SPI flash, be sure to select firmware that is c
 
 After writing the firmware to SPI flash, unplug Jawbreaker and plug it back in to boot the new firmware.
 
+If you get an error that mentions HACKRF_ERROR_NOT_FOUND, check out the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ#i-cant-seem-to-access-my-hackrf-under-linux). It's often a permissions problem that can be quickly solved.
+
 ## DFU Boot
 
 The LPC4330 microcontroller on Jawbreaker is capable of booting from several different code sources.  By default, Jawbreaker boots from SPI flash memory (SPIFI).  By shorting two pins on one of the "BOOT" headers while power is first supplied, you can force Jawbreaker into DFU (USB) boot mode.  In DFU boot mode, Jawbreaker will enumerate over USB, wait for code to be delivered using the DFU (Device Firmware Update) standard over USB, and then execute that code from RAM.  The SPIFI is normally unused and unaltered in DFU mode.
