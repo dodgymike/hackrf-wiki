@@ -26,11 +26,11 @@ sudo make install
 3. GNU Radio
 (Note that this will install GNU Radio version 3.7.x which means that old flow graphs won't work due to renamings.)
 ```
-git clone git://gnuradio.org/gnuradio.git
+
 cd gnuradio
 mkdir build && cd build
 cmake ../
-make -j4 // example build command to speed up compilation process when 4 cores are available
+make -j4 # example build command to speed up compilation process when 4 cores are available
 sudo make install
 sudo ldconfig
 ```
