@@ -28,6 +28,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [Clocking](https://github.com/mossmann/hackrf/wiki/Clocking)
 * [Future Hardware Modifications](https://github.com/mossmann/hackrf/wiki/Future-Hardware-Modifications)
 * [Hardware Components](https://github.com/mossmann/hackrf/wiki/Hardware-Components)
+  * [Block Diagrams](Hardware-Components#block-diagrams)
 * [Lemondrop Bring-Up](https://github.com/mossmann/hackrf/wiki/Lemondrop-Bring-Up)
 
 ## How to Help
