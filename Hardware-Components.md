@@ -18,3 +18,10 @@ Major parts selected so far (subject to change):
 * [RFFC5072 mixer/synthesizer](https://estore.rfmd.com/RFMD_Onlinestore/Products/RFMD+Parts/PID-P_RFFC5072.aspx)
   * [Datasheet](http://www.rfmd.com/CS/Documents/RFFC5071_2DS.pdf)
   * [Other Documentation](https://estore.rfmd.com/RFMD_Onlinestore/Products/RFMD+Parts/PID-P_RFFC5071.aspx) - includes programming guides and application notes.
+
+Block Diagrams
+==============
+
+![HackRF Frontend and Baseband Block Diagram](https://raw.github.com/mossmann/hackrf/master/doc/wiki/images/hackrf_blockdiagram-frontend_baseband.png)
+
+![HackRF Digital Stage Block Diagram](https://raw.github.com/mossmann/hackrf/master/doc/wiki/images/hackrf_blockdiagram-digital.png)
