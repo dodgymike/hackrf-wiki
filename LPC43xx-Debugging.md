@@ -147,6 +147,10 @@ More GDB tips for the GDB-unfamiliar:
     # execution.
     display/32xh buffer
 
+    # Print the contents of a range of registers (in this case the
+    # CGU peripheral, starting at 0x40050014, for 46 words):
+    x/46 0x40050014
+
 And still more, for debugging ARM Cortex-M4 Hard Faults:
 
     # Assuming you have a hard-fault handler wired in:
