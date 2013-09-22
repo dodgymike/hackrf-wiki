@@ -6,6 +6,10 @@ The PCB antenna on Jawbreaker was included to facilitate beta testing. Future de
 
 If a PCB antenna is not included, a side-launch SMA antenna connector might be worth considering. It'd be much easier to pack up a connected HackRF if there wasn't a stiff coax cabls sticking out perpendicular to the board.
 
+## Baseband
+
+The interfaces between the MAX2837 and MAX5864 have some signals inverted. Theoretically, that's fine if compensated for in software. However, I'm theorizing that RX/ADC DC offset compensation assumes that both channels have the same DC polarity. I've fixed the inversion in the CPLD. However, a PCB experiment should be conducted to see if the DC offset is reduced by un-inverting the RX Q channel connections to the MAX5864.
+
 ## CPLD
 
 The CPLD could be removed, but some sort of multiplexer would be needed to meet the MAX5864 i/o requirements.  Depending on the particular LPC43xx part used, it might be possible to use the System Control Unit (SCU) for this.
