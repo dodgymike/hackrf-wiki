@@ -18,6 +18,8 @@ The CPLD could be removed, but some sort of multiplexer would be needed to meet 
 
 The clock signal from the Si5351C to the LPC43xx's GP_CLKIN pin may need different passives, but the documentation on that clock input is thin (acceptable peak-to-peak voltage anyone?).
 
+An unpopulated footprint for a 32.768 kHz RTC crystal would be nice.  Also break out RTC battery pins to an expansion header.
+
 ## USB
 
 Would support for host mode on the second USB PHY be useful somehow? This is only possible with a larger LPC43xx package that exposes the second PHY's ULPI signals. Unless, of course, a mere full-speed PHY is acceptable.
