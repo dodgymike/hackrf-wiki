@@ -32,6 +32,10 @@ The MAX5864 appears to come up in "Tx" or "Rcvr" mode -- I have observed that th
 
 Add a reset button (for the LPC43xx).  Maybe add a DFU button too.
 
+## Shielding
+
+Maybe add a can around the RF section.
+
 ## Miscellaneous
 
 ### Shield Support
