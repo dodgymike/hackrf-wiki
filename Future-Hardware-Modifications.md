@@ -36,6 +36,10 @@ Add a reset button (for the LPC43xx).  Maybe add a DFU button too.
 
 Maybe add a can around the RF section.
 
+## Footprints
+
+Tighten up holes for USB connector support legs to improve placement consistency.  Make some of the QFN pads bigger (especially on the RF switches) for better soldering.
+
 ## Miscellaneous
 
 ### Shield Support
