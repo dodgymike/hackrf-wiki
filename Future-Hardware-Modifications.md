@@ -28,6 +28,10 @@ Would support for host mode on the second USB PHY be useful somehow? This is onl
 
 The MAX5864 appears to come up in "Tx" or "Rcvr" mode -- I have observed that the part will pass DA bus data to ID/QD without any SPI configuration. If we're worried about USB power and minimizing current consumption, it might be good to have this device on a power regulator with an ENABLE pin, or have a FET power switch.  Yes, let's add a high side switch for the whole RF section.
 
+## Regulators
+
+U21 (the TPS62410) FB1 pin is connected on the far side of jumper P8 (VCC), which puts the jumper inside the feedback path. If the jumper trace is cut, the regulator may go nuts because the FB pin is floating.
+
 ## Buttons
 
 Add a reset button (for the LPC43xx).  Maybe add a DFU button too.
