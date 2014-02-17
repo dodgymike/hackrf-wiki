@@ -6,6 +6,10 @@ Various debugger options for the LPC43xx exist.
 
 Recent Black Magic Probe firmware supports the LPC43xx.
 
+To check your Black Magic Probe's firmware revision from inside gdb:
+
+    monitor version
+
 To upgrade the Black Magic Probe firmware, plug in the Black Magic Probe and do:
 
     git clone git://github.com/gsmcmullin/blackmagic.git
