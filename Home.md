@@ -2,6 +2,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 ## User Documentation
 
+* [HackRF One](https://github.com/mossmann/hackrf/wiki/HackRF-One)
 * [Jawbreaker](https://github.com/mossmann/hackrf/wiki/Jawbreaker)
 * [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
 * [HackRF Beta Program](https://github.com/mossmann/hackrf/wiki/HackRF-Beta-Program) (Received a Jawbreaker?  Start here!)
