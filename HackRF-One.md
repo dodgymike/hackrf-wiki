@@ -69,3 +69,9 @@ Through most of the frequency range up to 4 GHz, the maximum TX power is between
 Overall, the output power is enough to perform over-the-air experiments at close range or to drive an external amplifier.  If you connect an external amplifier, you should also use an external bandpass filter for your operating frequency.
 
 Before you transmit, know your laws.  HackRF One has not been tested for compliance with regulations governing transmission of radio signals.  You are responsible for using your HackRF One legally.
+
+## Receive Power
+
+The maximum RX power of HackRF One is -5 dBm.  Exceeding -5 dBm can result in permanent damage!
+
+In theory, HackRF One can safely accept up to 10 dBm with the front-end RX amplifier disabled.  However, a simple software or user error could enable the amplifier, resulting in permanent damage.  It is better to use an external attenuator than to risk damage.
