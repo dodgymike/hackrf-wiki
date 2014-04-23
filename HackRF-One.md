@@ -42,6 +42,16 @@ The commercial version of HackRF One ships with an injection molded plastic encl
 
 * Acrylic sandwich: You can also use a laser cut acrylic enclosure in the "Sick of Beige" style with HackRF One.  This is a good option for access to the expansion headers.  A design can be found in the HackRF One hardware directory.  Use any laser cutting service.
 
+## Using HackRF One's Buttons
+
+The RESET button resets the microcontroller.  This is a reboot that should result in a USB re-enumeration.
+
+The DFU button invokes a USB DFU bootloader located in the microcontroller's ROM.  This bootloader makes it possible to unbrick a HackRF One with damaged firmware because the ROM cannot be overwritten.
+
+To invoke DFU mode: Press and hold the DFU button.  While holding the DFU button, reset the HackRF One either by pressing and releasing the RESET button or by powering on the HackRF One.  Release the DFU button.
+
+The DFU button only invokes the bootloader during reset.  This means that it can be used for other functions by custom firmware.
+
 ## SMA, not RP-SMA
 
 Some connectors that appear to be SMA are actually RP-SMA.  If you connect an RP-SMA antenna to HackRF One, it will seem to connect snugly but won't function at all because neither the male nor female side has a center pin.  RP-SMA connectors are most common on 2.4 GHz antennas and are popular on Wi-Fi equipment.  Adapters are available.
