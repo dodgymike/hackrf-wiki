@@ -34,6 +34,14 @@ Jawbreaker was the beta platform that preceded HackRF One.  HackRF One incorpora
 * Antenna port power: HackRF One can supply up to 50 mA at 3.3 V DC on the antenna port for compatibility with powered antennas and other low power amplifiers.
 * Enhanced frequency range: The RF performance of HackRF One is better than Jawbreaker, particularly at the high and low ends of the operating frequency range. HackRF One can operate at 10 MHz or even lower.
 
+## Enclosure Options
+
+The commercial version of HackRF One ships with an injection molded plastic enclosure, but it is designed to fit two optional enclosures:
+
+* Hammond 1455J1201: HackRF One fits this extruded aluminum enclosure and other similar models from Hammond Manufacturing.  In order to use the enclosure's end plates, you will have to drill them.  An end plate template can be found in the HackRF One KiCad layout.
+
+* Acrylic sandwich: You can also use a laser cut acrylic enclosure in the "Sick of Beige" style with HackRF One.  This is a good option for access to the expansion headers.  A design can be found in the HackRF One hardware directory.  Use any laser cutting service.
+
 ## SMA, not RP-SMA
 
 Some connectors that appear to be SMA are actually RP-SMA.  If you connect an RP-SMA antenna to HackRF One, it will seem to connect snugly but won't function at all because neither the male nor female side has a center pin.  RP-SMA connectors are most common on 2.4 GHz antennas and are popular on Wi-Fi equipment.  Adapters are available.
