@@ -23,7 +23,7 @@ Jawbreaker was the beta platform that preceded HackRF One.  HackRF One incorpora
 * Antenna port: No modification is necessary to use the SMA antenna port on HackRF One.
 * PCB antenna: Removed.
 * Size: HackRF One is smaller at 120 mm x 75 mm (PCB size).
-* Enclosure: The commercial version of HackRF One ships with an injection molded plastic enclosure. HackRF One is also designed to fit other enclosure options.
+* Enclosure: The commercial version of HackRF One from Great Scott Gadgets ships with an injection molded plastic enclosure. HackRF One is also designed to fit other enclosure options.
 * Buttons: HackRF One has a RESET button and a DFU button for easy programming.
 * Clock input and output: Installed and functional without modification.
 * USB connector: HackRF One features a new USB connector and improved USB layout.
@@ -36,7 +36,7 @@ Jawbreaker was the beta platform that preceded HackRF One.  HackRF One incorpora
 
 ## Enclosure Options
 
-The commercial version of HackRF One ships with an injection molded plastic enclosure, but it is designed to fit two optional enclosures:
+The commercial version of HackRF One from Great Scott Gadgets ships with an injection molded plastic enclosure, but it is designed to fit two optional enclosures:
 
 * Hammond 1455J1201: HackRF One fits this extruded aluminum enclosure and other similar models from Hammond Manufacturing.  In order to use the enclosure's end plates, you will have to drill them.  An end plate template can be found in the HackRF One KiCad layout.
 
@@ -75,3 +75,16 @@ Before you transmit, know your laws.  HackRF One has not been tested for complia
 The maximum RX power of HackRF One is -5 dBm.  Exceeding -5 dBm can result in permanent damage!
 
 In theory, HackRF One can safely accept up to 10 dBm with the front-end RX amplifier disabled.  However, a simple software or user error could enable the amplifier, resulting in permanent damage.  It is better to use an external attenuator than to risk damage.
+
+## Expansion Interface
+
+The HackRF One expansion interface consists of headers P9, P20, P22, and P28.  These four headers are installed on the commercial HackRF One from Great Scott Gadgets.
+
+* P9 BASEBAND: A direct interface to the high speed dual ADC and dual DAC.
+* P20 GPIO: GPIO, ADC, RTC, and power.
+* P22 I2S: I2S, SPI, I2C, UART, GPIO, and clocks.
+* P28 SD: SDIO, GPIO, clocks, and CPLD.
+
+Refer to the schematics and component documentation for more information.
+
+Additional unpopulated headers and test points are available for test and development, but they may be incompatible with some enclosure options.
