@@ -80,7 +80,7 @@ In theory, HackRF One can safely accept up to 10 dBm with the front-end RX ampli
 
 The HackRF One expansion interface consists of headers P9, P20, P22, and P28.  These four headers are installed on the commercial HackRF One from Great Scott Gadgets.
 
-* P9 BASEBAND: A direct interface to the high speed dual ADC and dual DAC.
+* P9 BASEBAND: A direct analog interface to the high speed dual ADC and dual DAC.
 * P20 GPIO: GPIO, ADC, RTC, and power.
 * P22 I2S: I2S, SPI, I2C, UART, GPIO, and clocks.
 * P28 SD: SDIO, GPIO, clocks, and CPLD.
