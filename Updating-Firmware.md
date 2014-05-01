@@ -1,25 +1,25 @@
-HackRF Jawbreaker ships with firmware on the SPI flash memory and with a bitstream programmed onto the CPLD.  You will need to update the firmware.  You can do this with nothing more than a USB cable and host computer.
+HackRF devices ship with firmware on the SPI flash memory and with a bitstream programmed onto the CPLD.  The firmware can be updated with nothing more than a USB cable and host computer.
 
 These instructions allow you to upgrade the firmware and (CPLD bitstream if necessary) in order to take advantage of new features or bug fixes.
 
 ## Updating the SPI Flash Firmware
 
-To update the firmware on a working Jawbreaker, use the hackrf_spiflash program:
+To update the firmware on a working HackRF, use the hackrf_spiflash program:
 > hackrf_spiflash -w hackrf_usb_rom_to_ram.bin
 
 You can find the firmware binary (hackrf_usb_rom_to_ram.bin) in the firmware-bin directory of the latest [release package](http://sourceforge.net/projects/hackrf/files/) or you can compile your own from the [source](https://github.com/mossmann/hackrf/tree/master/firmware).
 
 The hackrf_spiflash program is part hackrf-tools.
 
-When writing a firmware image to SPI flash, be sure to select firmware that is compiled with the "rom_to_ram" option.  (Without that option, the microcontroller will try to execute code directly from SPI flash without first copying the code to RAM.  This can cause performance problems and can result in future firmware update failures.)
+When writing a firmware image to SPI flash, be sure to select firmware that is compiled with the "rom_to_ram" option.  (Without that option, the microcontroller will try to execute code directly from SPI flash without first copying the code to RAM.  This can cause performance problems and can result in future firmware update failures.)  If you are compiling your own firmware, see firmware/README for instructions.
 
-After writing the firmware to SPI flash, unplug Jawbreaker and plug it back in to boot the new firmware.
+After writing the firmware to SPI flash, reset the HackRF device by pressing the RESET button or by unplugging it and plugging it back in.
 
 If you get an error that mentions HACKRF_ERROR_NOT_FOUND, check out the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ#i-cant-seem-to-access-my-hackrf-under-linux). It's often a permissions problem that can be quickly solved.
 
 ## DFU Boot
 
-The LPC4330 microcontroller on Jawbreaker is capable of booting from several different code sources.  By default, Jawbreaker boots from SPI flash memory (SPIFI).  By shorting two pins on one of the "BOOT" headers while power is first supplied, you can force Jawbreaker into DFU (USB) boot mode.  In DFU boot mode, Jawbreaker will enumerate over USB, wait for code to be delivered using the DFU (Device Firmware Update) standard over USB, and then execute that code from RAM.  The SPIFI is normally unused and unaltered in DFU mode.
+The LPC4330 microcontroller on HackRF is capable of booting from several different code sources.  By default, HackRF boots from SPI flash memory (SPIFI).  By shorting two pins on one of the "BOOT" headers while power is first supplied, you can force Jawbreaker into DFU (USB) boot mode.  In DFU boot mode, Jawbreaker will enumerate over USB, wait for code to be delivered using the DFU (Device Firmware Update) standard over USB, and then execute that code from RAM.  The SPIFI is normally unused and unaltered in DFU mode.
 
 The pins that must be shorted are pins 1 and 2 of header P32 on Jawbreaker.  Header P32 is labeled "P2_8" on most Jawbreakers but may be labeled "2" on prototype units.  Pin 1 is labeled "VCC".  Pin 2 is the center pin. 
 
@@ -31,16 +31,14 @@ Developers: DFU mode is also very convenient for making rapid changes during fir
 
 ## Updating the CPLD
 
-Required CPLD updates are rare.  You may never need to do this.
+Required CPLD updates are more rare than firmware updates.
 
-To update to the latest CPLD image, simply use DFU boot mode to load the cpldjtagprog firmware.  Follow the DFU instructions above to start Jawbreaker in DFU boot mode and then execute:
-> cd firmware/cpldjtagprog
+To update to the latest CPLD image, first update the SPI flash firmware, libhackrf, and hackrf-tools.
+Then:
 
-> make program
+> hackrf_cpldjtag -x firmware/cpld/sgpio_if/default.xsvf
 
-After a few seconds, three LEDs should start blinking.  This indicates that the CPLD has been programmed successfully.  You may now unplug Jawbreaker and reboot it normally.
-
-If cpldjtagprog fails, LED2 should illuminate (and not blink).  If this happens, unplug Jawbreaker and try again.
+After a few seconds, three LEDs should start blinking.  This indicates that the CPLD has been programmed successfully.  Reset the HackRF device by pressing the RESET button or by unplugging it and plugging it back in.
 
 ## Recovering the SPI Flash Firmware
 
