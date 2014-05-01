@@ -68,8 +68,8 @@ There are a few options:
 
 ## Purchasing HackRF
 
-### A:
+### Q:
 Where can I buy HackRF?
 
-### Q:
+### A:
 HackRF is designed and manufactured by Great Scott Gadgets.  Please see [http://greatscottgadgets.com/hackrf/](http://greatscottgadgets.com/hackrf/) for availability.  HackRF is open source hardware, so you could also build your own.
