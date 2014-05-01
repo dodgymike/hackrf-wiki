@@ -66,7 +66,10 @@ There are a few options:
 
 3. Correct it.  There are various ways of removing the DC offset in software.  However, these techniques may degrade parts of the signal that are close to 0 Hz.  It may look better, but that doesn't necessarily mean that it is better from the standpoint of a demodulator algorithm, for example.  Still, correcting the DC offset is often a good choice.
 
-## Where can I buy HackRF?
+## Purchasing HackRF
+
+### A:
+Where can I buy HackRF?
 
 ### Q:
-HackRF is designed and manufactured by Great Scott Gadgets.  Please see [http://greatscottgadgets.com/hackrf/](http://greatscottgadgets.com/hackrf/) for availability.
+HackRF is designed and manufactured by Great Scott Gadgets.  Please see [http://greatscottgadgets.com/hackrf/](http://greatscottgadgets.com/hackrf/) for availability.  HackRF is open source hardware, so you could also build your own.
