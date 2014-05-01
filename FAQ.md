@@ -48,7 +48,7 @@ This periodic signal contains a strong sinusoidal component spanning from -2 to 
 
 Samples produced by HackRF are measurements of radio waveforms, but the measurement method is prone to a DC bias introduced by HackRF.  It's an artifact of the measurement system, not an indication of a received radio signal.  DC offset is not unique to HackRF; it is common to all quadrature sampling systems.
 
-There was a bug in the HackRF firmware (through release 2013.06.1) that made the DC offset worse than it should have been.  In the worst cases, certain Jawbreakers experienced a DC offset that drifted to a great extreme over several seconds of operation.  This bug has been fixed (only in git at the time of writing).  The fix reduces DC offset but does not do away with it entirely.  It is something you have to live with when using any quadrature sampling system like HackRF.
+There was a bug in the HackRF firmware (through release 2013.06.1) that made the DC offset worse than it should have been.  In the worst cases, certain Jawbreakers experienced a DC offset that drifted to a great extreme over several seconds of operation.  This bug has been fixed.  The fix reduces DC offset but does not do away with it entirely.  It is something you have to live with when using any quadrature sampling system like HackRF.
 
 ## How do I deal with the DC offset?
 
