@@ -65,3 +65,8 @@ There are a few options:
 2. Avoid it.  The best way to handle DC offset for most applications is to use offset tuning; instead of tuning to your exact frequency of interest, tune to a nearby frequency so that the entire signal you are interested in is shifted away from 0 Hz but still within the received bandwidth.  If your algorithm works best with your signal centered at 0 Hz (many do), you can shift the frequency in the digital domain, moving your signal of interest to 0 Hz and your DC offset away from 0 Hz.  HackRF's high maximum sampling rate can be a big help as it allows you to use offset tuning even for relatively wideband signals.
 
 3. Correct it.  There are various ways of removing the DC offset in software.  However, these techniques may degrade parts of the signal that are close to 0 Hz.  It may look better, but that doesn't necessarily mean that it is better from the standpoint of a demodulator algorithm, for example.  Still, correcting the DC offset is often a good choice.
+
+## Where can I buy HackRF?
+
+### Q:
+HackRF is designed and manufactured by Great Scott Gadgets.  Please see [http://greatscottgadgets.com/hackrf/](http://greatscottgadgets.com/hackrf/) for availability.
