@@ -10,6 +10,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
 * [HackRF Hacks](https://github.com/mossmann/hackrf/wiki/HackRF-Hacks)
 * [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) (software setup for particular OS or Linux distro)
+* [Getting Help](https://github.com/mossmann/hackrf/wiki/Getting-Help)
 
 ## Developer Notes
 
