@@ -7,6 +7,8 @@ hackrf_open() failed: HACKRF_ERROR_NOT_FOUND (-5)
 ```
 
 ### A:
+First make sure that you are running the latest version of libhackrf and hackrf-tools. HackRF One, for example, is only supported by release 2014.04.1 or newer.  Then check to see if `hackrf_info` is successful when running as root.  If it is, then your other user is lacking permission.
+
 A normal user under Linux doesn't have the permissions to access arbitrary USB devices because of security reasons. The first solution would be to run every command which tries to access the HackRF as root which is not recommended for daily usage, but at least shows you if your HackRF really works.
 
 To fix this issue, you can write a udev rule to instruct udev to set permissions for the device in a way that it can be accessed by any user on the system who is a member of a specific group.
