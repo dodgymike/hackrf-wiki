@@ -4,7 +4,7 @@ HackRF One is the current hardware platform for the HackRF project.  It is a Sof
 
 * half-duplex transceiver
 * operating freq: 10 MHz to 6 GHz
-* supported sample rates: 8 Msps to 20 Msps (quadrature)
+* supported sample rates: 2 Msps to 20 Msps (quadrature)
 * resolution: 8 bits
 * interface: High Speed USB (with USB Micro-B connector)
 * power supply: USB bus power
