@@ -9,7 +9,7 @@ HackRF One is the current hardware platform for the HackRF project.  It is a Sof
 * interface: High Speed USB (with USB Micro-B connector)
 * power supply: USB bus power
 * software-controlled antenna port power (max 50 mA at 3.3 V)
-* SMA female antenna connector
+* SMA female antenna connector (50 ohms)
 * SMA female clock input and output for synchronization
 * convenient buttons for programming
 * pin headers for expansion
