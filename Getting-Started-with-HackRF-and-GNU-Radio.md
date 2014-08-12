@@ -6,7 +6,7 @@ Once Pentoo is running, type `startx` at the command line to launch the desktop 
 
 At the time of writing, the current Pentoo .iso (2014.0-RC3) has a minor bug that you need to work around by typing `eselect lapack set 1` at the command line in the terminal window before trying to use GNU Radio.  You only need to do this once after starting up Pentoo, but you'll have to do it every time you boot an unmodified .iso.
 
-To verify that your HackRF is detected, type `hackrf_info` at the command line.  It should produce a few lines of output including "Found HackRF board."  The 3V3, 1V8, RF, and USB LEDs should all be illuminated.
+To verify that your HackRF is detected, type `hackrf_info` at the command line.  It should produce a few lines of output including "Found HackRF board."  The 3V3, 1V8, RF, and USB LEDs should all be illuminated and are various colors.
 
 Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  If you are new to GNU Radio, an excellent place to start is with the [guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
 
