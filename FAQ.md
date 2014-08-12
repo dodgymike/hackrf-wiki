@@ -13,7 +13,7 @@ A normal user under Linux doesn't have the permissions to access arbitrary USB d
 
 To fix this issue, you can write a udev rule to instruct udev to set permissions for the device in a way that it can be accessed by any user on the system who is a member of a specific group.
 
-(The following things have been tested on Ubuntu 13.04 and may need to be adapted to other Linux distributions)  
+(The following things have been tested on Ubuntu and Gentoo and may need to be adapted to other Linux distributions.  In particular, your distro may have a group named something other than plugdev for this purpose.)  
 To do that, you need to create a new rules file in the `/etc/udev/rules.d` folder. I called mine `52-hackrf.rules`. Here is the content:
 
 ```
