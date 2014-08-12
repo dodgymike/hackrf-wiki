@@ -117,3 +117,19 @@ Why doesn't HackRF work properly with a virtual machine (VM)?
 HackRF requires the ability to stream data at very high rates over USB.  Unfortunately VM software typically has problems with continuous high speed USB transfers.
 
 There are some known bugs with the HackRF firmware's USB implementation.  It is possible that fixing these bugs will improve the ability to operate HackRF with a VM, but there is a very good chance that operation at higher sample rates will still be limited.
+
+## LEDs
+
+### Q:
+What LEDs should be illuminated?
+
+### A:
+When HackRF One is plugged in to a USB host, four LEDs should turn on: 3V3, 1V8, RF, and USB.  The 3V3, 1V8, and RF LEDs indicate that the internal power supplies are working properly.  The USB LED indicates that the HackRF One is communicating with the host over USB.
+
+The RX and TX LEDs indicate that a receive or transmit operation is currently in progress.
+
+### Q:
+Why are the LEDs different colors?
+
+### A:
+Each LED is a single color.  There are no multi-colored LEDs on HackRF One.  Adjacent LEDs are different colors in order to make them easier to distinguish from one another.  The colors do not mean anything.
