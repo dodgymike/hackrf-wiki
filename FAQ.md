@@ -97,3 +97,23 @@ How should I set the gain controls for RX?
 
 ### A:
 A good default setting to start with is RF=0 (off), IF=16, baseband=16.  Increase or decrease the IF and baseband gain controls roughly equally to find the best settings for your situation.  Turn on the RF amp if you need help picking up weak signals.  If your gain settings are too low, your signal may be buried in the noise.  If one or more of your gain settings is too high, you may see distortion (look for unexpected frequencies that pop up when you increase the gain) or the noise floor may be amplified more than your signal is.
+
+## System requirements
+
+### Q:
+What are the minimum system requirements for using HackRF?
+
+### A:
+The most important requirement is that you supply 500 mA at 5 V DC to your HackRF via the USB port.  If your host computer has difficulty meeting this requirement, you may need to use a powered USB hub.
+
+Most users will want to stream data to or from the HackRF at high speeds.  This requires that the host computer supports Hi-Speed USB.  Some Hi-Speed USB hosts are better than others, and you may have multiple host controllers on your computer.  If you have difficulty operating your HackRF at high sample rates (10 Msps to 20 Msps), try using a different USB port on your computer.  If possible, arrange things so that the HackRF is the only device on the bus.
+
+There is no specific minimum CPU requirement for the host computer, but SDR is generally a CPU-intensive application.  If you have a slower CPU, you may be unable to run certain SDR software or you may only be able to operate at lower sample rates.
+
+### Q:
+Why doesn't HackRF work properly with a virtual machine (VM)?
+
+### A:
+HackRF requires the ability to stream data at very high rates over USB.  Unfortunately VM software typically has problems with continuous high speed USB transfers.
+
+There are some known bugs with the HackRF firmware's USB implementation.  It is possible that fixing these bugs will improve the ability to operate HackRF with a VM, but there is a very good chance that operation at higher sample rates will still be limited.
