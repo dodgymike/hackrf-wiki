@@ -77,3 +77,23 @@ Where can I buy HackRF?
 
 ### A:
 HackRF is designed and manufactured by Great Scott Gadgets.  Please see [http://greatscottgadgets.com/hackrf/](http://greatscottgadgets.com/hackrf/) for availability.  HackRF is open source hardware, so you could also build your own.
+
+## Making sense of gain settings
+
+### Q:
+What gain controls are provided by HackRF?
+
+### A:
+HackRF (both Jawbreaker and One) provides three different analog gain controls on RX and two on TX.  The three RX gain controls are at the RF (0 or 14 dB), IF (0 to 40 dB in 8 dB steps), and baseband (0 to 62 dB in 2 dB steps) stages.  The two TX gain controls are at the RF (0 or 14 dB) and IF (0 to 47 dB in 1 dB steps) stages.
+
+### Q:
+Why is the RF gain setting restricted to two values?
+
+### A:
+HackRF has two RF amplifiers close to the antenna port, one for TX and one for RX.  These amplifiers have two settings: on or off.  In the off state, the amps are completely bypassed.  They nominally provide 14 dB of gain when on, but the actual amount of gain varies by frequency.  In general, expect less gain at higher frequencies.  For fine control of gain, use the IF and/or baseband gain options.
+
+### Q:
+How should I set the gain controls for RX?
+
+### A:
+A good default setting to start with is RF=0 (off), IF=16, baseband=16.  Increase or decrease the IF and baseband gain controls roughly equally to find the best settings for your situation.  Turn on the RF amp if you need help picking up weak signals.  If your gain settings are too low, your signal may be buried in the noise.  If one or more of your gain settings is too high, you may see distortion (look for unexpected frequencies that pop up when you increase the gain) or the noise floor may be amplified more than your signal is.
