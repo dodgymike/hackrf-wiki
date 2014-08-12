@@ -1,6 +1,6 @@
 ## Try Your HackRF with Pentoo Linux
 
-The easiest way to get started with your HackRF and ensure that it works is to use Pentoo, a Linux distribution with full support for HackRF and GNU Radio.  Download the latest Pentoo .iso image from one of the mirrors listed at [http://pentoo.ch/download/](http://pentoo.ch/download/).  Then burn the .iso to a DVD or use [UNetbootin](http://unetbootin.sourceforge.net/) to install the .iso on a USB flash drive.  Boot your computer using the DVD or USB flash drive to run Pentoo.
+The easiest way to get started with your HackRF and ensure that it works is to use Pentoo, a Linux distribution with full support for HackRF and GNU Radio.  Download the latest Pentoo .iso image from one of the mirrors listed at [http://pentoo.ch/download/](http://pentoo.ch/download/).  Then burn the .iso to a DVD or use [UNetbootin](http://unetbootin.sourceforge.net/) to install the .iso on a USB flash drive.  Boot your computer using the DVD or USB flash drive to run Pentoo.  Do this natively, not in a virtual machine.  (Unfortunately high speed USB operation invariably fails when people try to run HackRF from a virtual machine.)
 
 Once Pentoo is running, type `startx` at the command line to launch the desktop environment.  Accept the "default config" in the first dialog box and then launch a Terminal Emulator window using the icon at the bottom of the screen.
 
