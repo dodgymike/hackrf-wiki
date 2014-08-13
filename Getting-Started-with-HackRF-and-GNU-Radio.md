@@ -16,6 +16,8 @@ As mentioned above, the best way to get started with HackRF is to use Pentoo Lin
 
 If your package manager includes the most recent release of libhackrf (2014.04.1 at the time of writing) and gr-osmosdr, then use it to install those packages in addition to GNU Radio.  Otherwise, the recommended way to install these tools is by using [PyBOMBS](http://gnuradio.org/redmine/projects/pybombs/wiki).
 
+See the [HackRF One Quickstart](https://github.com/mossmann/hackrf/wiki/HackRF-One-Quickstart) page for information on setting up the HackRF One with Ubuntu (should work with other Debian-based distros).
+
 If you have any trouble, make sure that things work when booted to Pentoo.  This will allow you to easily determine if your problem is being caused by hardware or software, and it will give you a way to see how the software is supposed to function.
 
 ## Communication
