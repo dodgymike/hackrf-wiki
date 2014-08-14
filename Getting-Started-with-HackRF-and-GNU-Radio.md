@@ -10,16 +10,43 @@ To verify that your HackRF is detected, type `hackrf_info` at the command line. 
 
 Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  If you are new to GNU Radio, an excellent place to start is with the [guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
 
-## Software
+## Software Setup
 
 As mentioned above, the best way to get started with HackRF is to use Pentoo Linux.  Eventually you may want to install software to use HackRF with your favorite operating system.
 
 If your package manager includes the most recent release of libhackrf (2014.04.1 at the time of writing) and gr-osmosdr, then use it to install those packages in addition to GNU Radio.  Otherwise, the recommended way to install these tools is by using [PyBOMBS](http://gnuradio.org/redmine/projects/pybombs/wiki).
 
-See the [HackRF One Quickstart](https://github.com/mossmann/hackrf/wiki/HackRF-One-Quickstart) page for information on setting up the HackRF One with Ubuntu (should work with other Debian-based distros).
+See the [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) page for information on setting up HackRF software on particular Operating Systems and Linux distributions.
 
 If you have any trouble, make sure that things work when booted to Pentoo.  This will allow you to easily determine if your problem is being caused by hardware or software, and it will give you a way to see how the software is supposed to function.
 
-## Communication
+## Examples
+**Testing the HackRF**
+
+1. Plug in the HackRF
+2. run the hackrf_info command<br>
+`$hackrf_info`
+
+If everything is OK, you should see something similar to the following:
+
+> Found HackRF board.<br>
+> Board ID Number: 2 (HackRF One)<br>
+> Firmware Version: git-#######<br>
+> Part ID Number: 0x######## 0x########<br>
+> Serial Number: 0x######## 0x######## 0x######## 0x########<br>
+
+**FM Radio Example**
+
+This Example was derived from the following works:
+* [RTL-SDR FM radio receiver with GNU Radio Companion](http://www.instructables.com/id/RTL-SDR-FM-radio-receiver-with-GNU-Radio-Companion/) 
+* [How To Build an FM Receiver with the USRP in Less Than 10 Minutes](https://www.youtube.com/watch?v=KWeY2yqwVA0)
+<br><br>
+
+1. [Download the FM Radio Receiver python file here](https://raw.githubusercontent.com/rrobotics/hackrf-tests/master/fm_radio/fm_radio_rx.py)
+2. Run the file <br>
+`$python ./fm_radio_rx.py`
+3. [You can find the GNU Radio Companion source file here](https://raw.githubusercontent.com/rrobotics/hackrf-tests/master/fm_radio/fm_radio_rx.grc)
+
+## Getting Help
 
 Please subscribe to the [HackRF-dev mailing list](http://nine.pairlist.net/mailman/listinfo/hackrf-dev).  This is the preferred place for questions about HackRF.  Be sure to check the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ) and other [documentation](https://github.com/mossmann/hackrf/wiki) before asking questions.  Additionally, you may want to join the #hackrf IRC channel on [freenode](http://freenode.net/).  Specific bugs and feature requests may be added to the [Issues List](https://github.com/mossmann/hackrf/issues?direction=desc&sort=updated&state=open) though they should probably be discussed on the mailing list or IRC first.
