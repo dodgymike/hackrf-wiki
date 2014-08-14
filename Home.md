@@ -3,7 +3,6 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 ## User Documentation
 
 * [Getting Started with HackRF and GNU Radio](https://github.com/mossmann/hackrf/wiki/Getting-Started-with-HackRF-and-GNU-Radio)
-    * [HackRF One Quickstart](https://github.com/mossmann/hackrf/wiki/HackRF-One-Quickstart)
 * [HackRF One](https://github.com/mossmann/hackrf/wiki/HackRF-One)
 * [Jawbreaker](https://github.com/mossmann/hackrf/wiki/Jawbreaker)
 * [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
