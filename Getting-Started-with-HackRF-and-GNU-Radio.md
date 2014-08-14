@@ -8,7 +8,7 @@ At the time of writing, the current Pentoo .iso (2014.0-RC3) has a minor bug tha
 
 To verify that your HackRF is detected, type `hackrf_info` at the command line.  It should produce a few lines of output including "Found HackRF board."  The 3V3, 1V8, RF, and USB LEDs should all be illuminated and are various colors.
 
-Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  If you are new to GNU Radio, an excellent place to start is with the [guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
+Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  Try the Examples below.  If you are new to GNU Radio, an excellent place to start is with the [guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
 
 ## Software Setup
 
