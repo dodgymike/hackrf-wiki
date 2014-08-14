@@ -12,6 +12,8 @@ First things first, make sure all your current software is up to date<br>
 
 **Installing GNU Radio**
 
+Note: These instructions use the older build-gnuradio instead of the newer [PyBOMBS](http://gnuradio.org/pybombs). Either should work fine, but it would be nice if someone were to test PyBOMBS and update these instructions so that they will remain valid in the future.
+
 1. Create a directory to hold all the files needed to build the supporting software. In this example we will create a directory called **hackrf_files** under our home folder:<br>
 `$mkdir ~/hackrf_files`
 2. Download a copy of Marcus D. Leech's fantastic GNU radio setup script.  You can find it here:<br> http://www.sbrac.org/files/build-gnuradio
