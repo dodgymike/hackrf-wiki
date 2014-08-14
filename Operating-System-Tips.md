@@ -1,48 +1,29 @@
 Here are some software setup tips for particular Operating Systems and Linux distributions.
 
-## Ubuntu 13.04
+## Ubuntu
 
-1. Prerequisites
-```
-sudo apt-get -y install build-essential cmake git-core autoconf automake  libtool g++ python-dev swig \
-pkg-config libfftw3-dev libboost1.53-all-dev libcppunit-dev libgsl0-dev \
-libusb-dev sdcc libsdl1.2-dev python-wxgtk2.8 python-numpy \
-python-cheetah python-lxml doxygen python-qt4 python-qwt5-qt4 libxi-dev \
-libqt4-opengl-dev libqwt5-qt4-dev libfontconfig1-dev libxrender-dev ia32-libs
-```
-```
-sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded
-sudo apt-get update && sudo apt-get install gcc-arm-none-eabi
-```
-2. `libhackrf`
-```
-git clone git://github.com/mossmann/hackrf.git
-cd hackrf/host
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-```
-3. GNU Radio
-(Note that this will install GNU Radio version 3.7.x which means that old flow graphs won't work due to renamings.)
-```
-git clone git://git.gnuradio.org/gnuradio.git
-cd gnuradio
-mkdir build && cd build
-cmake ../
-make -j4 # example build command to speed up compilation process when 4 cores are available
-sudo make install
-sudo ldconfig
-```
-4. `gr-osmosdr`
-```
-git clone git://git.osmocom.org/gr-osmosdr
-cd gr-osmosdr
-mkdir build && cd build
-cmake ../
-make
-sudo make install
-```
+These instructions were written and tested for both Ubuntu 12.04LTS and Ubuntu 14.04LTS.  You will also need to be familiar with terminal use.
+
+**Preparing Your System**
+
+First things first, make sure all your current software is up to date<br>
+`$sudo apt-get update`<br>
+`$sudo apt-get upgrade -y`
+
+**Installing GNU Radio**
+
+1. Create a directory to hold all the files needed to build the supporting software. In this example we will create a directory called **hackrf_files** under our home folder:<br>
+`$mkdir ~/hackrf_files`
+2. Download a copy of Marcus D. Leech's fantastic GNU radio setup script.  You can find it here:<br> http://www.sbrac.org/files/build-gnuradio
+3. Save the script to ~/hackrf_files/build-gnuradio.sh
+4. Give the script execution permission<br>
+`$chmod 744 ~/hackrf_files/build-gnuradio.sh`
+5. Execute the script using ~/hackrf_files/build-gnuradio.sh and follow the prompts<br>**WARNING: This step may very well take a few hours to complete!**
+
+**Installing HackRF Tools**
+
+If you used the above steps to install GNU Radio, simply do the following to build and install the HackRF tools:<br>
+`$cd ~/hackrf_files/hackrf/host/hackrf-tools && mkdir build && cd build && cmake .. && make && sudo make install`
 
 ## OS X (10.5+) with MacPorts
 
