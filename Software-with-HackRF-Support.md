@@ -7,3 +7,5 @@ GNU Radio Mode-S/ADS-B - https://github.com/bistromath/gr-air-modes
 GQRX - http://gqrx.dk/
 
 ## Direct Support
+SDR# (Windows only) - http://sdrsharp.com/
+  * Only nightly builds currently support HackRF One - http://sdrsharp.com/downloads/sdr-nightly.zip
