@@ -17,6 +17,12 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 * [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
 
+### Lessons
+
+A running series of videos starring Michael Ossmann and the HackRF that will ultimately provide an entire body of coursework in SDR.
+
+* [Introduction to the HackRF and SDR](https://greatscottgadgets.com/sdr/1)
+
 ### Firmware
 
 * [Firmware Development Setup](https://github.com/mossmann/hackrf/wiki/Firmware-Development-Setup)
