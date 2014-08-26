@@ -30,6 +30,6 @@ Start Eclipse, go to Help/Install New Software... and add the URL to the 'Work w
 
 Two targets should be fetched: 'CDT Main Features' and 'CDT Optional Features'. Install them both.
 
-Once installation is complete, dowbnload the arm cross-compiler support package from http://sourceforge.net/projects/gnuarmeclipse/ and install as above, using the local zip file instead of a URL for the 'Work with:' field.
+Once installation is complete, download the arm cross-compiler support package from http://sourceforge.net/projects/gnuarmeclipse/ and install as above, using the local zip file instead of a URL for the 'Work with:' field.
 
 From Project Explorer you should now be able to import the HackRF source as 'C/C++ / Existing Code as Makefile Project' (you can normally select <none> for the toolchain as it's specified in the Makefile, but you will need to ensure your main window environment PATH includes the required cross-compilers if you are launching Eclipse from your desktop).
