@@ -54,6 +54,8 @@ Samples produced by HackRF are measurements of radio waveforms, but the measurem
 
 There was a bug in the HackRF firmware (through release 2013.06.1) that made the DC offset worse than it should have been.  In the worst cases, certain Jawbreakers experienced a DC offset that drifted to a great extreme over several seconds of operation.  This bug has been fixed.  The fix reduces DC offset but does not do away with it entirely.  It is something you have to live with when using any quadrature sampling system like HackRF.
 
+A high DC offset is also one of a few symptoms that can be caused by a software version mismatch.  A common problem is that people run an old version of gr-osmosdr with newer firmware.
+
 ## How do I deal with the DC offset?
 
 ### Q:
