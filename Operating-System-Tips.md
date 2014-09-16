@@ -16,11 +16,12 @@ First things first, make sure all your current software is up to date<br>
      ```$ git clone https://github.com/pybombs/pybombs.git && cd pybombs && ./app_store.py```
 2. You will be prompted for a dozen parameters (gituser, prefix, ...), press Enter to keep their default values.
 3. The script will open the App Store GUI window. Install the `gnuradio` recipe by clicking on its icon. The window will freeze during compilation and installation. **Note:** This step may take a few hours to complete.
-4. The script will end with the line `installation ok via: src`. Repeat the last step for the `hackrf` recipe.
-5. After closing the app store run: ```$ ./pybombs env```<br>
-6. The output tells you to run something similar to `source /home/<user>/target/setup_env.sh`. Do it.
-7. Add this same line to the end of your `/home/<user>/.bashrc` file.
-8. Launch GRC: ```$ gnuradio-companion```
+4. The script will end with the line `installation ok via: src` or `Writing "/home/<user>/.volk/volk_config"...`
+5. Repeat the last step for the `hackrf` recipe.
+6. After closing the app store run: ```$ ./pybombs env```<br>
+7. The output tells you to run something similar to `source /home/<user>/target/setup_env.sh`, do it.
+8. Add this same line to the end of your `/home/<user>/.bashrc` file.
+9. Launch GRC: ```$ gnuradio-companion```
 
 **Troubleshooting:** [GNU Radio Installation Instructions] (https://github.com/gnuberries/raspberry-radio/wiki/GNU-Radio-Installation-Instructions-(for-desktop-or-notebook))
 
