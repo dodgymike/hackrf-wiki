@@ -42,7 +42,7 @@ Note: These instructions use the older build-gnuradio instead of the newer [PyBO
 If you used the above steps to install GNU Radio, simply do the following to build and install the HackRF tools:
 ```
 cd ~/hackrf_files && git clone https://github.com/mossmann/hackrf.git
-cd ~/hackrf_files/hackrf/host/hackrf-tools && mkdir build && cd build && cmake .. && make && sudo make install
+cd ~/hackrf_files/hackrf/host && mkdir build && cd build && cmake .. && make && sudo make install
 ```
 ### Installing on Ubuntu 14.04 with packages 
 This is far the easiest install
