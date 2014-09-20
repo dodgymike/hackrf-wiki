@@ -57,7 +57,7 @@ For other options see: http://www.pg540.org/wiki/index.php/HackRF
 ## OS X (10.5+) with MacPorts
 
 ```
-sudo port install gr-osmosdr +full
+sudo port install gr-osmosdr
 ```
 
 ## Gentoo Linux
