@@ -14,6 +14,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 ## Installing
 * [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) (software setup for particular OS or Linux distro)
+* [Ubuntu 14, PyBombs and HackRf] (https://github.com/mossmann/hackrf/wiki/Ubuntu-14,-PyBombs-and-HackRf)
 
 ## Developer Notes
 
