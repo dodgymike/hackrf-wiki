@@ -44,16 +44,6 @@ If you used the above steps to install GNU Radio, simply do the following to bui
 cd ~/hackrf_files && git clone https://github.com/mossmann/hackrf.git
 cd ~/hackrf_files/hackrf/host && mkdir build && cd build && cmake .. && make && sudo make install
 ```
-### Installing on Ubuntu 14.04 with packages 
-This is far the easiest install
-```
-sudo add-apt-repository ppa:gqrx/releases
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt-get install gqrx gnuradio gr-osmosdr hackrf
-```
-For other options see: http://www.pg540.org/wiki/index.php/HackRF
-
 ## OS X (10.5+) with MacPorts
 
 ```
