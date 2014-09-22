@@ -347,6 +347,8 @@ When you click save, you are saving the GRC. When you click Execute or Generate 
 
 <a title="Test Script" href="http://www.celestialphotographer.com/wp-content/uploads/downloads/2014/09/test.zip">download test.py test script</a>
 
+MD-5 of test.zip : a356e0684c53b81da3fb0bf671b23ed7
+
 Unzip the file and save to your home directory.
 Open a terminal (ctrl+alt+t) and type python test.py
 If everything worked a windows should pop up and you should see something similar to this:
