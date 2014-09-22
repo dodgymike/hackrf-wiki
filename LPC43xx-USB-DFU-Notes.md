@@ -1,4 +1,4 @@
-The LPC43xx contains USB DFU bootloader support in ROM. By selecting the appropriate boot mode (USB0), the device will come up on USB at power-up or reset, and implement the popular and well-documented [USB DFU protocol](http://www.usb.org/developers/devclass_docs/DFU_1.1.pdf).
+The LPC43xx contains USB DFU bootloader support in ROM. By selecting the appropriate boot mode (USB0), the device will come up on USB at power-up or reset, and implement the popular and well-documented [USB DFU protocol](http://www.usb.org/developers/docs/devclass_docs/DFU_1.1.pdf).
 
 ## Setup
 
