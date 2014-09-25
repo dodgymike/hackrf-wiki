@@ -25,7 +25,7 @@ If you have any trouble, make sure that things work when booted to Pentoo.  This
 
 1. Plug in the HackRF
 2. run the hackrf_info command<br>
-`$hackrf_info`
+`$ hackrf_info`
 
 If everything is OK, you should see something similar to the following:
 
@@ -44,7 +44,7 @@ This Example was derived from the following works:
 
 1. [Download the FM Radio Receiver python file here](https://raw.githubusercontent.com/rrobotics/hackrf-tests/master/fm_radio/fm_radio_rx.py)
 2. Run the file <br>
-`$python ./fm_radio_rx.py`
+`$ python ./fm_radio_rx.py`
 3. [You can find the GNU Radio Companion source file here](https://raw.githubusercontent.com/rrobotics/hackrf-tests/master/fm_radio/fm_radio_rx.grc)
 
 ## Getting Help
