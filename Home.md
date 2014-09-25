@@ -25,8 +25,12 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 A [running series of videos](https://greatscottgadgets.com/sdr/) starring Michael Ossmann and the HackRF that will ultimately provide an entire body of coursework in SDR.
 
-* [Introduction to the HackRF and SDR](https://greatscottgadgets.com/sdr/1)
-* [Introduction to Digital Signal Processing](http://greatscottgadgets.com/sdr/2/)
+* [Welcome](http://greatscottgadgets.com/sdr/1)
+* [DSP](http://greatscottgadgets.com/sdr/2)
+* [What is a Decibel?](http://greatscottgadgets.com/sdr/3)
+* [Mysteries](http://greatscottgadgets.com/sdr/4)
+* [HackRF One](http://greatscottgadgets.com/sdr/5)
+* [Complex Numbers](http://greatscottgadgets.com/sdr/6)
 
 ### Firmware
 
