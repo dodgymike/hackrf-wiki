@@ -6,3 +6,8 @@ sudo apt-get upgrade
 sudo apt-get install gqrx gnuradio gr-osmosdr hackrf
 ```
 For other options see: http://www.pg540.org/wiki/index.php/HackRF
+
+If you run into installing troubles, possibly because of existing packages previously installed, do a 
+```
+sudo apt-get dist-upgrade
+```
