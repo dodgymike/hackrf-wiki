@@ -4,7 +4,7 @@ The easiest way to get started with your HackRF and ensure that it works is to u
 
 Once Pentoo is running, type `startx` at the command line to launch the desktop environment.  Accept the "default config" in the first dialog box and then launch a Terminal Emulator window using the icon at the bottom of the screen.
 
-At the time of writing, the current Pentoo .iso (2014.0-RC3) has a minor bug that you need to work around by typing `eselect lapack set 1` at the command line in the terminal window before trying to use GNU Radio.  You only need to do this once after starting up Pentoo, but you'll have to do it every time you boot an unmodified .iso.
+One particular version of the Pentoo .iso (2014.0-RC3) had a minor bug that you need to work around by typing `eselect lapack set 1` at the command line in the terminal window before trying to use GNU Radio.  You only need to do this once after starting up Pentoo, but you'll have to do it every time you boot an unmodified .iso.  However, it is recommended that you simply download the latest version (that doesn't suffer from that bug) instead.
 
 To verify that your HackRF is detected, type `hackrf_info` at the command line.  It should produce a few lines of output including "Found HackRF board."  The 3V3, 1V8, RF, and USB LEDs should all be illuminated and are various colors.
 
