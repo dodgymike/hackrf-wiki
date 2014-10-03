@@ -10,6 +10,10 @@ To verify that your HackRF is detected, type `hackrf_info` at the command line. 
 
 Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  Try the Examples below.  If you are new to GNU Radio, an excellent place to start is with the [guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
 
+**Alternative: GNU Radio Live SDR Environment**
+
+The [GNU Radio Live SDR Environment](http://gnuradio.org/redmine/projects/gnuradio/wiki/GNURadioLiveDVD) is another nice bootable Linux .iso with support for HackRF and, of course, GNU Radio.
+
 ## Software Setup
 
 As mentioned above, the best way to get started with HackRF is to use Pentoo Linux.  Eventually you may want to install software to use HackRF with your favorite operating system.
