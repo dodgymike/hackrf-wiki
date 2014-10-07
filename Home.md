@@ -31,6 +31,7 @@ A [running series of videos](https://greatscottgadgets.com/sdr/) starring Michae
 * [Mysteries](http://greatscottgadgets.com/sdr/4)
 * [HackRF One](http://greatscottgadgets.com/sdr/5)
 * [Complex Numbers](http://greatscottgadgets.com/sdr/6)
+* [Complex Numbers in DSP](http://greatscottgadgets.com/sdr/7)
 
 ### Firmware
 
