@@ -1,6 +1,6 @@
 HackRF devices ship with firmware on the SPI flash memory and with a bitstream programmed onto the CPLD.  The firmware can be updated with nothing more than a USB cable and host computer.
 
-These instructions allow you to upgrade the firmware and (CPLD bitstream if necessary) in order to take advantage of new features or bug fixes.
+These instructions allow you to upgrade the firmware and CPLD bitstream in order to take advantage of new features or bug fixes.
 
 ## Updating the SPI Flash Firmware
 
@@ -18,8 +18,6 @@ After writing the firmware to SPI flash, reset the HackRF device by pressing the
 If you get an error that mentions HACKRF_ERROR_NOT_FOUND, check out the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ#i-cant-seem-to-access-my-hackrf-under-linux). It's often a permissions problem that can be quickly solved.
 
 ## Updating the CPLD
-
-Required CPLD updates are more rare than firmware updates.
 
 To update to the latest CPLD image, first update the SPI flash firmware, libhackrf, and hackrf-tools.
 Then:
