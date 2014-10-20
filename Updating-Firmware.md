@@ -2,7 +2,7 @@ HackRF devices ship with firmware on the SPI flash memory and with a bitstream p
 
 These instructions allow you to upgrade the firmware and CPLD bitstream in order to take advantage of new features or bug fixes.
 
-This procedure currently does not work on Windows systems.  If you do not have hackrf-tools installed on a Linux or OS X system, you can [use Pentoo or the GNU Radio Live DVD](https://github.com/mossmann/hackrf/wiki/Getting-Started-with-HackRF-and-GNU-Radio#try-your-hackrf-with-pentoo-linux) to perform the updates.
+This procedure currently [does not work](https://github.com/mossmann/hackrf/issues/113) on Windows systems.  If you do not have hackrf-tools installed on a Linux or OS X system, you can [use Pentoo or the GNU Radio Live DVD](https://github.com/mossmann/hackrf/wiki/Getting-Started-with-HackRF-and-GNU-Radio#try-your-hackrf-with-pentoo-linux) to perform the updates.
 
 ## Updating the SPI Flash Firmware
 
