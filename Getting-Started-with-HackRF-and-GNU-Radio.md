@@ -2,13 +2,15 @@
 
 The easiest way to get started with your HackRF and ensure that it works is to use Pentoo, a Linux distribution with full support for HackRF and GNU Radio.  Download the latest Pentoo .iso image from one of the mirrors listed at [http://pentoo.ch/download/](http://pentoo.ch/download/).  Then burn the .iso to a DVD or use [UNetbootin](http://unetbootin.sourceforge.net/) to install the .iso on a USB flash drive.  Boot your computer using the DVD or USB flash drive to run Pentoo.  Do this natively, not in a virtual machine.  (Unfortunately high speed USB operation invariably fails when people try to run HackRF from a virtual machine.)
 
-Once Pentoo is running, type `startx` at the command line to launch the desktop environment.  Accept the "default config" in the first dialog box and then launch a Terminal Emulator window using the icon at the bottom of the screen.
-
-One particular version of the Pentoo .iso (2014.0-RC3) had a minor bug that you need to work around by typing `eselect lapack set 1` at the command line in the terminal window before trying to use GNU Radio.  You only need to do this once after starting up Pentoo, but you'll have to do it every time you boot an unmodified .iso.  However, it is recommended that you simply download the latest version (that doesn't suffer from that bug) instead.
+Once Pentoo is running, you can immediately use it to [update firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware) on your HackRF or use other HackRF command line tools.  For a walkthrough, watch [SDR with HackRF, Lesson 5: HackRF One](http://greatscottgadgets.com/sdr/5/).
 
 To verify that your HackRF is detected, type `hackrf_info` at the command line.  It should produce a few lines of output including "Found HackRF board."  The 3V3, 1V8, RF, and USB LEDs should all be illuminated and are various colors.
 
-Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  Try the Examples below.  If you are new to GNU Radio, an excellent place to start is with the [guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
+You can type `startx` at the command line to launch a desktop environment.  Accept the "default config" in the first dialog box.  The desktop environment is useful for GNU Radio Companion and other graphical applications but is not required for basic operations such as firmware updates.
+
+One particular version of the Pentoo .iso (2014.0-RC3) had a minor bug that you need to work around by typing `eselect lapack set 1` at the command line in the terminal window before trying to use GNU Radio.  You only need to do this once after starting up Pentoo, but you'll have to do it every time you boot an unmodified .iso.  However, it is recommended that you simply download the latest version (that doesn't suffer from that bug) instead.
+
+Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  Try the Examples below.  If you are new to GNU Radio, an excellent place to start is with the [SDR with HackRF](http://greatscottgadgets.com/sdr/) video series or with the [GNU Radio guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
 
 **Alternative: GNU Radio Live SDR Environment**
 
@@ -25,6 +27,9 @@ See the [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operatin
 If you have any trouble, make sure that things work when booted to Pentoo.  This will allow you to easily determine if your problem is being caused by hardware or software, and it will give you a way to see how the software is supposed to function.
 
 ## Examples
+
+A great way to get started with HackRF is the [SDR with HackRF](http://greatscottgadgets.com/sdr/) video series.  Additional examples follow:
+
 **Testing the HackRF**
 
 1. Plug in the HackRF
