@@ -157,3 +157,15 @@ How could the HackRF One design be changed to make it full-duplex?
 The HackRF One hardware design is actually full-duplex (at lower sample rates) from the USB connection through the ADC/DAC.  The RF section is the only part of the design that cannot support full-duplex operation.  The easiest way to make HackRF One full-duplex would be to create an add-on board that duplicates the RF section and also provides an external power input (from a wall wart, for example) for the additional power required.  This would also require software effort; the firmware, CPLD, libhackrf, and other host software would all need work to support full-duplex operation.
 
 If you were to try to redesign the RF section on HackRF One to support full-duplex, the main thing to focus on would be the MAX2837 (intermediate frequency transceiver).  This part is half-duplex, so you would either need two of them or you would have to redesign the RF section to use something other than the MAX2837, likely resulting in a radically different design.  If you used two MAX2837s you might be able to use one RFFC5071 instead of two RFFC5072s.
+
+## What is the receive sensitivity of HackRF?
+
+### Q:
+
+What is the minimum signal power level that can be detected by HackRF?
+
+### A:
+
+This isn't a question that can be answered for a general purpose SDR platform such as HackRF.  Any answer would be very specific to a particular application.  For example, an answerable question might be: What is the minimum power level in dBm of modulation M at frequency F that can be detected by HackRF One with software S under configuration C at a bit error rate of no more than E%?  Changing any of those variables (M, F, S, C, or E) would change the answer to the question.  Even a seemingly minor software update might result in a significantly different answer.  To learn the exact answer for a specific application, you would have to measure it yourself.
+
+HackRF's concrete specifications include operating frequency range, maximum sample rate, and dynamic range in bits.  These specifications can be used to roughly determine the suitability of HackRF for a given application.  Testing is required to finely measure performance in an application.  Performance can typically be enhanced significantly by selecting an appropriate antenna, external amplifier, and/or external filter for the application.
