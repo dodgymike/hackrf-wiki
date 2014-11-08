@@ -49,6 +49,8 @@ cd ~/hackrf_files/hackrf/host && mkdir build && cd build && cmake .. && make && 
 ```
 sudo port install gr-osmosdr
 ```
+## OS X (10.5+) using Homebrew
+https://github.com/andresv/homebrew-gnuradio
 
 ## Gentoo Linux
 
