@@ -11,6 +11,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
 * [HackRF Hacks](https://github.com/mossmann/hackrf/wiki/HackRF-Hacks)
 * [Getting Help](https://github.com/mossmann/hackrf/wiki/Getting-Help)
+* [USB Cables](https://github.com/mossmann/hackrf/wiki/USB-Cable-(and-why-to-use-a-noise-reducing-one)) (and why to use a noise reducing one)
 
 ## Installing
 * [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) (software setup for particular OS or Linux distro)
