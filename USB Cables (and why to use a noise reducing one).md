@@ -4,7 +4,7 @@ For this reason, when choosing a cable it is best to purchase one that has a fer
 
 Trying anything larger than a 6ft cable may yield poor results.  The longer the cable, the more loss you can expect and when making this post a 15ft cable was tried and the result was the HackRF would only power up half way.
 
-Screenshot before and after changing to a noise reducing cable:
+Screenshot before and after changing to a noise reducing cable ([view full size image](http://i.imgur.com/e64LASK.jpg)):
 ![Before and after showing the change when moving to a noise reducing USB cable.](http://i.imgur.com/e64LASK.jpg)
 
 The [cable](http://www.amazon.com/gp/product/B00A99BR90/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1) used when making the screenshot for the difference in noise is:
