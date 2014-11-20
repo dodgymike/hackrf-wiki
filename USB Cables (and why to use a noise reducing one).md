@@ -1,4 +1,4 @@
-The USB cable you chose can make a big difference in what you see when using your HackRF and especially when using it around the 480mhz area where the USB is doing all its work.
+The USB cable you choose can make a big difference in what you see when using your HackRF and especially when using it around the 480mhz area where the USB is doing all its work.
 
 For this reason, when choosing a cable it is best to purchase one that has a ferrite core (or ferrite beads).  These cables are usually advertised to be noise reducing and are recognizable from the plastic block towards one end.
 
