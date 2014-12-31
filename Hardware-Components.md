@@ -18,7 +18,7 @@ Major parts selected so far (subject to change):
   * [BSDL file for the LPC43xx (For boundary scan)](http://www.lpcware.com/system/files/LPC18xx_43xx%20BSDL%20files%2020121127_0.zip)
 * [RFFC5072 mixer/synthesizer](http://www.rfmd.com/store/rffc5072-1.html)
   * [Datasheet](http://www.rfmd.com/CS/Documents/RFFC5071_2DS.pdf)
-  * [Other Documentation](http://www.rfmd.com/store/rffc5072-1.html) - includes programming guides and application notes.
+  * [Other Documentation](http://www.rfmd.com/store/rffc5072-1.html) ; click "Technical Documents" - includes programming guides and application notes.
 
 Block Diagrams
 ==============
