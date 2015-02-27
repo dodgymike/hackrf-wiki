@@ -7,7 +7,8 @@ This procedure currently [does not work](https://github.com/mossmann/hackrf/issu
 ## Updating the SPI Flash Firmware
 
 To update the firmware on a working HackRF One, use the hackrf_spiflash program:
-> hackrf_spiflash -w hackrf_one_usb_rom_to_ram.bin
+
+    hackrf_spiflash -w hackrf_one_usb_rom_to_ram.bin
 
 You can find the firmware binary (hackrf_one_usb_rom_to_ram.bin) in the firmware-bin directory of the latest [release package](http://sourceforge.net/projects/hackrf/files/) or you can compile your own from the [source](https://github.com/mossmann/hackrf/tree/master/firmware).  For Jawbreaker, use hackrf_jawbreaker_usb_rom_to_ram.bin.  If you compile from source, the file will be called hackrf_usb_rom_to_ram.bin.
 
@@ -24,7 +25,7 @@ If you get an error that mentions HACKRF_ERROR_NOT_FOUND, check out the [FAQ](ht
 To update to the latest CPLD image, first update the SPI flash firmware, libhackrf, and hackrf-tools.
 Then:
 
-> hackrf_cpldjtag -x firmware/cpld/sgpio_if/default.xsvf
+    hackrf_cpldjtag -x firmware/cpld/sgpio_if/default.xsvf
 
 After a few seconds, three LEDs should start blinking.  This indicates that the CPLD has been programmed successfully.  Reset the HackRF device by pressing the RESET button or by unplugging it and plugging it back in.
 
