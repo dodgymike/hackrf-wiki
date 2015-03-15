@@ -61,4 +61,4 @@ USE="hackrf" emerge gr-osmosdr
 
 ## other Linux distributions
 
-Use [PyBOMBS](http://gnuradio.org/pybombs) to automatically compile and install libhackrf, gr-osmosdr, and GNU Radio from source.
+If your distribution is based on RPM or DEB, then easiest is to use [PyBOMBS](http://gnuradio.org/pybombs) to automatically compile and install libhackrf, gr-osmosdr, and GNU Radio from source.
