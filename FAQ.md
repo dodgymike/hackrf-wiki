@@ -86,7 +86,7 @@ HackRF is designed and manufactured by Great Scott Gadgets.  Please see [http://
 What gain controls are provided by HackRF?
 
 ### A:
-HackRF (both Jawbreaker and One) provides three different analog gain controls on RX and two on TX.  The three RX gain controls are at the RF (0 or 14 dB), IF (0 to 40 dB in 8 dB steps), and baseband (0 to 62 dB in 2 dB steps) stages.  The two TX gain controls are at the RF (0 or 14 dB) and IF (0 to 47 dB in 1 dB steps) stages.
+HackRF (both Jawbreaker and One) provides three different analog gain controls on RX and two on TX.  The three RX gain controls are at the RF ("amp", 0 or 14 dB), IF ("lna", 0 to 40 dB in 8 dB steps), and baseband ("vga", 0 to 62 dB in 2 dB steps) stages.  The two TX gain controls are at the RF (0 or 14 dB) and IF (0 to 47 dB in 1 dB steps) stages.
 
 ### Q:
 Why is the RF gain setting restricted to two values?
