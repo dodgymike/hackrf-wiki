@@ -97,4 +97,4 @@ The HackRF One expansion interface consists of headers P9, P20, P22, and P28.  T
 
 Refer to the schematics and component documentation for more information.
 
-Additional unpopulated headers and test points are available for test and development, but they may be incompatible with some enclosure options.
+Additional unpopulated headers and test points are available for test and development, but they may be incompatible with some enclosure or expansion options.
