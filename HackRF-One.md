@@ -1,9 +1,9 @@
-HackRF One is the current hardware platform for the HackRF project.  It is a Software Defined Radio peripheral capable of transmission or reception of radio signals from 10 MHz to 6 GHz. Designed to enable test and development of modern and next generation radio technologies, HackRF One is an open source hardware platform that can be used as a USB peripheral or programmed for stand-alone operation.
+HackRF One is the current hardware platform for the HackRF project.  It is a Software Defined Radio peripheral capable of transmission or reception of radio signals from 1 MHz to 6 GHz. Designed to enable test and development of modern and next generation radio technologies, HackRF One is an open source hardware platform that can be used as a USB peripheral or programmed for stand-alone operation.
 
 ## Features
 
 * half-duplex transceiver
-* operating freq: 10 MHz to 6 GHz
+* operating freq: 1 MHz to 6 GHz
 * supported sample rates: 2 Msps to 20 Msps (quadrature)
 * resolution: 8 bits
 * interface: High Speed USB (with USB Micro-B connector)
@@ -32,7 +32,7 @@ Jawbreaker was the beta platform that preceded HackRF One.  HackRF One incorpora
 * LPC4320 microcontroller: Jawbreaker had an LPC4330.
 * RF shield footprint: An optional shield may be installed over HackRF One's RF section.
 * Antenna port power: HackRF One can supply up to 50 mA at 3.3 V DC on the antenna port for compatibility with powered antennas and other low power amplifiers.
-* Enhanced frequency range: The RF performance of HackRF One is better than Jawbreaker, particularly at the high and low ends of the operating frequency range. HackRF One can operate at 10 MHz or even lower.
+* Enhanced frequency range: The RF performance of HackRF One is better than Jawbreaker, particularly at the high and low ends of the operating frequency range. HackRF One can operate at 1 MHz or even lower.
 
 ## Enclosure Options
 
