@@ -26,6 +26,8 @@ The content of the file instructs udev to look out for devices with Vendor ID an
 
 After creating the rules file you can either reboot or run the command `udevadm control --reload-rules` as root to instruct udev to reload all rule files. After replugging your HackRF board, you should be able to access the device with all utilities as a normal user.  If you still can't access the device, make sure that you are a member of the plugdev group.
 
+If you are using PyBOMBS, note that the HackRF recipe intentionally [does not install the udev rules](https://github.com/gnuradio/recipes/commit/a031078a52c038fc083dd3c107ef87df91803479#diff-8f163181a125b81f4d01e17217e471f3) to [avoid installation failures](https://github.com/mossmann/hackrf/issues/190) when run as non-root.
+
 ## hackrf_set_sample_rate fails
 
 ### Q:
