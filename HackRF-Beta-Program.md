@@ -28,7 +28,7 @@ The primary software library required to work with Jawbreaker is [libhackrf](htt
 
 You will need to [update the firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware) on your Jawbreaker to use the latest software.
 
-You can download the latest HackRF source code [release package](http://sourceforge.net/projects/hackrf/files/) or use source from the [git repository](https://github.com/mossmann/hackrf).  The release package includes a firmware binary that you can use if you don't want to set up a cross-compiler.
+You can download the latest HackRF source code [release package](https://github.com/mossmann/hackrf/releases/latest) or use source from the [git repository](https://github.com/mossmann/hackrf).  The release package includes a firmware binary that you can use if you don't want to set up a cross-compiler.
 
 Software known to support HackRF:
 
