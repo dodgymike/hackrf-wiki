@@ -114,12 +114,12 @@ Option 1 doesn't require you to edit your bash file after new recipes are instal
 Option 2 is more complex, but I have never had problems. You also have to update your bash file when new recipe path locations have been added/changed.
 
 ## Option 1
-cd to your home directory and type `sudo gedit .bashrc`
+cd to your home directory `cd ~` and type `sudo gedit .bashrc`
 Scroll to the bottom of your .bashrc file, it will look like this:
 
 [![](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash-300x87.jpg)](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash.jpg)
 
-**AFTER* the last **fi** press enter and type or paste the words between`run: "` and the last `"`, in this case it is `source /usr/local/setup_env.sh`
+At the end of the file add `source /home/user/target/setup_env.sh` Don't forget to change the `user` part.
 
 Save the file and exit.
 
