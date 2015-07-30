@@ -48,3 +48,19 @@ If the firmware installed in SPI flash has been damaged or if you are programmin
 1. Follow the DFU Boot instructions to start the HackRF in DFU boot mode.
 2. Type `dfu-util --device 1fc9:000c --alt 0 --download hackrf_one_usb_ram.dfu` to load firmware from a release package into RAM.  If you have a Jawbreaker, use hackrf_jawbreaker_usb_ram.dfu instead.  Alternatively, use `make -e BOARD=HACKRF_ONE RUN_FROM=RAM program` in the firmware/hackrf_usb directory to load the firmware into RAM and start it.
 3. Follow the SPI flash firmware update procedure above to write the "rom_to_ram" firmware image to SPI flash.
+
+
+## Obtaining DFU-Util
+On fresh installs of your OS, you may need obtain a copy of DFU-Util. The connonical reference can be found [here on the dfu-util source forge build page](http://dfu-util.sourceforge.net/build.html).
+
+	cd ~
+	sudo apt-get build-dep dfu-util
+	sudo apt-get install libusb-1.0-0-dev
+	git clone git://git.code.sf.net/p/dfu-util/dfu-util
+	cd dfu-util
+	./autogen.sh
+	./configure
+	make
+	sudo make install
+
+Now you will have the current version of DFU Util installed on your system.
