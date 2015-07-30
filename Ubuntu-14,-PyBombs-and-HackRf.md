@@ -1,9 +1,9 @@
 # Installing Pybombs
 
-Some of the formatting is not compatible with this wiki, this document's master is maintained at: [Celestial Photographer](http://www.celestialphotographer.com/2014/09/17/pybombs-gnuradio/)
+This document's master is maintained at: [Celestial Photographer](http://www.celestialphotographer.com/2014/09/17/pybombs-gnuradio/)
 
-The general disclaimer...This technique/approach has worked for me various times, it is the method I prefer, it may not work for you. You might prefer other steps. I assume no liability.
-HELPFUL/CONSTRUCTIVE criticism is always welcome. Pybombs is not perfect, some recipes do not work.
+# Disclaimer
+This technique / approach has worked for me various times, it is the method I prefer, it may not work for you. You might prefer other steps. I assume no liability. HELPFUL / CONSTRUCTIVE criticism is always welcome. Pybombs is not perfect, some recipes do not work.
 
 When you see the word `user` in my instructions, that refers to the user name you're using, ie,
 `run /home/user/pybombs/src/uhd/host/build/utils/uhd_images_downloader.py`
@@ -106,7 +106,7 @@ Click the "X" in the upper right hand corner of the app store to exit.
 
 	sudo ./pybombs env
 
-[!http://www.celestialphotographer.com/wp-content/uploads/2014/09/setupenv-300x35.jpg](http://www.celestialphotographer.com/wp-content/uploads/2014/09/setupenv.jpg)
+[![](http://www.celestialphotographer.com/wp-content/uploads/2014/09/setupenv-300x35.jpg)](http://www.celestialphotographer.com/wp-content/uploads/2014/09/setupenv.jpg)
 
 Take note of the env output, you'll need this information next.
 Here you have two options, option 1 is simpler but I have experienced problems with it.
@@ -117,7 +117,7 @@ Option 2 is more complex, but I have never had problems. You also have to update
 cd to your home directory and type `sudo gedit .bashrc`
 Scroll to the bottom of your .bashrc file, it will look like this:
 
-[![http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash-300x87.jpg]](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash.jpg)
+[![](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash-300x87.jpg)](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash.jpg)
 
 **AFTER* the last **fi** press enter and type or paste the words between`run: "` and the last `"`, in this case it is `source /usr/local/setup_env.sh`
 
@@ -138,17 +138,17 @@ Press <kbd>Enter</kbd> and gnruadio will run.
 ## Option 2
 Using the Ubuntu file manager, navigate to the location listed after typing `./pybombs env`. Open setup_env.sh and copy everything below the following line:
 
-[![http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard-300x18.jpg](http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard.jpg)
+[![](http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard-300x18.jpg)](http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard.jpg)
 
 It should look similar to:
 
-[![http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard-2-300x133.jpg](http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard-2.jpg)
+[![](http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard-2-300x133.jpg)](http://www.celestialphotographer.com/wp-content/uploads/2014/09/clipboard-2.jpg)
 
 In the termianl window, CD to your home directory
 `sudo gedit .bashrc`
 Scroll to the bottom of your .bashrc file, it will look like this:
 
-[![http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash-300x87.jpg]](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash.jpg)
+[![](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash-300x87.jpg)](http://www.celestialphotographer.com/wp-content/uploads/2014/09/bash.jpg)
 
 AFTER the last **fi** press <kbd>enter</kbd> and **PASTE**
 
