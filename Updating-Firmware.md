@@ -51,7 +51,7 @@ If the firmware installed in SPI flash has been damaged or if you are programmin
 
 
 ## Obtaining DFU-Util
-On fresh installs of your OS, you may need obtain a copy of DFU-Util. The connonical reference can be found [here on the dfu-util source forge build page](http://dfu-util.sourceforge.net/build.html).
+On fresh installs of your OS, you may need obtain a copy of DFU-Util. The canonical reference can be found [here on the dfu-util source forge build page](http://dfu-util.sourceforge.net/build.html).
 
 	cd ~
 	sudo apt-get build-dep dfu-util
