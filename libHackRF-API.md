@@ -10,6 +10,11 @@ hardware, we strongly recommend that you use either gr-osmosdr or SoapySDR to
 provide support for the broadest possible range of software defined radio
 hardware.
 
+For example usage of many of these functions, see the
+[hackrf_trasfer](https://github.com/mossmann/hackrf/blob/master/host/hackrf-tools/src/hackrf_transfer.c)
+tool.
+
+
 ##Setup, Initialization and Shutdown
 
 ###HackRF Init
