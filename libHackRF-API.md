@@ -312,11 +312,12 @@ These values identify the board type of the connected hardware. This value can
 be used as an indicator of capabilities, such as frequency range, bandwidth or
 antenna port power.
 
-Board      | Frequency range | Bandwidth | Antenna port power
-HackRF One | 1MHz - 6Ghz     | 20MHz     | Yes
-Jawbreaker | 10MHz - 6GHz    | 20MHz     | No
-Rad1o      | 50MHz - 4GHz    | 20MHz     | Unknown
-Jellybean  | N/A             | 20MHz     | No
+| Board      | Frequency range | Bandwidth | Antenna port power |
+|------------|-----------------|-----------|--------------------|
+| HackRF One | 1MHz - 6Ghz     | 20MHz     | Yes                |
+| Jawbreaker | 10MHz - 6GHz    | 20MHz     | No                 |
+| Rad1o      | 50MHz - 4GHz    | 20MHz     | Unknown            |
+| Jellybean  | N/A             | 20MHz     | No                 |
 
 Most boards will identify as HackRF One, Jawbreaker or Rad1o. Jellybean was a
 pre-production revision of HackRF. No hardware device should intentionally
