@@ -99,170 +99,328 @@ A value from the hackrf_error constants listed below.
 
 ##Using the Radio
 
-###int hackrf_start_rx(hackrf_device*, hackrf_sample_block_cb_fn, void* rx_ctx)
+###HackRF Start Rx
+**Syntax:** `int hackrf_start_rx(hackrf_device*, hackrf_sample_block_cb_fn, void* rx_ctx)`
+
+**Params:**
 
 
 **Returns:**
 A value from the hackrf_error constants listed below.
 
-###int hackrf_stop_rx(hackrf_device*)
+###HackRF Stop Rx
+**Syntax:** `int hackrf_stop_rx(hackrf_device*)`
+
+**Params:**
 
 
 **Returns:**
 A value from the hackrf_error constants listed below.
 
-###int hackrf_start_tx(hackrf_device*, hackrf_sample_block_cb_fn, void* tx_ctx)
+###HackRF Start Tx
+**Syntax:** `int hackrf_start_tx(hackrf_device*, hackrf_sample_block_cb_fn, void* tx_ctx)`
+
+**Params:**
 
 **Returns:**
 A value from the hackrf_error constants listed below.
 
-###int hackrf_stop_tx(hackrf_device*)
+###HackRF Stop Tx
+**Syntax:** `int hackrf_stop_tx(hackrf_device*)`
+
+**Params:**
 
 **Returns:**
 A value from the hackrf_error constants listed below.
 
 
-###int hackrf_set_baseband_filter_bandwidth(hackrf_device*, const uint32_t bandwidth_hz)
+###HackRF Set Baseband Filter Bandwidth
+**Syntax:** `int hackrf_set_baseband_filter_bandwidth(hackrf_device*, const uint32_t bandwidth_hz)`
+
+**Params:**
 
 **Returns:**
 A value from the hackrf_error constants listed below.
 
 
-###uint32_t hackrf_compute_baseband_filter_bw_round_down_lt(const uint32_t bandwidth_hz)
-Compute nearest freq for bw filter (manual filter)
-
-**Returns:**
-A valid baseband filter width available from the Maxim max2837 frontend used by
-the radio.
-
-###uint32_t hackrf_compute_baseband_filter_bw(const uint32_t bandwidth_hz)
+###HackRF Compute Baseband Filter BW
 Compute best default value depending on sample rate (auto filter)
 
+**Syntax:** `uint32_t hackrf_compute_baseband_filter_bw(const uint32_t bandwidth_hz)`
+
+**Params:**
+
 **Returns:**
 A valid baseband filter width available from the Maxim max2837 frontend used by
 the radio.
 
 
-/* range 0-40 step 8d, IF gain in osmosdr  */
-###int hackrf_set_lna_gain(hackrf_device* device, uint32_t value);
+###HackRF Compute Baseband Filter BW Round Down LT
+Compute nearest freq for bw filter (manual filter)
 
-/* range 0-62 step 2db, BB gain in osmosdr */
-###int hackrf_set_vga_gain(hackrf_device* device, uint32_t value);
+**Syntax:** `uint32_t hackrf_compute_baseband_filter_bw_round_down_lt(const uint32_t bandwidth_hz)`
 
-/* range 0-47 step 1db */
-###int hackrf_set_txvga_gain(hackrf_device* device, uint32_t value);
+**Params:**
 
-/* antenna port power control */
-###int hackrf_set_antenna_enable(hackrf_device* device, const uint8_t value);
+**Returns:**
+A valid baseband filter width available from the Maxim max2837 frontend used by
+the radio.
 
-###int hackrf_set_freq(hackrf_device* device, const uint64_t freq_hz);
-###int hackrf_set_freq_explicit(hackrf_device* device, const uint64_t if_freq_hz, const uint64_t lo_freq_hz, const enum rf_path_filter path);
 
-/* currently 8-20Mhz - either as a fraction, i.e. freq 20000000hz divider 2 -> 10Mhz or as plain old 10000000hz (double)
-	preferred rates are 8, 10, 12.5, 16, 20Mhz due to less jitter */
-###int hackrf_set_sample_rate_manual(hackrf_device* device, const uint32_t freq_hz, const uint32_t divider);
-###int hackrf_set_sample_rate(hackrf_device* device, const double freq_hz);
+###HackRF Set LNA Gain
+range 0-40 step 8d, IF gain in osmosdr
 
-/* external amp, bool on/off */
-###int hackrf_set_amp_enable(hackrf_device* device, const uint8_t value);
+**Syntax:** `int hackrf_set_lna_gain(hackrf_device* device, uint32_t value)`
 
-/* return HACKRF_TRUE if success */
-###int hackrf_is_streaming(hackrf_device* device);
+**Params:**
 
+**Returns:**
+
+###HackRF Set VGA Gain
+range 0-62 step 2db, BB gain in osmosdr
+
+**Syntax:** `int hackrf_set_vga_gain(hackrf_device* device, uint32_t value)`
+
+**Params:**
+
+**Returns:**
+
+###HackRF Set Tx VGA Gain
+range 0-47 step 1db
+
+**Syntax:** `int hackrf_set_txvga_gain(hackrf_device* device, uint32_t value)`
+
+**Params:**
+
+**Returns:**
+
+###HackRF Set Antenna Enable
+antenna port power control
+**Syntax:** `int hackrf_set_antenna_enable(hackrf_device* device, const uint8_t value)`
+
+**Params:**
+
+**Returns:**
+
+###HackRF Set Freq
+**Syntax:** `int hackrf_set_freq(hackrf_device* device, const uint64_t freq_hz)`
+
+**Params:**
+
+**Returns:**
+
+###HackRF Set Freq Explicit
+**Syntax:** `int hackrf_set_freq_explicit(hackrf_device* device, const uint64_t if_freq_hz, const uint64_t lo_freq_hz, const enum rf_path_filter path)`
+
+**Params:**
+
+**Returns:**
+
+
+###HackRF Set Sample Rate
+**Syntax:** `int hackrf_set_sample_rate(hackrf_device* device, const double freq_hz)`
+
+**Params:**
+
+**Returns:**
+
+
+###HackRF Set Sample Rate Manual
+currently 8-20Mhz - either as a fraction, i.e. freq 20000000hz divider 2 ->
+10Mhz or as plain old 10000000hz (double) preferred rates are 8, 10, 12.5, 16,
+20Mhz due to less jitter
+	
+**Syntax:** `int hackrf_set_sample_rate_manual(hackrf_device* device, const uint32_t freq_hz, const uint32_t divider)`
+
+**Params:**
+
+**Returns:**
+###HackRF Set Amp Enable
+Toggle the antenna port power for external amplifiers.
+
+**Syntax:** `int hackrf_set_amp_enable(hackrf_device* device, const uint8_t value)`
+
+**Params:**
+
+`device` - A pointer to the `hackrf_device` handle
+
+`value` - 1 to enable port power, 0 to disable
+
+**Returns:**
+
+
+###HackRF Is Streaming
+Check whether or not the HackRF device is currently streaming samples, either to
+or from the host system.
+
+**Syntax:** `int hackrf_is_streaming(hackrf_device* device)`
+
+**Params:**
+
+`device` - A pointer to the `hackrf_device` handle
+
+**Returns:**
+HACKRF_TRUE if the device is currently streaming.
 
 ##Reading and Writing Registers
 
-###int hackrf_max2837_read(hackrf_device* device, uint8_t register_number, uint16_t* value)
+###HackRF MAX2837 Read
+Read register values from the MAX2837 Baseband IC.
 
+**Syntax:** `int hackrf_max2837_read(hackrf_device* device, uint8_t register_number, uint16_t* value)`
+
+**Params:**
 
 **Returns:**
 
-###int hackrf_max2837_write(hackrf_device* device, uint8_t register_number, uint16_t value)
+###HackRF MAX2837 Write
+Write register values to the MAX2837 Baseband IC.
+
+**Syntax:** `int hackrf_max2837_write(hackrf_device* device, uint8_t register_number, uint16_t value)`
+
+**Params:**
  
 
 **Returns:**
 
-###int hackrf_si5351c_read(hackrf_device* device, uint16_t register_number, uint16_t* value)
+###HackRF Si5351C Read
+Read register values from the Si5351C clock generator IC.
+
+**Syntax:** `int hackrf_si5351c_read(hackrf_device* device, uint16_t register_number, uint16_t* value)`
+
+**Params:**
 
 
 **Returns:**
 
-###int hackrf_si5351c_write(hackrf_device* device, uint16_t register_number, uint16_t value)
+###HackRF Si5351C Write
+Write register values to the Si5351C clock generator IC.
+
+**Syntax:** `int hackrf_si5351c_write(hackrf_device* device, uint16_t register_number, uint16_t value)`
+
+**Params:**
 
 
 **Returns:**
- 
-###int hackrf_rffc5071_read(hackrf_device* device, uint8_t register_number, uint16_t* value)
 
+###HackRF RFFC5071 Read
+Read register values from the RFFC5071 mixer IC.
+
+**Syntax:** `int hackrf_rffc5071_read(hackrf_device* device, uint8_t register_number, uint16_t* value)`
+
+**Params:**
 
 **Returns:**
 
-###int hackrf_rffc5071_write(hackrf_device* device, uint8_t register_number, uint16_t value)
+###HackRF RFFC5071 Write
+Write register values to the RFFC5071 mixer IC.
 
+**Syntax:** `int hackrf_rffc5071_write(hackrf_device* device, uint8_t register_number, uint16_t value)`
+
+**Params:**
 
 **Returns:**
  
 ##Updating Firmware
 
-/* device will need to be reset after hackrf_cpld_write */
-###int hackrf_cpld_write(hackrf_device* device, unsigned char* const data, const unsigned int total_length)
+###HAckRF CPLD Write
+device will need to be reset after hackrf_cpld_write
 
-###int hackrf_spiflash_erase(hackrf_device\* device)
+**Syntax:** `int hackrf_cpld_write(hackrf_device* device, unsigned char* const data, const unsigned int total_length)`
 
-
-**Returns:**
-
-
-###int hackrf_spiflash_write(hackrf_device\* device, const uint32_t address, const uint16_t length, unsigned char\* const data)
+**Params:**
 
 **Returns:**
 
 
-###int hackrf_spiflash_read(hackrf_device\* device, const uint32_t address, const uint16_t length, unsigned char\* data);
+###HackRF SPI Flash Erase
 
+**Syntax:** `int hackrf_spiflash_erase(hackrf_device\* device)`
+
+**Params:**
+
+**Returns:**
+
+
+###HackRF SPI Flash Write
+
+**Syntax:** `int hackrf_spiflash_write(hackrf_device\* device, const uint32_t address, const uint16_t length, unsigned char\* const data)`
+
+**Params:**
+
+**Returns:**
+
+
+###HackRF SpI Flash Read
+
+**Syntax:** `int hackrf_spiflash_read(hackrf_device\* device, const uint32_t address, const uint16_t length, unsigned char\* data)`
+
+**Params:**
 
 **Returns:**
 
 
 ##Board Identifiers
 
-###int hackrf_board_id_read(hackrf_device\* device, uint8_t* value);
+###HackRF Board ID Read
 
+**Syntax:** `int hackrf_board_id_read(hackrf_device\* device, uint8_t* value)`
 
-**Returns:**
-
-
-###int hackrf_version_string_read(hackrf_device\* device, char\* version, uint8_t length);
-
+**Params:**
 
 **Returns:**
 
 
-###int hackrf_board_partid_serialno_read(hackrf_device\* device, read_partid_serialno_t\* read_partid_serialno);
+###HackRF Version String Read
 
+**Syntax:** `int hackrf_version_string_read(hackrf_device\* device, char\* version, uint8_t length)`
+
+**Params:**
+
+**Returns:**
+
+
+###HackRF Board Part ID Serial Number Read
+
+**Syntax:** `int hackrf_board_partid_serialno_read(hackrf_device* device, read_partid_serialno_t* read_partid_serialno)`
+
+**Params:**
 
 **Returns:**
 
 
 ##Miscellaneous
-###const char\* hackrf_error_name(enum hackrf_error errcode)
+###HackRF Error Name
 
+**Syntax:** `const char* hackrf_error_name(enum hackrf_error errcode)`
 
-**Returns:**
-
-
-###const char\* hackrf_board_id_name(enum hackrf_board_id board_id)
-
+**Params:**
 
 **Returns:**
 
 
-###const char\* hackrf_usb_board_id_name(enum hackrf_usb_board_id usb_board_id)
+###HackRF Board ID Name
+
+**Syntax:** `const char* hackrf_board_id_name(enum hackrf_board_id board_id)`
+
+**Params:**
+
+**Returns:**
+
+###HackRF USB Board ID Name
+
+**Syntax:** `const char* hackrf_usb_board_id_name(enum hackrf_usb_board_id usb_board_id)`
+
+**Params:**
 
 **Returns:**
 
 
-###const char\* hackrf_filter_path_name(const enum rf_path_filter path)
+###HackRF Filter Path Name
+
+**Syntax:** `const char* hackrf_filter_path_name(const enum rf_path_filter path)`
+
+**Params:**
 
 **Returns:**
 
