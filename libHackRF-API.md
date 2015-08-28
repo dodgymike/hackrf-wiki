@@ -1,6 +1,3 @@
-libHackRF API
-=============
-
 This document describes the functions, data structures and constants that
 libHackRF provides. It should be used as a refenrece for using libHackRF and the
 HackRF hardware.
