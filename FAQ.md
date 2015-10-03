@@ -28,6 +28,31 @@ After creating the rules file you can either reboot or run the command `udevadm 
 
 If you are using PyBOMBS, note that the HackRF recipe intentionally [does not install the udev rules](https://github.com/gnuradio/recipes/commit/a031078a52c038fc083dd3c107ef87df91803479#diff-8f163181a125b81f4d01e17217e471f3) to [avoid installation failures](https://github.com/mossmann/hackrf/issues/190) when run as non-root.
 
+=====
+Want to update one more reason for this error:
+
+If the command `hackrf_info` failed with "hackrf_open() .. HACKRF_ERROR_NOT_FOUND" error message, this could be also a problem of a kernel driver. Some ubuntu versions, like Ubuntu 15.04 with installed gnuradio has a kernel driver pre-installed. In this case you probably will get some syslog kernel messages like:
+
+* kernel: [ 8932.297074] hackrf 1-9.4:1.0: Board ID: 02
+* kernel: [ 8932.297076] hackrf 1-9.4:1.0: Firmware version: 2014.08.1
+* kernel: [ 8932.297261] hackrf 1-9.4:1.0: Registered as swradio0
+* kernel: [ 8932.297262] hackrf 1-9.4:1.0: SDR API is still slightly experimental and functionality changes may follow
+ 
+when you plug in the the HackRF module. Use the command `dmesg` to check the last system log entries. If you try to start `hackrf_info` it will terminate with the error message and the system log will show a message like:
+
+* kernel: [ 8967.263268] usb 1-9.4: usbfs: interface 0 claimed by hackrf while 'hackrf_info' sets config #1
+
+To solve this issue check under root account if is there is a kernel module `hackrf` loaded: `lsmod | grep hackrf`. If there is a hackrf kernel module, try to unload it with `rmmod hackrf`. You must do this command as root, too. After this the command `hackrf_info` (and all other hackrf related stuff) should work and the syslog usbfs massage should vanish.
+
+After a reset or USB unplug/plug this kernel module will load again and block the access again. To solve this you have to blacklist the hackrf kernel module in /etc/modprobe.d/blacklist(.conf) The current filename of the blacklist file may differ, it depends on the current ubuntu version. In ubuntu 15.04 it is located in /etc/modprobe.d/blacklist.conf. Open this file under root account with a text editor an add the following line at the end:
+
+```
+blacklist hackrf
+```
+
+After a system-restart, to get the updated modprobe working, the hackrf worked under ubuntu 15.04 with the upstream packages (Firmware version: 2014.08.1) out-of-the-box.
+
+
 ## hackrf_set_sample_rate fails
 
 ### Q:
