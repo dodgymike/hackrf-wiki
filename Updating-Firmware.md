@@ -4,7 +4,7 @@ These instructions allow you to upgrade the firmware and CPLD bitstream in order
 
 If you have any difficulty making this process work from your native operating system, you can [use Pentoo or the GNU Radio Live DVD](https://github.com/mossmann/hackrf/wiki/Getting-Started-with-HackRF-and-GNU-Radio#try-your-hackrf-with-pentoo-linux) to perform the updates.
 
-## Updating the SPI Flash Firmware
+## Step 1: Updating the SPI Flash Firmware
 
 To update the firmware on a working HackRF One, use the hackrf_spiflash program:
 
@@ -20,7 +20,7 @@ After writing the firmware to SPI flash, reset the HackRF device by pressing the
 
 If you get an error that mentions HACKRF_ERROR_NOT_FOUND, check out the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ#i-cant-seem-to-access-my-hackrf-under-linux). It's often a permissions problem that can be quickly solved.
 
-## Updating the CPLD
+## Step 2: Updating the CPLD
 
 To update to the latest CPLD image, first update the SPI flash firmware, libhackrf, and hackrf-tools.
 Then:
@@ -29,7 +29,7 @@ Then:
 
 After a few seconds, three LEDs should start blinking.  This indicates that the CPLD has been programmed successfully.  Reset the HackRF device by pressing the RESET button or by unplugging it and plugging it back in.
 
-## DFU Boot
+## Only if Necessary: DFU Boot
 
 DFU boot mode is normally only needed if the firmware is not working properly or has never been installed.
 
@@ -41,7 +41,7 @@ To start up Jawbreaker in DFU mode, short two pins on one of the "BOOT" headers 
 
 Developers: DFU mode is also very convenient for making rapid changes during firmware development.  If you leave a jumper in place, you can install new firmware by removing power from Jawbreaker, plugging it back in, and typing `make program` in the firmware source directory.  Note that you should not load firmware compiled with the "rom_to_ram" option over DFU.  On HackRF One, you can simply use the DFU and RESET buttons.
 
-## Recovering the SPI Flash Firmware
+## Only if Necessary: Recovering the SPI Flash Firmware
 
 If the firmware installed in SPI flash has been damaged or if you are programming a home-made HackRF for the first time, you will not be able to immediately use the hackrf_spiflash program as listed in the above procedure.  Follow these steps instead:
 
