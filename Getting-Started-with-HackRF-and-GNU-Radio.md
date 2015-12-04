@@ -8,8 +8,6 @@ To verify that your HackRF is detected, type `hackrf_info` at the command line. 
 
 You can type `startx` at the command line to launch a desktop environment.  Accept the "default config" in the first dialog box.  The desktop environment is useful for GNU Radio Companion and other graphical applications but is not required for basic operations such as firmware updates.
 
-One particular version of the Pentoo .iso (2014.0-RC3) had a minor bug that you need to work around by typing `eselect lapack set 1` at the command line in the terminal window before trying to use GNU Radio.  You only need to do this once after starting up Pentoo, but you'll have to do it every time you boot an unmodified .iso.  However, it is recommended that you simply download the latest version (that doesn't suffer from that bug) instead.
-
 Now you can use programs such as gnuradio-companion or gqrx to start experimenting with your HackRF.  Try the Examples below.  If you are new to GNU Radio, an excellent place to start is with the [SDR with HackRF](http://greatscottgadgets.com/sdr/) video series or with the [GNU Radio guided tutorials](http://gnuradio.org/redmine/projects/gnuradio/wiki/Guided_Tutorials).
 
 **Alternative: GNU Radio Live SDR Environment**
