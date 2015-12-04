@@ -43,3 +43,7 @@ The maximum TX power varies by operating frequency:
 Overall, the output power is enough to perform over-the-air experiments at close range or to drive an external amplifier.  If you connect an external amplifier, you should also use an external bandpass filter for your operating frequency.
 
 Before you transmit, know your laws.  Jawbreaker has not been tested for compliance with regulations governing transmission of radio signals.  You are responsible for using your Jawbreaker legally.
+
+## Hardware Documentation
+
+Schematic diagram, assembly diagram,and bill of materials can be found at [https://github.com/mossmann/hackrf/tree/master/doc/hardware](https://github.com/mossmann/hackrf/tree/master/doc/hardware)
