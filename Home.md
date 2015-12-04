@@ -21,18 +21,6 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 * [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
 
-### Lessons
-
-A [running series of videos](https://greatscottgadgets.com/sdr/) starring Michael Ossmann and the HackRF that will ultimately provide an entire body of coursework in SDR.
-
-* [Welcome](http://greatscottgadgets.com/sdr/1)
-* [DSP](http://greatscottgadgets.com/sdr/2)
-* [What is a Decibel?](http://greatscottgadgets.com/sdr/3)
-* [Mysteries](http://greatscottgadgets.com/sdr/4)
-* [HackRF One](http://greatscottgadgets.com/sdr/5)
-* [Complex Numbers](http://greatscottgadgets.com/sdr/6)
-* [Complex Numbers in DSP](http://greatscottgadgets.com/sdr/7)
-
 ### Firmware
 
 * [Firmware Development Setup](https://github.com/mossmann/hackrf/wiki/Firmware-Development-Setup)
