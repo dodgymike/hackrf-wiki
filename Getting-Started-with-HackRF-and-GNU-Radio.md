@@ -56,6 +56,4 @@ This Example was derived from the following works:
 `$ python ./fm_radio_rx.py`
 3. [You can find the GNU Radio Companion source file here](https://raw.githubusercontent.com/rrobotics/hackrf-tests/master/fm_radio/fm_radio_rx.grc)
 
-## Getting Help
-
-Please subscribe to the [HackRF-dev mailing list](http://nine.pairlist.net/mailman/listinfo/hackrf-dev).  This is the preferred place for questions about HackRF.  Be sure to check the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ) and other [documentation](https://github.com/mossmann/hackrf/wiki) before asking questions.  Additionally, you may want to join the #hackrf IRC channel on [freenode](http://freenode.net/).  Specific bugs and feature requests may be added to the [Issues List](https://github.com/mossmann/hackrf/issues?direction=desc&sort=updated&state=open) though they should probably be discussed on the mailing list or IRC first.
+## [Getting Help](https://github.com/mossmann/hackrf/wiki/Getting-Help)
