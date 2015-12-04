@@ -98,3 +98,7 @@ The HackRF One expansion interface consists of headers P9, P20, P22, and P28.  T
 Refer to the schematics and component documentation for more information.
 
 Additional unpopulated headers and test points are available for test and development, but they may be incompatible with some enclosure or expansion options.
+
+## Hardware Documentation
+
+Schematic diagram, assembly diagram,and bill of materials can be found at [https://github.com/mossmann/hackrf/tree/master/doc/hardware](https://github.com/mossmann/hackrf/tree/master/doc/hardware)
