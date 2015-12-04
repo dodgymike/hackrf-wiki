@@ -1,4 +1,4 @@
-Major parts selected so far (subject to change):
+Major parts used in HackRF One:
 
 * [MAX2837 2.3 to 2.7 GHz transceiver](http://www.maxim-ic.com/datasheet/index.mvp/id/5452/t/al)
   * [Datasheet](http://datasheets.maxim-ic.com/en/ds/MAX2837.pdf)
@@ -9,7 +9,7 @@ Major parts selected so far (subject to change):
   * [AN619: Manually Generating an Si5351 Register Map](http://www.silabs.com/Support%20Documents/TechnicalDocs/AN619.pdf)
   * [Datasheet](http://www.silabs.com/Support%20Documents/TechnicalDocs/Si5351.pdf) - this document is a mess of typos, and best used in conjunction with AN619, which has its own typos. Usually, you can reconcile what's true by comparison and a bit of thought.
   * [Other Documentation](http://www.silabs.com/products/clocksoscillators/clock-generators-and-buffers/Pages/clock+vcxo.aspx) - includes application notes, user guides, and white papers.
-* CoolRunner-II CPLD (considering switch to MAX V)
+* CoolRunner-II CPLD
 * [LPC43xx ARM Cortex-M4 microcontroller](http://www.nxp.com/products/microcontrollers/cortex_m4/lpc4300/)
   * [User Manual](http://www.nxp.com/documents/user_manual/UM10503.pdf)
   * [Datasheet](http://www.nxp.com/documents/data_sheet/LPC4350_30_20_10.pdf)
