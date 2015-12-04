@@ -5,7 +5,6 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [Getting Started with HackRF and GNU Radio](https://github.com/mossmann/hackrf/wiki/Getting-Started-with-HackRF-and-GNU-Radio)
 * [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) (software setup for particular OS or Linux distro)
 * [HackRF One](https://github.com/mossmann/hackrf/wiki/HackRF-One)
-* [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
 * [Updating Firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware)
 * [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
 * [HackRF Hacks](https://github.com/mossmann/hackrf/wiki/HackRF-Hacks)
