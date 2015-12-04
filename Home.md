@@ -4,9 +4,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 * [Getting Started with HackRF and GNU Radio](https://github.com/mossmann/hackrf/wiki/Getting-Started-with-HackRF-and-GNU-Radio)
 * [HackRF One](https://github.com/mossmann/hackrf/wiki/HackRF-One)
-* [Jawbreaker](https://github.com/mossmann/hackrf/wiki/Jawbreaker)
 * [Hardware Documentation](https://github.com/mossmann/hackrf/tree/master/doc/hardware) (schematic, assembly diagram, bill of materials)
-* [HackRF Beta Program](https://github.com/mossmann/hackrf/wiki/HackRF-Beta-Program) (Received a Jawbreaker?  Start here!)
 * [Updating Firmware](https://github.com/mossmann/hackrf/wiki/Updating-Firmware)
 * [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ)
 * [HackRF Hacks](https://github.com/mossmann/hackrf/wiki/HackRF-Hacks)
@@ -19,24 +17,30 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 
 ## Developer Notes
 
-* [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
-
 ### Firmware
 
 * [Firmware Development Setup](https://github.com/mossmann/hackrf/wiki/Firmware-Development-Setup)
-* [LPC4350 SGPIO Experimentation](https://github.com/mossmann/hackrf/wiki/LPC4350-SGPIO-Experimentation)
-* [LPC43xx SGPIO Configuration](https://github.com/mossmann/hackrf/wiki/LPC43xx-SGPIO-Configuration)
 * [LPC43xx Debugging](https://github.com/mossmann/hackrf/wiki/LPC43xx-Debugging)
 * [LPC43xx USB DFU Notes](https://github.com/mossmann/hackrf/wiki/LPC43xx-USB-DFU-Notes)
 * [LPC43xx USB Implementation](https://github.com/mossmann/hackrf/wiki/LPC43xx-USB-Implementation)
+* [LPC43xx SGPIO Configuration](https://github.com/mossmann/hackrf/wiki/LPC43xx-SGPIO-Configuration)
 
 ### Hardware
 
-* [Clocking](https://github.com/mossmann/hackrf/wiki/Clocking)
-* [Future Hardware Modifications](https://github.com/mossmann/hackrf/wiki/Future-Hardware-Modifications)
 * [Hardware Components](https://github.com/mossmann/hackrf/wiki/Hardware-Components)
   * [Block Diagrams](wiki/Hardware-Components#block-diagrams)
-* [Lemondrop Bring-Up](https://github.com/mossmann/hackrf/wiki/Lemondrop-Bring-Up)
+* [Clocking](https://github.com/mossmann/hackrf/wiki/Clocking)
 
 ## How to Help
 * [Task List](https://github.com/mossmann/hackrf/wiki/Task-List)
+
+## Old Stuff
+
+These pages are maintained for archival purposes.
+
+* [Jawbreaker](https://github.com/mossmann/hackrf/wiki/Jawbreaker)
+* [HackRF Beta Program](https://github.com/mossmann/hackrf/wiki/HackRF-Beta-Program) (Received a Jawbreaker?  Start here!)
+* [Design Goals](https://github.com/mossmann/hackrf/wiki/Design-Goals)
+* [Future Hardware Modifications](https://github.com/mossmann/hackrf/wiki/Future-Hardware-Modifications)
+* [Lemondrop Bring-Up](https://github.com/mossmann/hackrf/wiki/Lemondrop-Bring-Up)
+* [LPC4350 SGPIO Experimentation](https://github.com/mossmann/hackrf/wiki/LPC4350-SGPIO-Experimentation)
