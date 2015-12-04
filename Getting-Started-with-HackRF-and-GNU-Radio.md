@@ -20,7 +20,7 @@ The [GNU Radio Live SDR Environment](http://gnuradio.org/redmine/projects/gnurad
 
 As mentioned above, the best way to get started with HackRF is to use Pentoo Linux.  Eventually you may want to install software to use HackRF with your favorite operating system.
 
-If your package manager includes the most recent release of libhackrf (2014.04.1 at the time of writing) and gr-osmosdr, then use it to install those packages in addition to GNU Radio.  Otherwise, the recommended way to install these tools is by using [PyBOMBS](http://gnuradio.org/redmine/projects/pybombs/wiki).
+If your package manager includes the most recent release of libhackrf and gr-osmosdr, then use it to install those packages in addition to GNU Radio.  Otherwise, the recommended way to install these tools is by using [PyBOMBS](http://gnuradio.org/redmine/projects/pybombs/wiki).
 
 See the [Operating System Tips](https://github.com/mossmann/hackrf/wiki/Operating-System-Tips) page for information on setting up HackRF software on particular Operating Systems and Linux distributions.
 
