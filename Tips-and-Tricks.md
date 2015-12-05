@@ -2,11 +2,13 @@
 
 ## USB Cables (and why to use a noise reducing one)
 
-The USB cable you choose can make a big difference in what you see when using your HackRF and especially when using it around the 480mhz area where the USB is doing all its work.
+The USB cable you choose can make a big difference in what you see when using your HackRF and especially when using it around between 120 and 480 MHz where USB is doing all its work.
 
-For this reason, when choosing a cable it is best to purchase one that has a ferrite core (or ferrite beads).  These cables are usually advertised to be noise reducing and are recognizable from the plastic block towards one end.
+1. Use a shielded USB cable.  The best way to guarantee RF interference from USB is to use an unshielded cable.  You can test that your cable is shielded by using a continuity tester to verify that the shield on one connector has continuity to the shield on the connector at the other end of the cable.
 
-Trying anything larger than a 6ft cable may yield poor results.  The longer the cable, the more loss you can expect and when making this post a 15ft cable was tried and the result was the HackRF would only power up half way.
+2. Use a short USB cable.  Trying anything larger than a 6ft cable may yield poor results.  The longer the cable, the more loss you can expect and when making this post a 15ft cable was tried and the result was the HackRF would only power up half way.
+
+3. For best results, select a cable with a ferrite core.  These cables are usually advertised to be noise reducing and are recognizable from the plastic block towards one end.
 
 Screenshot before and after changing to a noise reducing cable ([view full size image](http://i.imgur.com/e64LASK.jpg)):
 ![Before and after showing the change when moving to a noise reducing USB cable.](http://i.imgur.com/e64LASK.jpg)
