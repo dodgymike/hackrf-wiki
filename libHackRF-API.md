@@ -1,5 +1,5 @@
 This document describes the functions, data structures and constants that
-libHackRF provides. It should be used as a refenrece for using libHackRF and the
+libHackRF provides. It should be used as a reference for using libHackRF and the
 HackRF hardware.
 
 If you are writing a generic SDR application, i.e. not tied to the HackRF
@@ -8,7 +8,7 @@ provide support for the broadest possible range of software defined radio
 hardware.
 
 For example usage of many of these functions, see the
-[hackrf_trasfer](https://github.com/mossmann/hackrf/blob/master/host/hackrf-tools/src/hackrf_transfer.c)
+[hackrf_transfer](https://github.com/mossmann/hackrf/blob/master/host/hackrf-tools/src/hackrf_transfer.c)
 tool.
 
 
@@ -87,7 +87,7 @@ A value from the hackrf_error constants listed below.
 ###HackRF Exit
 Cleanly shutdown libHackRF and the underlying USB context. This does not stop in
 progress transfers or close the HackRF hardware. ```hackrf_close()``` should be
-called before this to clceanly close the connection to the hardware.
+called before this to cleanly close the connection to the hardware.
 
 **Syntax:** `int hackrf_exit()`
 
@@ -499,13 +499,13 @@ enum hackrf_usb_board_id {
 };
 ```
 
-###Tranceiver Mode
+###Transceiver Mode
 HackRF can operate in three main transceiver modes, Receive, Transmit and Signal
 Source. There is also a CPLD update mode which is used to write firmware images
 to the CPLD.
 
-Receive mode is used to stream samples from the radio to the host system. The
-centre frequency and bandwidth are set using 
+The transceiver mode can be changed with `hackrf_set_transceiver_mode` with the value parameter set to one of the following:
+
 ```
 enum transceiver_mode_t {
 	TRANSCEIVER_MODE_OFF = 0,
@@ -515,6 +515,12 @@ enum transceiver_mode_t {
 	TRANSCEIVER_MODE_CPLD_UPDATE = 4
 };
 ```
+
+Receive mode (TRANSCEIVER_MODE_RX) is used to stream samples from the radio to the host system. Use `hackrf_set_freq` to set the center frequency of receiver and `hackrf_set_sample_rate` to set the sample rate (effective bandwidth).
+
+Transmit mode (TRANSCEIVER_MODE_TX) is used to stream samples from the host to the radio.
+
+See [hackrf_transfer](https://github.com/mossmann/hackrf/blob/master/host/hackrf-tools/src/hackrf_transfer.c) for an example of setting transmit and receive mode and transferring data over USB.
 
 ###Function return values
 ```
