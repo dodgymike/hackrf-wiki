@@ -10,7 +10,7 @@ Major parts used in HackRF One:
   * [Datasheet](http://www.silabs.com/Support%20Documents/TechnicalDocs/Si5351.pdf) - this document is a mess of typos, and best used in conjunction with AN619, which has its own typos. Usually, you can reconcile what's true by comparison and a bit of thought.
   * [Other Documentation](http://www.silabs.com/products/clocksoscillators/clock-generators-and-buffers/Pages/clock+vcxo.aspx) - includes application notes, user guides, and white papers.
 * CoolRunner-II CPLD
-* [LPC43xx ARM Cortex-M4 microcontroller](http://www.nxp.com/products/microcontrollers/cortex_m4/lpc4300/)
+* [LPC43xx ARM Cortex-M4 microcontroller](http://www.nxp.com/products/microcontrollers-and-processors/arm-processors/lpc-arm-cortex-m-mcus/lpc-dual-core-cortex-m0-m4f/lpc4300:MC_1403790133078)
   * [User Manual](http://www.nxp.com/documents/user_manual/UM10503.pdf)
   * [Datasheet](http://www.nxp.com/documents/data_sheet/LPC4350_30_20_10.pdf)
   * [Other Documentation (LPC4330FBD144)](http://www.nxp.com/products/microcontrollers/cortex_m4/lpc4300/LPC4330FBD144.html#documentation) - includes errata and application notes.
