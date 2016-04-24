@@ -7,8 +7,8 @@ These instructions were written and tested for both Ubuntu 12.04LTS and Ubuntu 1
 #### Preparing Your System
 
 First things first, make sure all your current software is up to date<br>
-`$sudo apt-get update`<br>
-`$sudo apt-get upgrade -y`
+`$ sudo apt-get update`<br>
+`$ sudo apt-get upgrade -y`
 
 #### Installing using PyBOMBS
 
@@ -30,11 +30,11 @@ First things first, make sure all your current software is up to date<br>
 Note: These instructions use the older build-gnuradio instead of the newer [PyBOMBS](http://gnuradio.org/pybombs). Either should work fine.
 
 1. Create a directory to hold all the files needed to build the supporting software. In this example we will create a directory called **hackrf_files** under our home folder:<br>
-`$mkdir ~/hackrf_files`
+`$ mkdir ~/hackrf_files`
 2. Download a copy of Marcus D. Leech's fantastic GNU radio setup script.  You can find it here:<br> http://www.sbrac.org/files/build-gnuradio
 3. Save the script to ~/hackrf_files/build-gnuradio.sh
 4. Give the script execution permission<br>
-`$chmod 744 ~/hackrf_files/build-gnuradio.sh`
+`$ chmod 744 ~/hackrf_files/build-gnuradio.sh`
 5. Execute the script using ~/hackrf_files/build-gnuradio.sh and follow the prompts<br>**WARNING: This step may very well take a few hours to complete!**
 
 #### Installing HackRF Tools manually
