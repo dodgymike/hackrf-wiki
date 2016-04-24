@@ -2,7 +2,7 @@ Here are some software setup tips for particular Operating Systems and Linux dis
 
 ## Ubuntu
 
-These instructions were written and tested for both Ubuntu 12.04LTS and Ubuntu 14.04LTS.  You will also need to be familiar with terminal use.
+These instructions were written and tested for both Ubuntu 12.04LTS and Ubuntu 14.04LTS.  You will also need to be familiar with terminal use.  An unofficial [HackRF Ubuntu Setup](https://mborgerson.com/getting-started-with-the-hackrf-one-on-ubuntu-14-04) guide is also available.
 
 #### Preparing Your System
 
