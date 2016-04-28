@@ -14,6 +14,9 @@ SDR_Radio.com V2 - http://v2.sdr-radio.com/Radios/HackRF.aspx
 
 ## Can use HackRF data
 
+Inspectrum https://github.com/miek/inspectrum
+  * Capture analysis tool with advanced features
+
 Baudline http://www.baudline.com/  (Can view/process HackRF data, e.g. hackrf_transfer)
 
 ## HackRF Tools
