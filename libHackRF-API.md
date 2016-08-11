@@ -332,7 +332,7 @@ device will need to be reset after hackrf_cpld_write
 
 ###HackRF SPI Flash Erase
 
-**Syntax:** `int hackrf_spiflash_erase(hackrf_device\* device)`
+**Syntax:** `int hackrf_spiflash_erase(hackrf_device* device)`
 
 **Params:**
 
@@ -341,7 +341,7 @@ device will need to be reset after hackrf_cpld_write
 
 ###HackRF SPI Flash Write
 
-**Syntax:** `int hackrf_spiflash_write(hackrf_device\* device, const uint32_t address, const uint16_t length, unsigned char\* const data)`
+**Syntax:** `int hackrf_spiflash_write(hackrf_device* device, const uint32_t address, const uint16_t length, unsigned char* const data)`
 
 **Params:**
 
@@ -350,7 +350,7 @@ device will need to be reset after hackrf_cpld_write
 
 ###HackRF SpI Flash Read
 
-**Syntax:** `int hackrf_spiflash_read(hackrf_device\* device, const uint32_t address, const uint16_t length, unsigned char\* data)`
+**Syntax:** `int hackrf_spiflash_read(hackrf_device* device, const uint32_t address, const uint16_t length, unsigned char* data)`
 
 **Params:**
 
@@ -361,7 +361,7 @@ device will need to be reset after hackrf_cpld_write
 
 ###HackRF Board ID Read
 
-**Syntax:** `int hackrf_board_id_read(hackrf_device\* device, uint8_t* value)`
+**Syntax:** `int hackrf_board_id_read(hackrf_device* device, uint8_t* value)`
 
 **Params:**
 
@@ -370,7 +370,7 @@ device will need to be reset after hackrf_cpld_write
 
 ###HackRF Version String Read
 
-**Syntax:** `int hackrf_version_string_read(hackrf_device\* device, char\* version, uint8_t length)`
+**Syntax:** `int hackrf_version_string_read(hackrf_device* device, char* version, uint8_t length)`
 
 **Params:**
 
