@@ -10,6 +10,12 @@ First things first, make sure all your current software is up to date<br>
 `$ sudo apt-get update`<br>
 `$ sudo apt-get upgrade -y`
 
+
+#### Installing using a package manager
+Works on Ubuntu version 15.04 'Vivid' and later.
+This will install gnuradio, gnuradio-companion, gqrx as main programs and support for HackRF, USRP, RTL-stick. 
+     sudo apt-get install gqrx-sdr
+
 #### Installing using PyBOMBS
 
 1. Clone [PyBOMBS](http://gnuradio.org/pybombs) in your home directory and start the app store:<br>
