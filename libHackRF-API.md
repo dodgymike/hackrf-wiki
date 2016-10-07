@@ -45,7 +45,7 @@ data structures section below.
 
 
 ###HackRF Device List Open
-Open and acquire a handle on a device from the 
+Open and acquire a handle on a device from the hackrf_device_list_t struct.
 
 **Syntax:** `int hackrf_device_list_open(hackrf_device_list_t* list, int idx, hackrf_device** device)`
 
@@ -141,14 +141,14 @@ A value from the hackrf_error constants listed below.
 
 
 ###HackRF Compute Baseband Filter BW
-Compute best default value depending on sample rate (auto filter)
+Compute best default value depending on sample rate (auto filter).
 
 **Syntax:** `uint32_t hackrf_compute_baseband_filter_bw(const uint32_t bandwidth_hz)`
 
 **Params:**
 
 **Returns:**
-A valid baseband filter width available from the Maxim max2837 frontend used by
+A valid baseband filter width available from the Maxim MAX2837 frontend used by
 the radio.
 
 
@@ -160,12 +160,12 @@ Compute nearest freq for bw filter (manual filter)
 **Params:**
 
 **Returns:**
-A valid baseband filter width available from the Maxim max2837 frontend used by
+A valid baseband filter width available from the Maxim MAX2837 frontend used by
 the radio.
 
 
 ###HackRF Set LNA Gain
-range 0-40 step 8d, IF gain in osmosdr
+Range 0-40 (step 8dB), IF gain in OsmoSDR
 
 **Syntax:** `int hackrf_set_lna_gain(hackrf_device* device, uint32_t value)`
 
@@ -174,7 +174,7 @@ range 0-40 step 8d, IF gain in osmosdr
 **Returns:**
 
 ###HackRF Set VGA Gain
-range 0-62 step 2db, BB gain in osmosdr
+Range 0-62 (step 2dB), BB gain in OsmoSDR
 
 **Syntax:** `int hackrf_set_vga_gain(hackrf_device* device, uint32_t value)`
 
@@ -183,7 +183,7 @@ range 0-62 step 2db, BB gain in osmosdr
 **Returns:**
 
 ###HackRF Set Tx VGA Gain
-range 0-47 step 1db
+Range 0-47 (step 1dB)
 
 **Syntax:** `int hackrf_set_txvga_gain(hackrf_device* device, uint32_t value)`
 
@@ -192,7 +192,8 @@ range 0-47 step 1db
 **Returns:**
 
 ###HackRF Set Antenna Enable
-antenna port power control
+Antenna port power control
+
 **Syntax:** `int hackrf_set_antenna_enable(hackrf_device* device, const uint8_t value)`
 
 **Params:**
@@ -223,9 +224,9 @@ antenna port power control
 
 
 ###HackRF Set Sample Rate Manual
-currently 8-20Mhz - either as a fraction, i.e. freq 20000000hz divider 2 ->
-10Mhz or as plain old 10000000hz (double) preferred rates are 8, 10, 12.5, 16,
-20Mhz due to less jitter
+Currently 8-20MHz - either as a fraction, i.e. freq 20000000hz divider 2 ->
+10MHz or as plain old 10000000Hz (double) preferred rates are 8, 10, 12.5, 16,
+20MHz due to less jitter
 	
 **Syntax:** `int hackrf_set_sample_rate_manual(hackrf_device* device, const uint32_t freq_hz, const uint32_t divider)`
 
@@ -320,8 +321,8 @@ Write register values to the RFFC5071 mixer IC.
  
 ##Updating Firmware
 
-###HAckRF CPLD Write
-device will need to be reset after hackrf_cpld_write
+###HackRF CPLD Write
+Device will need to be reset after hackrf_cpld_write.
 
 **Syntax:** `int hackrf_cpld_write(hackrf_device* device, unsigned char* const data, const unsigned int total_length)`
 
@@ -348,7 +349,7 @@ device will need to be reset after hackrf_cpld_write
 **Returns:**
 
 
-###HackRF SpI Flash Read
+###HackRF SPI Flash Read
 
 **Syntax:** `int hackrf_spiflash_read(hackrf_device* device, const uint32_t address, const uint16_t length, unsigned char* data)`
 
