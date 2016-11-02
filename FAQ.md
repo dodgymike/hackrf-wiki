@@ -6,9 +6,10 @@ When running `hackrf_info` or any other command which tries to communicate with 
 hackrf_open() failed: HACKRF_ERROR_NOT_FOUND (-5)
 ```
 
-### A:
+### Using the latest version
 First make sure that you are running the latest version of libhackrf and hackrf-tools. HackRF One, for example, is only supported by release 2014.04.1 or newer.  Then check to see if `hackrf_info` is successful when running as root.  If it is, then your other user is lacking permission.
 
+### Permission problem
 A normal user under Linux doesn't have the permissions to access arbitrary USB devices because of security reasons. The first solution would be to run every command which tries to access the HackRF as root which is not recommended for daily usage, but at least shows you if your HackRF really works.
 
 To fix this issue, you can write a udev rule to instruct udev to set permissions for the device in a way that it can be accessed by any user on the system who is a member of a specific group.
@@ -26,10 +27,11 @@ The content of the file instructs udev to look out for devices with Vendor ID an
 
 After creating the rules file you can either reboot or run the command `udevadm control --reload-rules` as root to instruct udev to reload all rule files. After replugging your HackRF board, you should be able to access the device with all utilities as a normal user.  If you still can't access the device, make sure that you are a member of the plugdev group.
 
+#### PyBOMBs
+
 If you are using PyBOMBS, note that the HackRF recipe intentionally [does not install the udev rules](https://github.com/gnuradio/recipes/commit/a031078a52c038fc083dd3c107ef87df91803479#diff-8f163181a125b81f4d01e17217e471f3) to [avoid installation failures](https://github.com/mossmann/hackrf/issues/190) when run as non-root.
 
-=====
-Want to update one more reason for this error:
+### hackrf kernel module
 
 If the command `hackrf_info` failed with "hackrf_open() .. HACKRF_ERROR_NOT_FOUND" error message, this could be also a problem of a kernel driver. Some ubuntu versions, like Ubuntu 15.04 with installed gnuradio has a kernel driver pre-installed. In this case you probably will get some syslog kernel messages like:
 
@@ -51,6 +53,15 @@ blacklist hackrf
 ```
 
 After a system-restart, to get the updated modprobe working, the hackrf worked under ubuntu 15.04 with the upstream packages (Firmware version: 2014.08.1) out-of-the-box.
+
+### USB autosuspend
+Another problem could be enabled USB autosuspend, which is likely if `hackrf_info` returns an error on the first execution, and works if you execute it a second time directly after. In this case, you should see a `broken pipe` error if run you run it with LIBUSB_DEBUG=3.
+To fix this, you need to disable USB autosuspend. If you use a power manager like tlp, make sure to add the usbids to `USB_BLACKLIST`:
+
+```
+USB_BLACKLIST="1d50:604b 1d50:6089 1d50:cc15 1fc9:000c"
+```
+and restart tlp afterwards.
 
 
 ## hackrf_set_sample_rate fails
