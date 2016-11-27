@@ -12,7 +12,7 @@ SDR# (Windows only) - http://sdrsharp.com/
 
 SDR_Radio.com V2 - http://v2.sdr-radio.com/Radios/HackRF.aspx
 
-Universal Radio Hacker - https://github.com/jopohl/urh
+Universal Radio Hacker (Windows+Linux) - https://github.com/jopohl/urh
 
 ## Can use HackRF data
 
