@@ -2,22 +2,7 @@ Various debugger options for the LPC43xx exist.
 
 # Black Magic Probe
 
-[http://www.blacksphere.co.nz/main/blackmagic](http://www.blacksphere.co.nz/main/blackmagic)
-
-Recent Black Magic Probe firmware supports the LPC43xx.
-
-To check your Black Magic Probe's firmware revision from inside gdb:
-
-    monitor version
-
-To upgrade the Black Magic Probe firmware, plug in the Black Magic Probe and do:
-
-    git clone git://github.com/gsmcmullin/blackmagic.git
-    cd blackmagic
-    git submodule init && git submodule update
-    make
-    scripts/stm32_mem.py src/blackmagic.bin
-    scripts/stm32_mem.py src/blackmagic.bin
+[https://github.com/blacksphere/blackmagic](https://github.com/blacksphere/blackmagic)
 
 An example of using gdb with the Black Magic Probe:
 
@@ -29,7 +14,7 @@ An example of using gdb with the Black Magic Probe:
     load
     cont
 
-It is possible to attach to the M0 instead of the M4 if you use jtag_scan instead of swdp_scan, but the Black Magic Probe still has some bugs when trying to work with the M0.
+It is possible to attach to the M0 instead of the M4 if you use jtag_scan instead of swdp_scan, but the Black Magic Probe had some bugs when trying to work with the M0 the last time I tried it.
 
 # LPC-Link
 
