@@ -28,7 +28,7 @@ Welcome to the HackRF wiki! For project status and information about HackRF hard
 * [Clocking](https://github.com/mossmann/hackrf/wiki/Clocking)
 
 ## How to Help
-* [Task List](https://github.com/mossmann/hackrf/wiki/Task-List)
+* [Issues](https://github.com/mossmann/hackrf/issues) (Look for enhancements or bugs that interest you.)
 
 ## Old Stuff
 
