@@ -8,15 +8,15 @@ If you have any difficulty making this process work from your native operating s
 
 To update the firmware on a working HackRF One, use the hackrf_spiflash program:
 
-    hackrf_spiflash -w hackrf_one_usb_rom_to_ram.bin
+    hackrf_spiflash -Rw hackrf_one_usb.bin
 
-You can find the firmware binary (hackrf_one_usb_rom_to_ram.bin) in the firmware-bin directory of the latest [release package](https://github.com/mossmann/hackrf/releases/latest) or you can compile your own from the [source](https://github.com/mossmann/hackrf/tree/master/firmware).  For Jawbreaker, use hackrf_jawbreaker_usb_rom_to_ram.bin.  If you compile from source, the file will be called hackrf_usb_m0.bin.
+You can find the firmware binary (hackrf_one_usb.bin) in the firmware-bin directory of the latest [release package](https://github.com/mossmann/hackrf/releases/latest) or you can compile your own from the [source](https://github.com/mossmann/hackrf/tree/master/firmware).  For Jawbreaker, use hackrf_jawbreaker_usb.bin.  If you compile from source, the file will be called hackrf_usb_m0.bin.
 
 The hackrf_spiflash program is part hackrf-tools.
 
-When writing a firmware image to SPI flash, be sure to select firmware that is compiled with the "rom_to_ram" option.  (Without that option, the microcontroller will try to execute code directly from SPI flash without first copying the code to RAM.  This can cause performance problems and can result in future firmware update failures.)  If you are compiling your own firmware, see firmware/README for instructions.
+When writing a firmware image to SPI flash, be sure to select firmware with a filename ending in ".bin".
 
-After writing the firmware to SPI flash, reset the HackRF device by pressing the RESET button or by unplugging it and plugging it back in.
+After writing the firmware to SPI flash, you may need to reset the HackRF device by pressing the RESET button or by unplugging it and plugging it back in.
 
 If you get an error that mentions HACKRF_ERROR_NOT_FOUND, check out the [FAQ](https://github.com/mossmann/hackrf/wiki/FAQ#i-cant-seem-to-access-my-hackrf-under-linux). It's often a permissions problem that can be quickly solved.
 
@@ -39,15 +39,15 @@ To start up HackRF One in DFU mode, hold down the DFU button while powering it o
 
 To start up Jawbreaker in DFU mode, short two pins on one of the "BOOT" headers while power is first supplied.  The pins that must be shorted are pins 1 and 2 of header P32 on Jawbreaker.  Header P32 is labeled "P2_8" on most Jawbreakers but may be labeled "2" on prototype units.  Pin 1 is labeled "VCC".  Pin 2 is the center pin.  After DFU boot, you should see VCCLED illuminate and note that 1V8LED does not illuminate.  At this point Jawbreaker is ready to receive firmware over USB.
 
-Developers: DFU mode is also very convenient for making rapid changes during firmware development.  If you leave a jumper in place, you can install new firmware by removing power from Jawbreaker, plugging it back in, and typing `make program` in the firmware source directory.  Note that you should not load firmware compiled with the "rom_to_ram" option over DFU.  On HackRF One, you can simply use the DFU and RESET buttons.
+You should not load firmware with a filename ending in ".bin" over DFU.  Only use a fimware image with a filename ending in ".dfu".
 
 ## Only if Necessary: Recovering the SPI Flash Firmware
 
 If the firmware installed in SPI flash has been damaged or if you are programming a home-made HackRF for the first time, you will not be able to immediately use the hackrf_spiflash program as listed in the above procedure.  Follow these steps instead:
 
 1. Follow the DFU Boot instructions to start the HackRF in DFU boot mode.
-2. Type `dfu-util --device 1fc9:000c --alt 0 --download hackrf_one_usb_ram.dfu` to load firmware from a release package into RAM.  If you have a Jawbreaker, use hackrf_jawbreaker_usb_ram.dfu instead.  Alternatively, use `make -e BOARD=HACKRF_ONE RUN_FROM=RAM program` in the firmware/hackrf_usb directory to load the firmware into RAM and start it.
-3. Follow the SPI flash firmware update procedure above to write the "rom_to_ram" firmware image to SPI flash.
+2. Type `dfu-util --device 1fc9:000c --alt 0 --download hackrf_one_usb.dfu` to load firmware from a release package into RAM.  If you have a Jawbreaker, use hackrf_jawbreaker_usb.dfu instead.  Alternatively, use `make -e BOARD=HACKRF_ONE RUN_FROM=RAM program` to load the firmware into RAM and start it.
+3. Follow the SPI flash firmware update procedure above to write the ".bin" firmware image to SPI flash.
 
 
 ## Obtaining DFU-Util
