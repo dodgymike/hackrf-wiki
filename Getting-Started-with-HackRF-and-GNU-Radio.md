@@ -38,11 +38,14 @@ A great way to get started with HackRF is the [SDR with HackRF](http://greatscot
 
 If everything is OK, you should see something similar to the following:
 
-> Found HackRF board.<br>
+> hackrf_info version: 2017.02.1<br>
+> libhackrf version: 2017.02.1 (0.5)<br>
+> Found HackRF<br>
+> Index: 0<br>
+> Serial number: 0000000000000000################<br>
 > Board ID Number: 2 (HackRF One)<br>
-> Firmware Version: git-#######<br>
+> Firmware Version: 2017.02.1 (API:1.02)<br>
 > Part ID Number: 0x######## 0x########<br>
-> Serial Number: 0x######## 0x######## 0x######## 0x########<br>
 
 **FM Radio Example**
 
