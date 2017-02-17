@@ -22,4 +22,4 @@ The hackrf case has small plastic clips holding it in place. These are usually *
 # Connect the clocks
 Connecting the hackrf clocks together will force them to sample at precisely the same rate. The individual samples will most likely be sampled at slightly different time due to phase offsets in the clock, but for most purposes this is acceptable.
 
-Choose a **primary** hackrf, and connect the clock sync cable from the __clock out__ connector to the __clock in__ connector of the **second** hackrf. If you're using another hackrf, connect the **second** hackrf's __clock out__ to the **third** hackrf's __clock in__
+Choose a **primary** hackrf, and connect the clock sync cable from the _clock out_ connector to the _clock in_ connector of the **second** hackrf. If you're using another hackrf, connect the **second** hackrf's _clock out_ to the **third** hackrf's _clock in_
