@@ -18,3 +18,8 @@ You will also need the standard requirements such as antenna and USB cable.
 
 # Opening your hackrf
 The hackrf case has small plastic clips holding it in place. These are usually **destroyed** when the case is opened. Please follow the instructions in [this video](https://www.youtube.com/watch?v=zuXJtpTSEJM) by [Jared Boone](https://twitter.com/sharebrained).
+
+# Connect the clocks
+Connecting the hackrf clocks together will force them to sample at precisely the same rate. The individual samples will most likely be sampled at slightly different time due to phase offsets in the clock, but for most purposes this is acceptable.
+
+Choose a **primary** hackrf, and connect the clock sync cable from the __clock out__ connector to the __clock in__ connector of the **second** hackrf. If you're using another hackrf, connect the **second** hackrf's __clock out__ to the **third** hackrf's __clock in__
