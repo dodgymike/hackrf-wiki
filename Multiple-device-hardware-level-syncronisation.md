@@ -63,7 +63,7 @@ This test will fail if:
 * your timing is too slow when running _hackrf_transfer_
 
 Run the following commands within one second of each other:
-`hackrf_transfer -d <device A> -r <filename-A> -H`
-`hackrf_transfer -d <device B> -r <filename-B> -H`
+* `hackrf_transfer -d <device A> -r <filename-A> -H`
+* `hackrf_transfer -d <device B> -r <filename-B> -H`
 
 If the test runs correctly, you are 90% of the way there!
