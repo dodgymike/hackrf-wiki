@@ -72,6 +72,8 @@ If the test runs correctly, you are 90% of the way there!
 # What now?
 I am a big fan of _GnuRadio_, and I use the _Osmocom source_ for multi-device streaming, as it can be configured to pull from more than one device. I then interleave the streams and output the result to a file.
 
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/grc-hw-sync-streaming.png]]
+
 I wrote a dodgy piece of _PyQt_ to read in the stream, pull out the interleaved streams and display them on a single, normalised graph. This helps me figure out what is happening with the phases. Automation will hopefully follow.
 
 # Related work
