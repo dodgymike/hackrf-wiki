@@ -56,7 +56,7 @@ Next we connect the _primary:Jxx_ _ready_ GPIO pin input to the _secondary:Jxx_ 
 Now that the hardware is setup, you need to upgrade your HackRFs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
 
 # Testing with _hackrf_transfer_
-The latest version of _hackrf_transfer_ includes the '-H' flag, which will activate hardware synchronisation (via libhackrf via the firmware). Testing this way is a little tricky because _hackrf_transfer_ will time out if it hasn't received any data within one second, and it requires that **two** copies of _hackrf_transfer are running. My approach is to have two terminal windows with the relevant commands waiting, and quickly run them.
+The latest version of _hackrf_transfer_ includes the '-H' flag, which will activate hardware synchronisation (via libhackrf via the firmware). Testing this way is a little tricky because neither HackRF will start sending  data until they are synched, and _hackrf_transfer_ will time out if it hasn't received any data within one second. So the test requires that **two** copies of _hackrf_transfer are started within 1 second of each other. My approach is to have two terminal windows with the relevant commands waiting, and quickly run them.
 
 This test will fail if:
 * your hackrf firmware or _libhackrf_ are out of date
