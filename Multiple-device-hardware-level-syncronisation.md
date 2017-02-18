@@ -32,7 +32,6 @@ Firstly, this has only been tested on official hackrfs. If you have a jawbreaker
 
 The hackrf has four pin headers, three of which are arranged in a 'C' shape. On the board these are marked as _P28_, _P22_ and _P20_. _P20_ is the header closest to the _clock in_/_clock out_ connectors. For this exercise we will only be discussing _P20_. The [hackrf schematics](https://github.com/mossmann/hackrf/tree/master/hardware/hackrf-one) are a very good reference for this activity. The relevant part can been seen in the following image:
 
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20.png]]
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers.jpg]]
 
 # Wire up the pin headers
@@ -46,6 +45,9 @@ We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's 
 
 Next we connect the _primary:Jxx_ _ready_ GPIO pin input to the _secondary:Jxx_ _ready_ GPIO pin output, and the _primary:Jxx_ _ack_ GPIO pin output to the _secondary:Jxx_ ack GPIO pin input. This is the final step, and should look as follows:
 [[images/hackrf-pin-headers-ready-ack.png]]
+
+Below is the P20 schematic diagram:
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20.png]]
 
 # Upgrade
 Now that the hardware is setup, you need to upgrade your hackrfs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
