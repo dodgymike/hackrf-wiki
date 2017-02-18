@@ -25,7 +25,7 @@ Connecting the hackrf clocks together will force them to sample at precisely the
 Choose a **primary** hackrf, and connect the clock sync cable from the _clock out_ connector to the _clock in_ connector of the **second** hackrf. If you're using another hackrf, connect the **second** hackrf's _clock out_ to the **third** hackrf's _clock in_.
 
 Your hackrfs should look like this:
-[[images/clock-sync-cables.png]]
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-clock-sync.jpg]]
 
 # Identify the pin headers
 Firstly, this has only been tested on official hackrfs. If you have a jawbreaker, or another hackrf-inspired device, you will have to figure out how to connect the devices correctly from the schematics.
