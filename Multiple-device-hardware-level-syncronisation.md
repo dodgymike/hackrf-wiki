@@ -3,7 +3,6 @@ This page describes the modifications required to get multiple HackRF hardware-l
 * phase correlation
 * oversampling using multiple devices
 * 40MHz (or more) wifi
-* Full-duplex (will this work? I haven't tried!)
 
 The HackRFs will start transmitting USB packets at the same time, which results in an inter-device offset of ~50 samples at a sample rate of 20MSps. Without this synchronisation, the offset is in the range of thousands to tens of thousands of samples. This is due to the USB start command being called sequentially for each device, along with USB buffering, OS-level timing etc. 
 
