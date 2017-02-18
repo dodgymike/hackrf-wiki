@@ -42,10 +42,10 @@ This is the P20 schematic diagram:
 # Wire up the pin headers
 As mentioned before **BE WARNED**, this step could easily result in **one or all** of your HackRFs being **permanently damaged**. If you care about your SDRs more than your cats/children/spouse (like I do), **don't do this**!
 
-Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the respective GND levels as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We choose _P20-PIN19_ on both devices and connect them together like so:
+Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the respective GND levels as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We use _P20-PIN19_ on both devices and connect them together like so:
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-19-gnd.jpg]]
 
-We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's not present. We choose _Jxx_ from the **primary** hackrf for this, and bring it down to the breadboard. _primary:Jxx_ and _secondary:Jxx_ are _ready_ GPIO pins. Connect these to the breadboard _positive_ line. After this your setup should look like so:
+We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's not present. We use _P20-PIN3_ from the **primary** hackrf for this, and bring it down to the breadboard. _primary:Jxx_ and _secondary:Jxx_ are _ready_ GPIO pins. Connect these to the breadboard _positive_ line. After this your setup should look like so:
 [[images/hackrf-pin-headers-positive.png]]
 
 Next we connect the _primary:Jxx_ _ready_ GPIO pin input to the _secondary:Jxx_ _ready_ GPIO pin output, and the _primary:Jxx_ _ack_ GPIO pin output to the _secondary:Jxx_ ack GPIO pin input. This is the final step, and should look as follows:
