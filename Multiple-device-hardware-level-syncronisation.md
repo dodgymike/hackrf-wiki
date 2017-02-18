@@ -33,6 +33,7 @@ Firstly, this has only been tested on official hackrfs. If you have a jawbreaker
 The hackrf has four pin headers, three of which are arranged in a 'C' shape. On the board these are marked as _P28_, _P22_ and _P20_. _P20_ is the header closest to the _clock in_/_clock out_ connectors. For this exercise we will only be discussing _P20_.
 
 [[images/hackrf-pin-headers-p20.png]]
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20.png]]
 
 The [hackrf schematics](https://github.com/mossmann/hackrf/tree/master/hardware/hackrf-one) are a very good reference for this activity. The relevant part can been seen in the following image:
 [[images/hackrf-pin-headers-schematic.png]]
