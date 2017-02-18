@@ -37,8 +37,8 @@ The hackrf has four pin headers, three of which are arranged in a 'C' shape. On 
 # Wire up the pin headers
 As mentioned before **BE WARNED**, this step could easily result in **one or all** of your hackrfs being **permanently damaged**. If you care about your SDRs more than your cats/children/spouse (like I do), **don't do this**!
 
-Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the negative values as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We choose _Jxx_ on both devices and connect them together like so:
-[[images/hackrf-pin-headers-gnd.png]]
+Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the respective GND levels as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We choose _P20-PIN19_ on both devices and connect them together like so:
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-19-gnd.jpg]]
 
 We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's not present. We choose _Jxx_ from the **primary** hackrf for this, and bring it down to the breadboard. _primary:Jxx_ and _secondary:Jxx_ are _ready_ GPIO pins. Connect these to the breadboard _positive_ line. After this your setup should look like so:
 [[images/hackrf-pin-headers-positive.png]]
