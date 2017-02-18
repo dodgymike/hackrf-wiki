@@ -1,12 +1,12 @@
 # Purpose
-This page describes the modifications required to get multiple hackrf hardware-level synchronisation working. Synchronisation is required for many applications where a single hackrf isn't sufficient:
+This page describes the modifications required to get multiple HackRF hardware-level synchronisation working. Synchronisation is required for many applications where a single HackRF isn't sufficient:
 * phase correlation
 * oversampling using multiple devices
 * 40MHz (or more) wifi
 
-The hackrfs will start transmitting USB packets at the same time, which results in an inter-device offset of ~50 samples at a sample rate of 20MSps. Without this synchronisation, the offset is in the range of thousands to tens of thousands of samples. This is due to the USB start command being called sequentially for each device, along with USB buffering, OS-level timing etc. 
+The HackRFs will start transmitting USB packets at the same time, which results in an inter-device offset of ~50 samples at a sample rate of 20MSps. Without this synchronisation, the offset is in the range of thousands to tens of thousands of samples. This is due to the USB start command being called sequentially for each device, along with USB buffering, OS-level timing etc. 
 
-**BE WARNED** you will have to open your hackrfs, which is most likely going to destroy the plastic case it comes in. You will also be electrically connecting them together. If you do this incorrectly, there is a good chance one or all of the devices will be permanently destroyed.
+**BE WARNED** you will have to open your HackRFs, which is most likely going to destroy the plastic case it comes in. You will also be electrically connecting them together. If you do this incorrectly, there is a good chance one or all of the devices will be permanently destroyed.
 
 # Requirements
 For this to work you will need:
@@ -17,19 +17,19 @@ For this to work you will need:
 
 You will also need the standard requirements such as antenna and USB cable.
 
-# Opening your hackrf
-The hackrf case has small plastic clips holding it in place. These are usually **destroyed** when the case is opened. Please follow the instructions in [this video](https://www.youtube.com/watch?v=zuXJtpTSEJM) by [Jared Boone](https://twitter.com/sharebrained).
+# Opening your HackRF
+The HackRF case has small plastic clips holding it in place. These are usually **destroyed** when the case is opened. Please follow the instructions in [this video](https://www.youtube.com/watch?v=zuXJtpTSEJM) by [Jared Boone](https://twitter.com/sharebrained).
 
 # Connect the clocks
-Connecting the hackrf clocks together will force them to sample at precisely the same rate. The individual samples will most likely be sampled at slightly different time due to phase offsets in the clock ICs, but for most purposes this is acceptable.
+Connecting the HackRF clocks together will force them to sample at precisely the same rate. The individual samples will most likely be sampled at slightly different time due to phase offsets in the clock ICs, but for most purposes this is acceptable.
 
-Choose a **primary** hackrf, and connect the clock sync cable from the _clock out_ connector to the _clock in_ connector of the **second** hackrf. If you're using another hackrf, connect the **second** hackrf's _clock out_ to the **third** hackrf's _clock in_.
+Choose a **primary** HackRF, and connect the clock sync cable from the _clock out_ connector to the _clock in_ connector of the **second** HackRF. If you're using another HackRF, connect the **second** HackRF's _clock out_ to the **third** HackRF's _clock in_.
 
-Your hackrfs should look like this:
+Your HackRFs should look like this:
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-clock-sync.jpg]]
 
 # Identify the pin headers
-Firstly, this has only been tested on official Hackrf Ones. If you have a jawbreaker, Hackrf blue or another hackrf-inspired device, you will have to figure out how to connect the devices correctly, using the schematics.
+Firstly, this has only been tested on official HackRF Ones. If you have a jawbreaker, HackRF blue or another HackRF-inspired device, you will have to figure out how to connect the devices correctly, using the schematics.
 
 The hackrf has four pin headers, three of which are arranged in a 'C' shape. On the board these are marked as _P28_, _P22_ and _P20_. _P20_ is the header closest to the _clock in_/_clock out_ connectors. For this exercise we will only be discussing _P20_. The [hackrf schematics](https://github.com/mossmann/hackrf/tree/master/hardware/hackrf-one) are a very good reference for this activity. The relevant part can been seen in the following image:
 
@@ -40,7 +40,7 @@ This is the P20 schematic diagram:
 
 
 # Wire up the pin headers
-As mentioned before **BE WARNED**, this step could easily result in **one or all** of your hackrfs being **permanently damaged**. If you care about your SDRs more than your cats/children/spouse (like I do), **don't do this**!
+As mentioned before **BE WARNED**, this step could easily result in **one or all** of your HackRFs being **permanently damaged**. If you care about your SDRs more than your cats/children/spouse (like I do), **don't do this**!
 
 Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the respective GND levels as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We choose _P20-PIN19_ on both devices and connect them together like so:
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-19-gnd.jpg]]
@@ -53,7 +53,7 @@ Next we connect the _primary:Jxx_ _ready_ GPIO pin input to the _secondary:Jxx_ 
 
 
 # Upgrade
-Now that the hardware is setup, you need to upgrade your hackrfs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
+Now that the hardware is setup, you need to upgrade your HackRFs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
 
 # Testing with _hackrf_transfer_
 The latest version of _hackrf_transfer_ includes the '-H' flag, which will activate hardware synchronisation (via libhackrf via the firmware). Testing this way is a little tricky because _hackrf_transfer_ will time out if it hasn't received any data within one second, and it requires that **two** copies of _hackrf_transfer are running. My approach is to have two terminal windows with the relevant commands waiting, and quickly run them.
