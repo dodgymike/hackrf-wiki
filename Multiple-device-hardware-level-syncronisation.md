@@ -34,6 +34,10 @@ The hackrf has four pin headers, three of which are arranged in a 'C' shape. On 
 
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers.jpg]]
 
+This is the P20 schematic diagram:
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20.png]]
+
+
 # Wire up the pin headers
 As mentioned before **BE WARNED**, this step could easily result in **one or all** of your hackrfs being **permanently damaged**. If you care about your SDRs more than your cats/children/spouse (like I do), **don't do this**!
 
@@ -46,8 +50,6 @@ We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's 
 Next we connect the _primary:Jxx_ _ready_ GPIO pin input to the _secondary:Jxx_ _ready_ GPIO pin output, and the _primary:Jxx_ _ack_ GPIO pin output to the _secondary:Jxx_ ack GPIO pin input. This is the final step, and should look as follows:
 [[images/hackrf-pin-headers-ready-ack.png]]
 
-Below is the P20 schematic diagram:
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20.png]]
 
 # Upgrade
 Now that the hardware is setup, you need to upgrade your hackrfs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
