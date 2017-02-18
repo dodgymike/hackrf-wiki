@@ -14,6 +14,7 @@ For this to work you will need:
 * a clock sync cable
 * some connecting cables (pin header-type)
 * a breadboard
+
 You will also need the standard requirements such as antenna and USB cable.
 
 # Opening your hackrf
