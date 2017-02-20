@@ -8,6 +8,9 @@ The HackRFs will start transmitting USB packets at the same time, which results 
 
 **BE WARNED** you will have to open your HackRFs, which is most likely going to destroy the plastic case it comes in. You will also be electrically connecting them together. If you do this incorrectly, there is a good chance one or all of the devices will be permanently destroyed.
 
+# Related work
+"bardi_" on the #hackrf channel pointed out [his work](http://spcomnav.uab.es/docs/conferences/Bartolucci_NAVITEC_2016.pdf). This uses the HackRF _CPLD_ to synchronise multiple devices.
+
 # Requirements
 For this to work you will need:
 * at least two devices
@@ -78,6 +81,3 @@ I am a big fan of _GnuRadio_, and I use the _Osmocom source_ for multi-device st
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/grc-hw-sync-streaming.png]]
 
 I wrote a dodgy piece of _PyQt_ to read in the stream, pull out the interleaved streams and display them on a single, normalised graph. This helps me figure out what is happening with the phases. Automation will hopefully follow.
-
-# Related work
-"bardi_" on the #hackrf channel pointed out [his work](http://spcomnav.uab.es/docs/conferences/Bartolucci_NAVITEC_2016.pdf). This uses the HackRF _CPLD_ to synchronise multiple devices. This may be a better approach, but I don't have access to the code or the hardware.
