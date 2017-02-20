@@ -9,7 +9,7 @@ The HackRFs will start transmitting USB packets at the same time, which results 
 **BE WARNED** you will have to open your HackRFs, which is most likely going to destroy the plastic case it comes in. You will also be electrically connecting them together. If you do this incorrectly, there is a good chance one or all of the devices will be permanently destroyed.
 
 # Related work
-"bardi_" on the #hackrf channel pointed out [his work](http://spcomnav.uab.es/docs/conferences/Bartolucci_NAVITEC_2016.pdf). This uses the HackRF _CPLD_ to synchronise multiple devices.
+"bardi_" on the #hackrf channel pointed out [his paper on synchronising HackRFs](http://spcomnav.uab.es/docs/conferences/Bartolucci_NAVITEC_2016.pdf). This uses the HackRF _CPLD_ to synchronise multiple devices.
 
 # Requirements
 For this to work you will need:
