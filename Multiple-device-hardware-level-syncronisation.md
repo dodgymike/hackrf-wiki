@@ -51,7 +51,7 @@ We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's 
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-8-3rd.png]]
 
 Next we connect the _primary:P20-PIN7_ _ready_ GPIO pin input to the _secondary:P20-PIN5_ _ready_ GPIO pin output, and the _primary:P20-PIN5_ _ack_ GPIO pin output to the _secondary:P20-PIN7_ ack GPIO pin input. This is the final step, and should look as follows:
-[[images/hackrf-pin-headers-ready-ack.png]]
+[[https://github.com/dodgymike/hackrf-wiki/blob/master/images/hackrf-pin-headers-ack-ready.jpg]]
 
 
 # Upgrade
