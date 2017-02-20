@@ -69,15 +69,12 @@ This test will fail if:
 * your connectors are incorrectly set up
 * your timing is too slow when running _hackrf_transfer_
 
-Run the following commands within one second of each other:
-* `hackrf_transfer -d <device A> -r <filename-A> -H`
-* `hackrf_transfer -d <device B> -r <filename-B> -H`
+Run the following command:
+* `hackrf_transfer -d <device A> -r <filename-A> -H &; hackrf_transfer -d <device B> -r <filename-B> -H`
 
-If the test runs correctly, you are 90% of the way there!
+If the test runs correctly, you have successfully streamed synchronised data from two HackRFs!
 
-# What now?
-I am a big fan of _GnuRadio_, and I use the _Osmocom source_ for multi-device streaming, as it can be configured to pull from more than one device. I then interleave the streams and output the result to a file.
+# What next?
+I am a big fan of _GnuRadio_, and I usually use the _Osmocom source_ for multi-device streaming, as it can be configured to pull from more than one device. Unfortunately the current version does not have hardware synchronisation built in.
 
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/grc-hw-sync-streaming.png]]
-
-I wrote a dodgy piece of _PyQt_ to read in the stream, pull out the interleaved streams and display them on a single, normalised graph. This helps me figure out what is happening with the phases. Automation will hopefully follow.
