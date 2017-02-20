@@ -43,6 +43,8 @@ As mentioned before **BE WARNED**, this step could easily result in **one or all
 Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the respective GND levels as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We use _P20-PIN19_ on both devices and connect them together like so:
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-19-gnd.jpg]]
 
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrfs-gnd-connection.jpg]]
+
 We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's not present. We use _P20-PIN3_ from the **primary** hackrf for this, and bring it down to the breadboard. _primary:P20-PIN8_ and _secondary:P20-PIN8_ are _ready_ input GPIO pins. Connect these to the breadboard _positive_ line. After this your setup should look like so:
 [[images/hackrf-pin-headers-positive.png]]
 
