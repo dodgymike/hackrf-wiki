@@ -74,7 +74,10 @@ Run the following command:
 
 If the test runs correctly, you have successfully streamed synchronised data from two HackRFs!
 
+The two streams can be merged into one using _GnuRadio_, and then viewed using [this hacky piece of PyQt](https://github.com/dodgymike/direction-finding/blob/master/decode_remote_dual_stream.py)
+
 # What next?
-I am a big fan of _GnuRadio_, and I usually use the _Osmocom source_ for multi-device streaming, as it can be configured to pull from more than one device. Unfortunately the current version does not have hardware synchronisation built in.
+I am a big fan of _GnuRadio_, and I usually use the _Osmocom source_ for multi-device streaming, as it can be configured to pull from more than one device. Unfortunately the current version does not have hardware synchronisation built in. Work is being done to make the _Osmocom source_ compatible with these changes.
 
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/grc-hw-sync-streaming.png]]
+
