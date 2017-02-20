@@ -51,9 +51,9 @@ We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's 
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-8-3rd.png]]
 
 Next we connect the _primary:P20-PIN7_ _ready_ GPIO pin input to the _secondary:P20-PIN5_ _ready_ GPIO pin output, and the _primary:P20-PIN5_ _ack_ GPIO pin output to the _secondary:P20-PIN7_ ack GPIO pin input. This is the final step, and should look as follows:
-[[https://github.com/dodgymike/hackrf-wiki/blob/master/images/hackrf-pin-headers-ack-ready.jpg]]
-
 [[https://github.com/dodgymike/hackrf-wiki/blob/master/images/hackrf-pin-headers-ack-ready-colours.jpg]]
+
+[[https://github.com/dodgymike/hackrf-wiki/blob/master/images/hackrf-pin-headers-ack-ready.jpg]]
 
 # Upgrade
 Now that the hardware is setup, you need to upgrade your HackRFs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
