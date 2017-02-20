@@ -48,7 +48,7 @@ Now that's out of the way, let me describe what we're doing here. The first part
 We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's not present. We use _P20-PIN3_ from the **primary** hackrf for this, and bring it down to the breadboard. _primary:P20-PIN8_ and _secondary:P20-PIN8_ are _ready_ input GPIO pins. Connect these to the breadboard _positive_ line. After this your setup should look like so:
 [[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-positive.jpg]]
 
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-positive.jpg]]
+[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-8-3rd.png]]
 
 Next we connect the _primary:P20-PIN7_ _ready_ GPIO pin input to the _secondary:P20-PIN5_ _ready_ GPIO pin output, and the _primary:P20-PIN5_ _ack_ GPIO pin output to the _secondary:P20-PIN7_ ack GPIO pin input. This is the final step, and should look as follows:
 [[images/hackrf-pin-headers-ready-ack.png]]
