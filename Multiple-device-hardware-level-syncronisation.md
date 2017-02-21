@@ -27,36 +27,36 @@ Connecting the HackRF clocks together will force them to sample at precisely the
 Choose a **primary** HackRF, and connect the clock sync cable from the _clock out_ connector to the _clock in_ connector of the **second** HackRF. If you're using another HackRF, connect the **second** HackRF's _clock out_ to the **third** HackRF's _clock in_.
 
 Your HackRFs should look like this:
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-clock-sync.jpg]]
+[[images/hackrf-clock-sync.jpg]]
 
 # Identify the pin headers
 Firstly, this has only been tested on official HackRF Ones. If you have a jawbreaker, HackRF blue or another HackRF-inspired device, you will have to figure out how to connect the devices correctly, using the schematics.
 
 The hackrf has four pin headers, three of which are arranged in a 'C' shape. On the board these are marked as _P28_, _P22_ and _P20_. _P20_ is the header closest to the _clock in_/_clock out_ connectors. For this exercise we will only be discussing _P20_. The [hackrf schematics](https://github.com/mossmann/hackrf/tree/master/hardware/hackrf-one) are a very good reference for this activity. The relevant part can been seen in the following image:
 
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers.jpg]]
+[[images/hackrf-pin-headers.jpg]]
 
 This is the P20 schematic diagram:
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20.png]]
+[[images/hackrf-pin-headers-p20.png]]
 
 
 # Wire up the pin headers
 As mentioned before **BE WARNED**, this step could easily result in **one or all** of your HackRFs being **permanently damaged**.
 
 Now that's out of the way, let me describe what we're doing here. The first part of this exercise is to give both devices a common ground. This is really important for any inter-device electrical connections, as it prevents ICs from seeing slight differences in the respective GND levels as legitimate signals. As shown on the schematic, many of the pins in _P20_ are GND pins. We use _P20-PIN19_ on both devices and connect them together like so:
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-19-gnd.jpg]]
+[[images/hackrf-pin-headers-p20-19-gnd.jpg]]
 
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrfs-gnd-connection.jpg]]
+[[images/hackrfs-gnd-connection.jpg]]
 
 We then need a _positive_ (+5v) connection to 'fake' the _third_ hackrf if it's not present. We use _P20-PIN3_ from the **primary** hackrf for this, and bring it down to the breadboard. _primary:P20-PIN8_ and _secondary:P20-PIN8_ are _ready_ input GPIO pins for the missing third HackRF. Connect these to the breadboard _positive_ line. After this your setup should look like so:
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-positive.jpg]]
+[[images/hackrf-pin-headers-p20-3-positive.jpg]]
 
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/hackrf-pin-headers-p20-3-8-3rd.png]]
+[[images/hackrf-pin-headers-p20-3-8-3rd.png]]
 
 Next we connect the _primary:P20-PIN7_ _ready_ GPIO pin input to the _secondary:P20-PIN5_ _ready_ GPIO pin output, and the _primary:P20-PIN5_ _ack_ GPIO pin output to the _secondary:P20-PIN7_ ack GPIO pin input. This is the final step, and should look as follows:
-[[https://github.com/dodgymike/hackrf-wiki/blob/master/images/hackrf-pin-headers-ack-ready-colours.jpg]]
+[[images/hackrf-pin-headers-ack-ready-colours.jpg]]
 
-[[https://github.com/dodgymike/hackrf-wiki/blob/master/images/hackrf-pin-headers-ack-ready.jpg]]
+[[images/hackrf-pin-headers-ack-ready.jpg]]
 
 # Upgrade
 Now that the hardware is setup, you need to upgrade your HackRFs' firmware, and your _libhackrf_ to at least [v2017.02.1](https://github.com/mossmann/hackrf/releases/tag/v2017.02.1) as per [this wiki page](https://github.com/mossmann/hackrf/wiki/Updating-Firmware).
@@ -81,5 +81,5 @@ Obviously the method of wiring up multiple HackRFs described above is fragile an
  
 Usually the _Osmocom source_ can be used for multi-device streaming, as it can be configured to pull from more than one device. Unfortunately the current version does not have hardware synchronisation built in. Work is being done to make the _Osmocom source_ compatible with these changes.
 
-[[https://raw.githubusercontent.com/dodgymike/hackrf-wiki/master/images/grc-hw-sync-streaming.png]]
+[[images/grc-hw-sync-streaming.png]]
 
